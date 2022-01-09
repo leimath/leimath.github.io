@@ -1,4 +1,4 @@
-baseurl = "https://leimath.github.io"
+baseurl = "https://leimath.github.io/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5

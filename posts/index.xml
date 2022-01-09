@@ -1,112 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on LeiMath</title>
-    <link>https://leimath.github.io/posts/</link>
-    <description>Recent content in Posts on LeiMath</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Fibonacci For the Olympiad</title>
-      <link>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</link>
-      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</guid>
-      <description>Often-a-while fibonacci sequence problems stars as the guest problem in olympiad exam papers and often the solution is hidden from the untrained eye as some form of application of its properties. This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci Sequence&amp;rdquo; and the ability to comprehend recursive definitions at the minimum.
-We will present various properties related to Fibonacci Numbers (and related) without any proof. It is the interest of the reader to seek out the proofs and validate each result for their own.</description>
-      <content>&lt;p&gt;Often-a-while fibonacci sequence problems stars as the guest problem in olympiad exam papers and often the solution is hidden from the untrained eye as some form of application of its properties.
-This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci Sequence&amp;rdquo; and the ability to comprehend recursive definitions at the minimum.&lt;/p&gt;
-&lt;p&gt;We will present various properties related to Fibonacci Numbers (and related) without any proof. It is the interest of the reader to seek out the proofs and validate each result for their own.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;definitions&#34;&gt;Definitions&lt;/h1&gt;
-&lt;p&gt;For the sake of recourse, we present the defintions -&lt;/p&gt;
-&lt;p&gt;Fibonacci Sequence : A sequence of integers $F_1, F_2, \cdots$ such that $F_{n+2} = F_{n+1} + F_n$ for all $n \geqslant 1$, with, $F_1 = F_2 = 1$.&lt;/p&gt;
-&lt;p&gt;&amp;ndash; The first few terms are : $1,1,2,3,5,8,13,21,34,55,89,144, \cdots$&lt;/p&gt;
-&lt;p&gt;Golden Ratio: $\phi =	\frac{1+\sqrt{5}}{2}$&lt;/p&gt;
-&lt;p&gt;Lucas Sequence: A sequence of integers with $L_0 = 2, L_1 = 1$ such that $L_n = L_{n-2} + L_{n-1}$ for all $n \geqslant 1$.&lt;/p&gt;
-&lt;p&gt;$G_n$: The ratio of two successive term in the Fibonacci Sequence, i.e, $\displaystyle G_n = \frac{F_{n+1}}{F_n}$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;binets-formula&#34;&gt;Binet&amp;rsquo;s Formula&lt;/h1&gt;
-&lt;p&gt;$$F_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\right)$$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;properties&#34;&gt;Properties&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;(GCD Rule[I]) $$\operatorname{gcd}(F_n,F_m)= F_{\operatorname{gcd}(n,m)}$$
-(GCD Rule[II]) $$\operatorname{gcd}\left(F_{n}, F_{n-1}\right)=1$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Lucas Identity) $$F_n^2+F_{n+1}^2 = F_{2n+1}  $$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Cassini&amp;rsquo;s Identity) $$F_{n+1}^{2}-F_{n+2} F_{n}=(-1)^{n}$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Forward Jump Identity) $$F_{n+1} = \sum\limits_{k=0}^n \binom{n-k}{k}$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Parity[I]) If $n$ is even, then $F_n$ is an odd number.&lt;/p&gt;
-&lt;p&gt;(Parity[II]) If $F_n$ is even if and only if $n$ is divisible by $3$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Divisibility[I]) $m \mid n \implies F_m \mid F_n$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Fibonacci Generating Function) $$\sum_{n=1}^{\infty} F_{n} x^{n}=\frac{x}{1-x-x^{2}}$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Finite Sum) $$F_1 + F_2 + F_3 + F_4 + \cdots + F_n = F_{n+2} - 1$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Balls and Urns Formulation) $$F_n=\sum\limits_{k=0}^{n-1} \binom{n-k-1}{k} \text{ or, } 	\sum\limits_{k=1}^{n}\binom{n-k}{k-1} $$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Fibonacci Limit Theorem) $$\lim\limits_{n \to \infty} \frac{F_{n+1}}{F_n} = \phi$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Gap Telescope) $$\frac 1{F_{n-1}F_{n+1}}=\frac 1{F_{n-1}F_n}-\frac 1{F_nF_{n+1}}$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Difference Rule) $$F_nF_{n+1}=F_n^2+F_{n-1}F_n$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Square Sum) $$\sum_{k=1}^{n}F_{k}^{2}=F_{n}F_{n+1}$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Double Sum)$$F_{m}F_{n+1} + F_{m-1}F_{n} = F_{n+m}$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(Triple Sum) $$F_a F_{a+b+c}-F_{a+b}F_{a+c}=(-1)^{a+1} F_b F_c$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;fact-file&#34;&gt;Fact File&lt;/h1&gt;
-&lt;p&gt;Fact 1: The only Fibonacci numbers that are squares are $0, 1, 144.$&lt;/p&gt;
-&lt;p&gt;// Proof: &lt;a href=&#34;https://math.la.asu.edu/~checkman/SquareFibonacci.html#intro&#34;&gt;https://math.la.asu.edu/~checkman/SquareFibonacci.html#intro&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Fact 2: Every positive integer $m$, there is a Fibonacci number divisible by $m$.&lt;/p&gt;
-&lt;p&gt;// Proof: &lt;a href=&#34;https://math.stackexchange.com/questions/1523198/proving-that-every-integer-has-a-fibonacci-number-multiple&#34;&gt;https://math.stackexchange.com/questions/1523198/proving-that-every-integer-has-a-fibonacci-number-multiple&lt;/a&gt; (also see, &lt;a href=&#34;https://artofproblemsolving.com/community/c6h2231614p17047441&#34;&gt;https://artofproblemsolving.com/community/c6h2231614p17047441&lt;/a&gt;)&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;theorems&#34;&gt;Theorems&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Theorem[Zeckendorf]: Every positive integer can be represented &lt;code&gt;uniquely&lt;/code&gt; as the sum of one or more Fibonacci numbers in such a way that the sum does not include any two consecutive Fibonacci numbers.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Theorem[Counting]:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$F_{n}$ is the number of binary sequences of length $n-2$ with no consecutive 0 s.&lt;/li&gt;
-&lt;li&gt;$F_{n}$ is the number of subsets of ${1,2, \ldots, n-2}$ that do not contain any pair of consecutive numbers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Theorem: All the odd divisors of Fibonacci numbers with odd subscripts are of
-the form $4t + 1$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</content>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on LeiMath</title><link>https://leimath.github.io/posts/</link><description>Recent content in Posts on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 03 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Fibonacci For the Olympiad</title><link>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</link><pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</guid><description>Often-a-while fibonacci sequence problems stars as the guest problem in olympiad exam papers and often the solution is hidden from the untrained eye as some form of application of its properties. This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci Sequence&amp;rdquo; and the ability to comprehend recursive definitions at the minimum.
+We will present various properties related to Fibonacci Numbers (and related) without any proof. It is the interest of the reader to seek out the proofs and validate each result for their own.</description><content>&lt;p>Often-a-while fibonacci sequence problems stars as the guest problem in olympiad exam papers and often the solution is hidden from the untrained eye as some form of application of its properties.
+This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci Sequence&amp;rdquo; and the ability to comprehend recursive definitions at the minimum.&lt;/p>
+&lt;p>We will present various properties related to Fibonacci Numbers (and related) without any proof. It is the interest of the reader to seek out the proofs and validate each result for their own.&lt;/p>
+&lt;hr>
+&lt;h1 id="definitions">Definitions&lt;/h1>
+&lt;p>For the sake of recourse, we present the defintions -&lt;/p>
+&lt;p>Fibonacci Sequence : A sequence of integers $F_1, F_2, \cdots$ such that $F_{n+2} = F_{n+1} + F_n$ for all $n \geqslant 1$, with, $F_1 = F_2 = 1$.&lt;/p>
+&lt;p>&amp;ndash; The first few terms are : $1,1,2,3,5,8,13,21,34,55,89,144, \cdots$&lt;/p>
+&lt;p>Golden Ratio: $\phi = \frac{1+\sqrt{5}}{2}$&lt;/p>
+&lt;p>Lucas Sequence: A sequence of integers with $L_0 = 2, L_1 = 1$ such that $L_n = L_{n-2} + L_{n-1}$ for all $n \geqslant 1$.&lt;/p>
+&lt;p>$G_n$: The ratio of two successive term in the Fibonacci Sequence, i.e, $\displaystyle G_n = \frac{F_{n+1}}{F_n}$&lt;/p>
+&lt;hr>
+&lt;h1 id="binets-formula">Binet&amp;rsquo;s Formula&lt;/h1>
+&lt;p>$$F_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\right)$$&lt;/p>
+&lt;hr>
+&lt;h1 id="properties">Properties&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>(GCD Rule[I]) $$\operatorname{gcd}(F_n,F_m)= F_{\operatorname{gcd}(n,m)}$$
+(GCD Rule[II]) $$\operatorname{gcd}\left(F_{n}, F_{n-1}\right)=1$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Lucas Identity) $$F_n^2+F_{n+1}^2 = F_{2n+1} $$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Cassini&amp;rsquo;s Identity) $$F_{n+1}^{2}-F_{n+2} F_{n}=(-1)^{n}$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Forward Jump Identity) $$F_{n+1} = \sum\limits_{k=0}^n \binom{n-k}{k}$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Parity[I]) If $n$ is even, then $F_n$ is an odd number.&lt;/p>
+&lt;p>(Parity[II]) If $F_n$ is even if and only if $n$ is divisible by $3$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Divisibility[I]) $m \mid n \implies F_m \mid F_n$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Fibonacci Generating Function) $$\sum_{n=1}^{\infty} F_{n} x^{n}=\frac{x}{1-x-x^{2}}$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Finite Sum) $$F_1 + F_2 + F_3 + F_4 + \cdots + F_n = F_{n+2} - 1$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Balls and Urns Formulation) $$F_n=\sum\limits_{k=0}^{n-1} \binom{n-k-1}{k} \text{ or, } \sum\limits_{k=1}^{n}\binom{n-k}{k-1} $$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Fibonacci Limit Theorem) $$\lim\limits_{n \to \infty} \frac{F_{n+1}}{F_n} = \phi$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Gap Telescope) $$\frac 1{F_{n-1}F_{n+1}}=\frac 1{F_{n-1}F_n}-\frac 1{F_nF_{n+1}}$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Difference Rule) $$F_nF_{n+1}=F_n^2+F_{n-1}F_n$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Square Sum) $$\sum_{k=1}^{n}F_{k}^{2}=F_{n}F_{n+1}$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Double Sum)$$F_{m}F_{n+1} + F_{m-1}F_{n} = F_{n+m}$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Triple Sum) $$F_a F_{a+b+c}-F_{a+b}F_{a+c}=(-1)^{a+1} F_b F_c$$&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h1 id="fact-file">Fact File&lt;/h1>
+&lt;p>Fact 1: The only Fibonacci numbers that are squares are $0, 1, 144.$&lt;/p>
+&lt;p>// Proof: &lt;a href="https://math.la.asu.edu/~checkman/SquareFibonacci.html#intro">https://math.la.asu.edu/~checkman/SquareFibonacci.html#intro&lt;/a>&lt;/p>
+&lt;p>Fact 2: Every positive integer $m$, there is a Fibonacci number divisible by $m$.&lt;/p>
+&lt;p>// Proof: &lt;a href="https://math.stackexchange.com/questions/1523198/proving-that-every-integer-has-a-fibonacci-number-multiple">https://math.stackexchange.com/questions/1523198/proving-that-every-integer-has-a-fibonacci-number-multiple&lt;/a> (also see, &lt;a href="https://artofproblemsolving.com/community/c6h2231614p17047441">https://artofproblemsolving.com/community/c6h2231614p17047441&lt;/a>)&lt;/p>
+&lt;hr>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>Theorem[Zeckendorf]: Every positive integer can be represented &lt;code>uniquely&lt;/code> as the sum of one or more Fibonacci numbers in such a way that the sum does not include any two consecutive Fibonacci numbers.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Theorem[Counting]:&lt;/p>
+&lt;ul>
+&lt;li>$F_{n}$ is the number of binary sequences of length $n-2$ with no consecutive 0 s.&lt;/li>
+&lt;li>$F_{n}$ is the number of subsets of ${1,2, \ldots, n-2}$ that do not contain any pair of consecutive numbers.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Theorem: All the odd divisors of Fibonacci numbers with odd subscripts are of
+the form $4t + 1$&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr></content></item></channel></rss>

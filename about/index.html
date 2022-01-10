@@ -54,7 +54,29 @@ LeiMath
 <li><a href=/listing>Listing</a></li>
 </ul>
 </nav>
-<script type=text/javascript async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$']],processEscapes:!0,processEnvironments:!0,skipTags:['script','noscript','style','textarea','pre'],TeX:{equationNumbers:{autoNumber:"AMS"},extensions:["AMSmath.js","AMSsymbols.js"]}}}),MathJax.Hub.Queue(function(){var b=MathJax.Hub.getAllJax(),a;for(a=0;a<b.length;a+=1)b[a].SourceElement().parentNode.className+=' has-jax'}),MathJax.Hub.Config({TeX:{equationNumbers:{autoNumber:"AMS"}}})</script>
+<script type=text/x-mathjax-config>
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      tagSide: "right"
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+  MathJax.Hub.Register.StartupHook("TeX AMSmath Ready", function () {
+    MathJax.InputJax.TeX.Stack.Item.AMSarray.Augment({
+      clearTag() {
+        if (!this.global.notags) {
+          this.super(arguments).clearTag.call(this);
+        }
+      }
+    });
+  });
+</script>
+<script type=text/javascript src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
 </header>
 <div class=content>
 <div class=post>

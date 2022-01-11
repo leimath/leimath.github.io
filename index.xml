@@ -1,4 +1,167 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LeiMath</title><link>https://leimath.github.io/</link><description>Recent content on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 03 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Fibonacci For the Olympiad</title><link>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</link><pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</guid><description>Often-a-while fibonacci sequence problems stars as the guest problem in olympiad exam papers and often the solution is hidden from the untrained eye as some form of application of its properties. This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci Sequence&amp;rdquo; and the ability to comprehend recursive definitions at the minimum.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LeiMath</title><link>https://leimath.github.io/</link><description>Recent content on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>A Toolbox for Diophantine Equations</title><link>https://leimath.github.io/posts/diophantine-toolbox/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/diophantine-toolbox/</guid><description>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.
+This write-up especially focusses on the easier side of things related to cater to Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
+Methods: $\star$ Parity Case: Only use parity if it is VERY obvious that some variable is odd or even from the start.</description><content>&lt;p>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.&lt;/p>
+&lt;p>This write-up especially focusses on the easier side of things related to cater to Scholarship problems and &lt;strong>not&lt;/strong> Olympiad Problems which may require various additional specialised methods.&lt;/p>
+&lt;hr>
+&lt;h1 id="methods">Methods:&lt;/h1>
+&lt;ul>
+&lt;li>$\star$ &lt;code>Parity Case&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>
+&lt;p>Only use parity if it is &lt;strong>VERY&lt;/strong> obvious that some variable is odd or even from the start. Assumptions might lead to false conclusions.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Break into two cases and substitute in the variable with $2x$ or $2x \pm 1$ to see if it gives any clue.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Prime Case&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Given equation has some variable as a prime ? Try two cases if the prime equals $2$ or is an odd prime. Is there some important clue that can be obtained from the prime equals $2$ case or the odd prime case ?&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Factorization&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>Factor the given equation and see if one of the sides can be broken (especially, if it is a constant) to deduce some conclusions.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sophie Germain Identity: If of the form $a^4 + 4b^4$ then factor as $((a+b)^2 +
+b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>SFFT : If of the form $xy +x +y$ or $\frac{1}{x} + \frac{1}{y} = \frac{1}{N}$ see - &lt;a href="https://studymath.github.io/assets/docs/SFFT.pdf">Click Here!&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Monotonicity&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>Using the fact that $f(x) = x^2$ is monotonous over $\mathbb{Z}^+$, we can deduce things like $a^2 &amp;lt; x &amp;lt; (a+3)^2 \implies x = (a+1)^2$ or $x = (a+2)^2.$ The idea being between two squares, there is another square in between if the original two squares differ by some constant.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>There is a $x$ in the power of every constant in the equation ? Take the R.H.S and divide both sides by it, the R.H.S should be $1$ now. Now observe the increasing-decreasing arguments and employ them on this equation to get contradictions or soem useful clue like parity.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Some theorems that are of use if the given equation is assumed to be $f(x)$:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>$\qquad$ [I] If the function $y = f(x)$ is continuously increasing or decreasing
+in set $I$, then the equation $f(x)= 0$ has at most one solution in $I.$&lt;/p>
+&lt;p>$\qquad$ [II] If the function $y=f(x)$ is increasing (decreasing) over interval $I$, then the function $y=-f(x)$ is decreasing (increasing) on $I$.&lt;/p>
+&lt;p>$\qquad$ [III] The sum of two increasing functions is an increasing function and the sum of two decreasing functions is a decreasing function.&lt;/p>
+&lt;p>$\qquad$ [IV] If one of the two functions $f$ and $g$ is increasing and the other is a decreasing function of real variable $x$, then the equation $f(x)=g(x)$ has at most one real zero.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Bounding&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>Given equation is symmetric ? Using symmetry (if the equation looks &amp;ldquo;evenly&amp;rdquo; divided or, if the equation variables can be rotated and no change occurs) we take a WLOG inequality and then try to bound at least one variabe to generate further cases.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Is the graph simple to visualize ? Try to figure out the graph and extremal points.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Is the maximum and minimum readily available ? Try to use them as bounds&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>$\star$ &lt;code>Modular Arithmetic&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>
+&lt;p>Need to show that no integer solutions exist ? Modular Arithmetic.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Euler&amp;rsquo;s Harrow: It can be tricky deciding what modulo to use for unconventional powers hence a useful clue might be using Euler&amp;rsquo;s Theorem that $a^{\phi(n)} \equiv 1$ $\operatorname{mod} n$ when $\operatorname{gcd}(a,n) = 1$ and working modulo $n$ hereon. Specifically, we check try to find such a $n$ so that Euler&amp;rsquo;s theorem holds (it makes the RHS under mod $n$ &amp;ndash; one) and we do this by first observing the highest power of the given equation (say, $m$) and coming up with $\phi(n) = m.$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Given two equations and both have variables ? Try to write it in the form of a modular equation $f(x) \equiv 0$ $(\operatorname{mod} g(x))$ and try to eliminate the variable and get a constant $k$ to get something like $g(x) \mid k$. This implies $g(x) \leq k$ so we can check finitely many such $k$ that might be valid.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Equation has a square ? Try modulo 3,4,5,8 and 16.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Equation has a cube ? Try modulo 7,9,13.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Squares can only be congruent to 0, 1 or 4 modulo 8.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Quadratic Discriminant&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Given a quadratic and Integer solutions are involved ? Try obtaining the discriminant. Now for integer solutions, the discriminant &lt;strong>MUST&lt;/strong> be perfect square hence we keep chaining discriminants (if the subsequent discriminant is also a quadratic) and lastly assume it to be equal to some $k^2$. In the last step if it happens that with some manipulation the equation is factor-able, and there lies a constant we can check the factors of the constant as such. The last step might vary as it can be that sometimes, instead of factoring we get another quadratic so we take its discriminant and again equate to some $m^2$ and check similarly. Sometimes we might also need modular arithmetic or parity arguments as well.&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Variabe Cuts&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>Question asks to show infinite number of solutions ? Try reducing the number of variables as much as possible with substitutions (and very rarely, by modular arithmetic) to end up with a dependency on a tertiary variable which can take any value.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Standard substitutions include ($x+s, x, x-s$) or ($x-s,x+s$). The key idea is to cancel out when substituting and if some factorable form is present - then to exploit that.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>G.C.D Linking&lt;/code>:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>This involves the fact that if $\operatorname{gcd}(a,b) = d$ then $a = pd$ and $b = qd$ for some $p,q.$ This susbstitutions might lead to some manage-able divisibility assumptions.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If the gcd happens to be $1$ then a few many clues can be found from the equation by the substitutions.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;hr>
+&lt;p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as &lt;em>Infinite Descent, Cyclotomic recognition and Viete Jumping&lt;/em>.&lt;/p>
+&lt;p>Some questions to try these methods on:&lt;/p>
+&lt;p>&lt;code>1.&lt;/code> Show that
+$$
+x^{4}+131 y^{4}=3 z^{4}
+$$
+has no solutions in positive integers.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> Find all ordered triples of positive integers $(a, b, c)$ such that for all positive integers $t$
+$$
+\frac{(a t+1)(b t+1)(c t+1)-1}{\operatorname{lcm}(a t, b t, c t)}
+$$
+is also a positive integer.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> [HMMT Algebra 2005 #2] How many &lt;em>real&lt;/em> numbers $x$ are solutions to the following equation?
+$$
+2003^{x}+2004^{x}=2005^{x}
+$$&lt;/p>
+&lt;p>&lt;code>4.&lt;/code> Find all triples ($p,x,y$) such that $p^x=y^4+4$, where $p$ is a prime and $x$ and $y$ are natural numbers.&lt;/p>
+&lt;p>&lt;code>5.&lt;/code> Determine all pairs $(m, n)$ of positive integers for which
+$$
+2^{m}+3^{n}
+$$
+is a perfect square.&lt;/p>
+&lt;p>&lt;code>6.&lt;/code> Show that the equation
+$$
+5 m^{2}-6 m n+7 n^{2}=1985
+$$
+has no integer solutions.&lt;/p>
+&lt;p>&lt;code>7.&lt;/code> Show that for natural numbers $x, y, z$ such that $(x, y)=1$ and $x^{2}+y^{2}=z^{4}$, the product $x y$ is always divisible by 7 . Show that this is generally not true without the condition $(x, y)=1$.&lt;/p>
+&lt;hr>
+&lt;h1 id="refrences">Refrences:&lt;/h1>
+&lt;p>[1] &lt;a href="https://brilliant.org/wiki/sophie-germain-identity/">Sophie Germain&lt;/a>&lt;/p>
+&lt;p>[2] &lt;a href="https://www.amazon.com/Problem-Solving-Strategies-Problem-Books-Mathematics/dp/0387982191">Problem-Solving Strategies&lt;/a>&lt;/p></content></item><item><title>Fibonacci For the Olympiad</title><link>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</link><pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/fibonacci-for-the-olympiad/</guid><description>Often-a-while fibonacci sequence problems stars as the guest problem in olympiad exam papers and often the solution is hidden from the untrained eye as some form of application of its properties. This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci Sequence&amp;rdquo; and the ability to comprehend recursive definitions at the minimum.
 We will present various properties related to Fibonacci Numbers (and related) without any proof. It is the interest of the reader to seek out the proofs and validate each result for their own.</description><content>&lt;p>Often-a-while fibonacci sequence problems stars as the guest problem in olympiad exam papers and often the solution is hidden from the untrained eye as some form of application of its properties.
 This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci Sequence&amp;rdquo; and the ability to comprehend recursive definitions at the minimum.&lt;/p>
 &lt;p>We will present various properties related to Fibonacci Numbers (and related) without any proof. It is the interest of the reader to seek out the proofs and validate each result for their own.&lt;/p>
@@ -17,11 +180,11 @@ This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci
 &lt;h1 id="properties">Properties&lt;/h1>
 &lt;ol>
 &lt;li>
-&lt;p>(GCD Rule[I]) $$\operatorname{gcd}(F_n,F_m)= F_{\operatorname{gcd}(n,m)}$$
-(GCD Rule[II]) $$\operatorname{gcd}\left(F_{n}, F_{n-1}\right)=1$$&lt;/p>
+&lt;p>(Strong Divisibility) $$\operatorname{gcd}(F_n,F_m)= F_{\operatorname{gcd}(n,m)}$$
+(GCD Rule) $$\operatorname{gcd}\left(F_{n}, F_{n-1}\right)=1$$&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>(Lucas Identity) $$F_n^2+F_{n+1}^2 = F_{2n+1} $$&lt;/p>
+&lt;p>(Divisibility Sequence) $$m \mid n \implies F_m \mid F_n$$&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>(Cassini&amp;rsquo;s Identity) $$F_{n+1}^{2}-F_{n+2} F_{n}=(-1)^{n}$$&lt;/p>
@@ -34,7 +197,7 @@ This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci
 &lt;p>(Parity[II]) If $F_n$ is even if and only if $n$ is divisible by $3$&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>(Divisibility[I]) $m \mid n \implies F_m \mid F_n$&lt;/p>
+&lt;p>(Lucas Identity) $$F_n^2+F_{n+1}^2 = F_{2n+1} $$&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>(Fibonacci Generating Function) $$\sum_{n=1}^{\infty} F_{n} x^{n}=\frac{x}{1-x-x^{2}}$$&lt;/p>

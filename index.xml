@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LeiMath</title><link>https://leimath.github.io/</link><description>Recent content on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>A Toolbox for Diophantine Equations</title><link>https://leimath.github.io/posts/diophantine-toolbox/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/diophantine-toolbox/</guid><description>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.
 This write-up especially focusses on the easier side of things related to cater Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
-Methods: $\star$ Parity Case: Only use parity if it is VERY obvious that some variable is odd or even from the start.</description><content>&lt;p>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.&lt;/p>
+We do not illustrate any methods with examples since it is often quite restricting to see a few examples and become limited to one such method, whereas in an exam environment multiple trial with several approaches are almost always necessary.</description><content>&lt;p>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.&lt;/p>
 &lt;p>This write-up especially focusses on the easier side of things related to cater Scholarship problems and &lt;strong>not&lt;/strong> Olympiad Problems which may require various additional specialised methods.&lt;/p>
+&lt;p>We do &lt;strong>not&lt;/strong> illustrate any methods with examples since it is often quite restricting to see a few examples and become limited to one such method, whereas in an exam environment multiple trial with several approaches are almost always necessary.&lt;/p>
 &lt;hr>
 &lt;h1 id="methods">Methods:&lt;/h1>
 &lt;ul>
@@ -44,7 +45,6 @@ b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$&
 &lt;p>If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
 =(a+b+c)(a b+b c+c a)-a b c$&lt;/p>
 &lt;/li>
-&lt;li>&lt;/li>
 &lt;/ol>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;ul>
@@ -139,8 +139,8 @@ in set $I$, then the equation $f(x)= 0$ has at most one solution in $I.$&lt;/p>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;hr>
 &lt;h1 id="for-olympiads">For Olympiads:&lt;/h1>
-&lt;p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as &lt;em>Infinite Descent, Zsigmondy&amp;rsquo;s Theorem, Cyclotomic recognition and Viete Jumping&lt;/em>.&lt;/p>
-&lt;p>In some instances, more tools like &lt;em>Lifting the Exponent Lemma and p-adic observations&lt;/em> are elso employed.&lt;/p>
+&lt;p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as &lt;em>Infinite Descent, Zsigmondy&amp;rsquo;s Theorem, Cyclotomic Recognition&lt;/em> and &lt;em>Viete Jumping&lt;/em>.&lt;/p>
+&lt;p>In some instances, more tools like &lt;em>Lifting the Exponent Lemma&lt;/em> and &lt;em>p-adic observations&lt;/em> are elso employed.&lt;/p>
 &lt;p>Lastly, it is also advised to add &lt;em>Legendre&amp;rsquo;s/ de-Polignac Formula&lt;/em> and more generally p-adic valuations (2-adic, to be more specific) in the toolkit, they help in some instances as well.&lt;/p>
 &lt;hr>
 &lt;h1 id="questions">Questions:&lt;/h1>

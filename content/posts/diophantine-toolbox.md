@@ -9,6 +9,8 @@ In this post we take a dive into building a very minimalist toolkit which might 
 
 This write-up especially focusses on the easier side of things related to cater Scholarship problems and **not** Olympiad Problems which may require various additional specialised methods.
 
+We do **not** illustrate any methods with examples since it is often quite restricting to see a few examples and become limited to one such method, whereas in an exam environment multiple trial with several approaches are almost always necessary.
+
 ---
 
 # Methods:
@@ -41,7 +43,6 @@ b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$
 4. If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
 =(a+b+c)(a b+b c+c a)-a b c$
 
-5.
 
 $$\dotsb$$
 
@@ -117,9 +118,9 @@ $$\dotsb$$
 
 # For Olympiads:
 
-The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as _Infinite Descent, Zsigmondy's Theorem, Cyclotomic recognition and Viete Jumping_.
+The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as _Infinite Descent, Zsigmondy's Theorem, Cyclotomic Recognition_ and _Viete Jumping_.
 
-In some instances, more tools like _Lifting the Exponent Lemma and p-adic observations_ are elso employed. 
+In some instances, more tools like _Lifting the Exponent Lemma_ and _p-adic observations_ are elso employed. 
 
 Lastly, it is also advised to add _Legendre's/ de-Polignac Formula_ and more generally p-adic valuations (2-adic, to be more specific) in the toolkit, they help in some instances as well.
 

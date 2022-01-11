@@ -138,10 +138,12 @@ in set $I$, then the equation $f(x)= 0$ has at most one solution in $I.$&lt;/p>
 &lt;/ol>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;hr>
+&lt;h1 id="for-olympiads">For Olympiads:&lt;/h1>
 &lt;p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as &lt;em>Infinite Descent, Zsigmondy&amp;rsquo;s Theorem, Cyclotomic recognition and Viete Jumping&lt;/em>.&lt;/p>
 &lt;p>In some instances, more tools like &lt;em>Lifting the Exponent Lemma and p-adic observations&lt;/em> are elso employed.&lt;/p>
 &lt;p>Lastly, it is also advised to add &lt;em>Legendre&amp;rsquo;s/ de-Polignac Formula&lt;/em> and more generally p-adic valuations (2-adic, to be more specific) in the toolkit, they help in some instances as well.&lt;/p>
-&lt;p>Some questions to try these methods on:&lt;/p>
+&lt;hr>
+&lt;h1 id="questions">Questions:&lt;/h1>
 &lt;p>&lt;code>1.&lt;/code> Show that
 $$
 x^{4}+131 y^{4}=3 z^{4}

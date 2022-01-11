@@ -40,10 +40,10 @@ b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$&
 &lt;li>
 &lt;p>SFFT : If of the form $xy +x +y$ or $\frac{1}{x} + \frac{1}{y} = \frac{1}{N}$ see - &lt;a href="https://studymath.github.io/assets/docs/SFFT.pdf">Click Here!&lt;/a>&lt;/p>
 &lt;/li>
-&lt;/ol>
-&lt;p>4.If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
+&lt;li>
+&lt;p>If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
 =(a+b+c)(a b+b c+c a)-a b c$&lt;/p>
-&lt;ol start="5">
+&lt;/li>
 &lt;li>&lt;/li>
 &lt;/ol>
 &lt;p>$$\dotsb$$&lt;/p>

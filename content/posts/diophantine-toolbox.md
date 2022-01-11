@@ -115,13 +115,18 @@ $$\dotsb$$
 
 ---
 
+# For Olympiads:
+
 The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as _Infinite Descent, Zsigmondy's Theorem, Cyclotomic recognition and Viete Jumping_.
 
 In some instances, more tools like _Lifting the Exponent Lemma and p-adic observations_ are elso employed. 
 
 Lastly, it is also advised to add _Legendre's/ de-Polignac Formula_ and more generally p-adic valuations (2-adic, to be more specific) in the toolkit, they help in some instances as well.
 
-Some questions to try these methods on:
+---
+
+# Questions:
+
 
 `1.` Show that
 $$

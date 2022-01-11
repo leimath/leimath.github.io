@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LeiMath</title><link>https://leimath.github.io/</link><description>Recent content on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>A Toolbox for Diophantine Equations</title><link>https://leimath.github.io/posts/diophantine-toolbox/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/diophantine-toolbox/</guid><description>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.
-This write-up especially focusses on the easier side of things related to cater to Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
+This write-up especially focusses on the easier side of things related to cater Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
 Methods: $\star$ Parity Case: Only use parity if it is VERY obvious that some variable is odd or even from the start.</description><content>&lt;p>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.&lt;/p>
-&lt;p>This write-up especially focusses on the easier side of things related to cater to Scholarship problems and &lt;strong>not&lt;/strong> Olympiad Problems which may require various additional specialised methods.&lt;/p>
+&lt;p>This write-up especially focusses on the easier side of things related to cater Scholarship problems and &lt;strong>not&lt;/strong> Olympiad Problems which may require various additional specialised methods.&lt;/p>
 &lt;hr>
 &lt;h1 id="methods">Methods:&lt;/h1>
 &lt;ul>
@@ -13,6 +13,9 @@ Methods: $\star$ Parity Case: Only use parity if it is VERY obvious that some va
 &lt;/li>
 &lt;li>
 &lt;p>Break into two cases and substitute in the variable with $2x$ or $2x \pm 1$ to see if it gives any clue.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Parity and Sign of R.H.S and L.H.S must remain the same for equality.&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;p>$$\dotsb$$&lt;/p>
@@ -37,6 +40,11 @@ b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$&
 &lt;li>
 &lt;p>SFFT : If of the form $xy +x +y$ or $\frac{1}{x} + \frac{1}{y} = \frac{1}{N}$ see - &lt;a href="https://studymath.github.io/assets/docs/SFFT.pdf">Click Here!&lt;/a>&lt;/p>
 &lt;/li>
+&lt;/ol>
+&lt;p>4.If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
+=(a+b+c)(a b+b c+c a)-a b c$&lt;/p>
+&lt;ol start="5">
+&lt;li>&lt;/li>
 &lt;/ol>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;ul>
@@ -130,7 +138,9 @@ in set $I$, then the equation $f(x)= 0$ has at most one solution in $I.$&lt;/p>
 &lt;/ol>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;hr>
-&lt;p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as &lt;em>Infinite Descent, Cyclotomic recognition and Viete Jumping&lt;/em>.&lt;/p>
+&lt;p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as &lt;em>Infinite Descent, Zsigmondy&amp;rsquo;s Theorem, Cyclotomic recognition and Viete Jumping&lt;/em>.&lt;/p>
+&lt;p>In some instances, more tools like &lt;em>Lifting the Exponent Lemma and p-adic observations&lt;/em> are elso employed.&lt;/p>
+&lt;p>Lastly, it is also advised to add &lt;em>Legendre&amp;rsquo;s/ de-Polignac Formula&lt;/em> and more generally p-adic valuations (2-adic, to be more specific) in the toolkit, they help in some instances as well.&lt;/p>
 &lt;p>Some questions to try these methods on:&lt;/p>
 &lt;p>&lt;code>1.&lt;/code> Show that
 $$

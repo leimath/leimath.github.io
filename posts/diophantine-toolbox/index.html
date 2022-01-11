@@ -4,7 +4,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.
-This write-up especially focusses on the easier side of things related to cater to Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
+This write-up especially focusses on the easier side of things related to cater Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
  Methods:  $\star$ Parity Case:   Only use parity if it is VERY obvious that some variable is odd or even from the start.">
 <meta name=keywords content>
 <meta name=robots content="noodp">
@@ -20,7 +20,7 @@ This write-up especially focusses on the easier side of things related to cater 
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Toolbox for Diophantine Equations">
 <meta property="og:description" content="In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.
-This write-up especially focusses on the easier side of things related to cater to Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
+This write-up especially focusses on the easier side of things related to cater Scholarship problems and not Olympiad Problems which may require various additional specialised methods.
  Methods:  $\star$ Parity Case:   Only use parity if it is VERY obvious that some variable is odd or even from the start.">
 <meta property="og:url" content="https://leimath.github.io/posts/diophantine-toolbox/">
 <meta property="og:site_name" content="LeiMath">
@@ -68,7 +68,7 @@ LeiMath
 </div>
 <div class=post-content><div>
 <p>In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems.</p>
-<p>This write-up especially focusses on the easier side of things related to cater to Scholarship problems and <strong>not</strong> Olympiad Problems which may require various additional specialised methods.</p>
+<p>This write-up especially focusses on the easier side of things related to cater Scholarship problems and <strong>not</strong> Olympiad Problems which may require various additional specialised methods.</p>
 <hr>
 <h1 id=methods>Methods:<a href=#methods class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <ul>
@@ -80,6 +80,9 @@ LeiMath
 </li>
 <li>
 <p>Break into two cases and substitute in the variable with $2x$ or $2x \pm 1$ to see if it gives any clue.</p>
+</li>
+<li>
+<p>Parity and Sign of R.H.S and L.H.S must remain the same for equality.</p>
 </li>
 </ol>
 <p>$$\dotsb$$</p>
@@ -104,6 +107,11 @@ b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$<
 <li>
 <p>SFFT : If of the form $xy +x +y$ or $\frac{1}{x} + \frac{1}{y} = \frac{1}{N}$ see - <a href=https://studymath.github.io/assets/docs/SFFT.pdf>Click Here!</a></p>
 </li>
+</ol>
+<p>4.If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
+=(a+b+c)(a b+b c+c a)-a b c$</p>
+<ol start=5>
+<li></li>
 </ol>
 <p>$$\dotsb$$</p>
 <ul>
@@ -197,7 +205,9 @@ in set $I$, then the equation $f(x)= 0$ has at most one solution in $I.$</p>
 </ol>
 <p>$$\dotsb$$</p>
 <hr>
-<p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as <em>Infinite Descent, Cyclotomic recognition and Viete Jumping</em>.</p>
+<p>The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as <em>Infinite Descent, Zsigmondy&rsquo;s Theorem, Cyclotomic recognition and Viete Jumping</em>.</p>
+<p>In some instances, more tools like <em>Lifting the Exponent Lemma and p-adic observations</em> are elso employed.</p>
+<p>Lastly, it is also advised to add <em>Legendre&rsquo;s/ de-Polignac Formula</em> and more generally p-adic valuations (2-adic, to be more specific) in the toolkit, they help in some instances as well.</p>
 <p>Some questions to try these methods on:</p>
 <p><code>1.</code> Show that
 $$

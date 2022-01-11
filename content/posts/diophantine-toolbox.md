@@ -38,7 +38,7 @@ b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$
 
 3. SFFT : If of the form $xy +x +y$ or $\frac{1}{x} + \frac{1}{y} = \frac{1}{N}$ see - [Click Here!](https://studymath.github.io/assets/docs/SFFT.pdf)
 
-4.If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
+4. If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
 =(a+b+c)(a b+b c+c a)-a b c$
 
 5.

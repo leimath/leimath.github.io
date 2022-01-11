@@ -7,7 +7,7 @@ author = "LeiMath"
 
 In this post we take a dive into building a very minimalist toolkit which might be useful for Diophantine Equation problems. 
 
-This write-up especially focusses on the easier side of things related to cater to Scholarship problems and **not** Olympiad Problems which may require various additional specialised methods.
+This write-up especially focusses on the easier side of things related to cater Scholarship problems and **not** Olympiad Problems which may require various additional specialised methods.
 
 ---
 
@@ -18,6 +18,8 @@ This write-up especially focusses on the easier side of things related to cater 
 2. Only use parity if it is **VERY** obvious that some variable is odd or even from the start. Assumptions might lead to false conclusions.
 
 1. Break into two cases and substitute in the variable with $2x$ or $2x \pm 1$ to see if it gives any clue. 
+
+3. Parity and Sign of R.H.S and L.H.S must remain the same for equality.
 
 $$\dotsb$$
 
@@ -35,6 +37,11 @@ $$\dotsb$$
 b^2)((a-b)^2+b^2)$ or the regular version $(a^2 + 2b^2 + 2ab)(a^2 + 2b^2-2ab).$
 
 3. SFFT : If of the form $xy +x +y$ or $\frac{1}{x} + \frac{1}{y} = \frac{1}{N}$ see - [Click Here!](https://studymath.github.io/assets/docs/SFFT.pdf)
+
+4.If $a,b,c \in \mathbb{R}$ then $(a+b)(b+c)(c+a)
+=(a+b+c)(a b+b c+c a)-a b c$
+
+5.
 
 $$\dotsb$$
 
@@ -108,7 +115,11 @@ $$\dotsb$$
 
 ---
 
-The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as _Infinite Descent, Cyclotomic recognition and Viete Jumping_.
+The listed methods are enough for most questions at the Scholarship level. Olympiad students should look into methods such as _Infinite Descent, Zsigmondy's Theorem, Cyclotomic recognition and Viete Jumping_.
+
+In some instances, more tools like _Lifting the Exponent Lemma and p-adic observations_ are elso employed. 
+
+Lastly, it is also advised to add _Legendre's/ de-Polignac Formula_ and more generally p-adic valuations (2-adic, to be more specific) in the toolkit, they help in some instances as well.
 
 Some questions to try these methods on:
 

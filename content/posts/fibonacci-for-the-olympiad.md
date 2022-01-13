@@ -56,7 +56,9 @@ $$F_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\f
 13. (Square Sum) $$\sum_{k=1}^{n}F_{k}^{2}=F_{n}F_{n+1}$$
 14. (Double Sum)$$F_{m}F_{n+1} + F_{m-1}F_{n} = F_{n+m}$$
 15. (Triple Sum) $$F_a F_{a+b+c}-F_{a+b}F_{a+c}=(-1)^{a+1} F_b F_c$$
-
+16. (First Form Inequality) $$F_k > F_{k-2}+F_{k-3}+\ldots+F_2$$
+17. (n-odd-even Equality)$$F_2+F_3+F_5+\ldots+F_{2k-1} = F_{2k}$$
+ 
 
 --- 
 
@@ -85,4 +87,23 @@ Fact 2: Every positive integer $m$, there is a Fibonacci number divisible by $m$
 
 *  Theorem: All the odd divisors of Fibonacci numbers with odd subscripts are of
 the form $4t + 1$
+
 ---
+
+# The Proof of a Theorem
+
+Theorem: Let $r \in \mathbb{N}$. The Fibonacci numbers modulo r form a periodic sequence.
+
+Proof: 
+
+The total number of possible pairs $\left(F_{i} \bmod r, F_{i+1} \bmod r\right)$ is $r^{2}$. Therefore some ordered pair must occur more than once, so pick one that repeats and label it $n$ and $n+j$; that is,
+$$
+\left(F_{n} \bmod r, F_{n+1} \bmod r\right)=\left(F_{n+j} \bmod r, F_{n+j+1} \bmod r\right) .
+$$
+Then induction on $k \geq 2$ and using the recurrence for the Fibonacci numbers show that $F_{n+k} \bmod r=F_{n+k+j} \bmod r$. Therefore the sequence $F_{n} \bmod r$ is periodic. $\blacksquare$
+
+This above theorem while may or may not be useful, has seen usage because of the proof. The idea of finite pairs of remainders and that eventually some remainder of index values will repeat has been used in question based on divisibility sequences.
+
+---
+
+$$\dots$$

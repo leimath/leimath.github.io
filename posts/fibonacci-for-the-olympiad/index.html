@@ -129,6 +129,12 @@ This article assumes familiarity with the definition of the &ldquo;Fibonacci Seq
 <li>
 <p>(Triple Sum) $$F_a F_{a+b+c}-F_{a+b}F_{a+c}=(-1)^{a+1} F_b F_c$$</p>
 </li>
+<li>
+<p>(First Form Inequality) $$F_k > F_{k-2}+F_{k-3}+\ldots+F_2$$</p>
+</li>
+<li>
+<p>(n-odd-even Equality)$$F_2+F_3+F_5+\ldots+F_{2k-1} = F_{2k}$$</p>
+</li>
 </ol>
 <hr>
 <h1 id=fact-file>Fact File<a href=#fact-file class=hanchor arialabel=Anchor>&#8983;</a> </h1>
@@ -155,6 +161,17 @@ the form $4t + 1$</p>
 </li>
 </ul>
 <hr>
+<h1 id=the-proof-of-a-theorem>The Proof of a Theorem<a href=#the-proof-of-a-theorem class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>Theorem: Let $r \in \mathbb{N}$. The Fibonacci numbers modulo r form a periodic sequence.</p>
+<p>Proof:</p>
+<p>The total number of possible pairs $\left(F_{i} \bmod r, F_{i+1} \bmod r\right)$ is $r^{2}$. Therefore some ordered pair must occur more than once, so pick one that repeats and label it $n$ and $n+j$; that is,
+$$
+\left(F_{n} \bmod r, F_{n+1} \bmod r\right)=\left(F_{n+j} \bmod r, F_{n+j+1} \bmod r\right) .
+$$
+Then induction on $k \geq 2$ and using the recurrence for the Fibonacci numbers show that $F_{n+k} \bmod r=F_{n+k+j} \bmod r$. Therefore the sequence $F_{n} \bmod r$ is periodic. $\blacksquare$</p>
+<p>This above theorem while may or may not be useful, has seen usage because of the proof. The idea of finite pairs of remainders and that eventually some remainder of index values will repeat has been used in question based on divisibility sequences.</p>
+<hr>
+<p>$$\dots$$</p>
 </div></div>
 <div class=pagination>
 <div class=pagination__title>

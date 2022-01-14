@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on LeiMath</title><link>https://leimath.github.io/posts/</link><description>Recent content in Posts on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 1</title><link>https://leimath.github.io/posts/gt-notes-p1/</link><pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p1/</guid><description>This is a series of my notes on graph theory and usage in Scholarship Problems. We look at what a graph is today and present some terminologies. We also present some basic tactics to solve elementary problems.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on LeiMath</title><link>https://leimath.github.io/posts/</link><description>Recent content in Posts on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 2</title><link>https://leimath.github.io/posts/gt-notes-p2/</link><pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p2/</guid><description>Degree of a Vertex The degree of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.</description><content>&lt;h1 id="degree-of-a-vertex">Degree of a Vertex&lt;/h1>
+&lt;p>The &lt;code>degree&lt;/code> of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.&lt;/p>
+&lt;p>Let $G(V,E)$ be a graph where $V,E$ are the vertex and edge set respectively. If it happens that for ALL vertex $v$, $d(v) = k$ for some $k$, then the graph $G$ is called &lt;code>k-regular&lt;/code>. The complete graph on $n$ vertices is $(n-1)$ regular.&lt;/p>
+&lt;p>Theorem[I]: For any graph $G$ with $n$ vertices, the sum of degrees of all the vertices is twice as large as the number of edges. In symbols, if the $n$ vertices are $V = \lbrace v_1, v_2, \dots, v_n \rbrace$ then $$\sum\limits_{k = 1}^n d(v_k) = 2 |E|$$&lt;/p>
+&lt;p>This is popularly known as the &lt;code>Hand-Shaking Lemma&lt;/code>.&lt;/p>
+&lt;p>Theorem[II]: In any graph $G$, the number of vertices with odd degree is even.&lt;/p>
+&lt;p>Theorem[III]: A vertex is at most adjacent to other $n-1$ vertices in a simple graph on $n$ vertices i.e $$d(v) \leqslant n-1$$ for all $v \in V.$&lt;/p>
+&lt;hr>
+&lt;p>Let there be $n$ vertices of type $x$ all contained in the set $X$ i.e, $X = \lbrace x_1, x_2, \dots, x_n \rbrace$ and $m$ vertices of type $y$ in $Y$ as $Y = \lbrace y_1, y_2, \dots, y_m\rbrace$ then $X \cap Y = \phi$ and if we connect $x_i$ with $y_i$ if a relationship exists then an edge $(x_i, y_i)$ is formed. This graph $G$ is called a &lt;code>bipartite&lt;/code> graph, or &lt;code>even&lt;/code> graph and is denoted by $G = (X,Y; E)$&lt;/p>
+&lt;p>If $G$ is a simple graph on $n$ vertices, then if we generate a graph by deleting all the edges belonging to $G$ from the complete graph $K_n$, this is called the &lt;code>complementary&lt;/code> graph of G, denoted by $\bar{G}$.&lt;/p>
+&lt;hr>
+&lt;h1 id="tactics">Tactics&lt;/h1>
+&lt;ul>
+&lt;li>Looking for some contradiction with the use of Hand-Shaking Lemma.&lt;/li>
+&lt;li>Selectively looking for what the degree of a vertex value can be.&lt;/li>
+&lt;li>Looking at the subgraph by deleting some edges, vertices and then reaching some contradiction.&lt;/li>
+&lt;li>Getting bounds on the degree of all vertex values.&lt;/li>
+&lt;li>Viewing $d(v)$ as some algebraic object to use inequalities in it.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> Show that at any party, there are always at least two people with exactly the
+same number of friends at the party.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> A cube with edge of length $n$ is cut into $n^3$ unit cubes by planes parallel to its sides. How many pairs of unit cubes whose common vertices are no more than $2$ are there?&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> There are $n$ points on the plane. Prove that the number of pairs of points whose distance is $1$ would not exceed $$\frac{n}{4} + \frac{\sqrt{2}}{2}n^{\frac{3}{2}}$$&lt;/p></content></item><item><title>My Graph Theory Notes - Part 1</title><link>https://leimath.github.io/posts/gt-notes-p1/</link><pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p1/</guid><description>This is a series of my notes on graph theory and usage in Scholarship Problems. We look at what a graph is today and present some terminologies. We also present some basic tactics to solve elementary problems.
 Following the tradition of this blog, we do not present any illustrations on using the tactics as it limits the readers to thinking about the problems only through a specific approach whereas in an exam environment multiple approaches and various combination of techniques is necessary.</description><content>&lt;p>This is a series of my notes on graph theory and usage in Scholarship Problems. We look at what a graph is today and present some terminologies. We also present some basic tactics to solve elementary problems.&lt;/p>
 &lt;p>Following the tradition of this blog, we do not present any illustrations on using the tactics as it limits the readers to thinking about the problems only through a specific approach whereas in an exam environment multiple approaches and various combination of techniques is necessary.&lt;/p>
 &lt;hr>
@@ -25,7 +49,7 @@ Following the tradition of this blog, we do not present any illustrations on usi
 &lt;p>If $n$ is the number of vertices of a graph, the number of edges are $\binom{n}{2} = \frac{1}{2} n(n-1).$&lt;/p>
 &lt;p>A graph is &lt;code>finite&lt;/code> if cardinality of vertices and edges are finite. If a graph has infinitely many vertices OR edges, then it is &lt;code>infinite&lt;/code>.&lt;/p>
 &lt;hr>
-&lt;h1 id="tactics">Tactics:&lt;/h1>
+&lt;h1 id="tactics">Tactics&lt;/h1>
 &lt;p>A wide variety of questions can be tackled merely by the above definitions. The tactics to solve such problems are:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>Reformulate the question&lt;/code> : This sounds simple enough but not always clicks to mind by a first look. After translating the question in graph theoritic terms and &lt;strong>constructing a graph&lt;/strong>, a few too many questions are tremendously simplified to some form of logical argument or something to do with the data provided/inferred.&lt;/li>
@@ -320,7 +344,7 @@ the form $4t + 1$&lt;/p>
 &lt;/ul>
 &lt;hr>
 &lt;h1 id="the-proof-of-a-theorem">The Proof of a Theorem&lt;/h1>
-&lt;p>Theorem: Let $r \in \mathbb{N}$. The Fibonacci numbers modulo r form a periodic sequence.&lt;/p>
+&lt;p>Theorem: Let $r \in \mathbb{N}$. The Fibonacci numbers modulo $r$ form a periodic sequence.&lt;/p>
 &lt;p>Proof:&lt;/p>
 &lt;p>The total number of possible pairs $\left(F_{i} \bmod r, F_{i+1} \bmod r\right)$ is $r^{2}$. Therefore some ordered pair must occur more than once, so pick one that repeats and label it $n$ and $n+j$; that is,
 $$

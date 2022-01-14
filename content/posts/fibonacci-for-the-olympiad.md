@@ -92,7 +92,7 @@ the form $4t + 1$
 
 # The Proof of a Theorem
 
-Theorem: Let $r \in \mathbb{N}$. The Fibonacci numbers modulo r form a periodic sequence.
+Theorem: Let $r \in \mathbb{N}$. The Fibonacci numbers modulo $r$ form a periodic sequence.
 
 Proof: 
 

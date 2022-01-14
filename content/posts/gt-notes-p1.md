@@ -43,7 +43,7 @@ If $n$ is the number of vertices of a graph, the number of edges are $\binom{n}{
 A graph is `finite` if cardinality of vertices and edges are finite. If a graph has infinitely many vertices OR edges, then it is `infinite`.
 
 ---
-# Tactics:
+# Tactics
 
 A wide variety of questions can be tackled merely by the above definitions. The tactics to solve such problems are:
 

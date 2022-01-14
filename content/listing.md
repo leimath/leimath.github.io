@@ -4,3 +4,4 @@
 * [A Toolbox for Diophantine Equations](https://leimath.github.io/posts/diophantine-toolbox/)
 * [Problems from December '21](https://leimath.github.io/posts/dec21-problems/)
 * [Graph Theory Notes - Part 1](https://leimath.github.io/posts/gt-notes-p1/)
+* [Graph Theory Notes - Part 2](https://leimath.github.io/posts/gt-notes-p2/)

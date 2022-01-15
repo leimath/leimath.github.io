@@ -4,6 +4,9 @@ date = "2022-01-14"
 author = "LeiMath"
 +++
 
+The book followed throughout is: _Graph Theory with Applications_ by _Bondy J.A., Murty U.S.R._. Please refer to the book for examples as well as visual graph drawings.
+
+
 # Degree of a Vertex
 
 The `degree` of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.
@@ -14,7 +17,7 @@ Theorem[I]: For any graph $G$ with $n$ vertices, the sum of degrees of all the v
 
 This is popularly known as the `Hand-Shaking Lemma`.
 
-Theorem[II]: In any graph $G$, the number of vertices with odd degree is even.
+Theorem[II]: In any *finite* graph $G$, the number of vertices with odd degree is even.
 
 Theorem[III]: A vertex is at most adjacent to other $n-1$ vertices in a simple graph on $n$ vertices i.e $$d(v) \leqslant n-1$$ for all $v \in V.$
 

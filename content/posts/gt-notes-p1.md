@@ -8,9 +8,12 @@ This is a series of my notes on graph theory and usage in Scholarship Problems. 
 
 Following the tradition of this blog, we do not present any illustrations on using the tactics as it limits the readers to thinking about the problems only through a specific approach whereas in an exam environment multiple approaches and various combination of techniques is necessary.
 
+
+The book followed throughout is: _Graph Theory with Applications_ by _Bondy J.A., Murty U.S.R._. Please refer to the book for examples as well as visual graph drawings.
+
 ---
 
-# Graphs
+# Graphs 
 
 A graph is a set of points with certain vertices joined by some edge. The graph represents a binary relationship.
 
@@ -38,9 +41,11 @@ For a graph $G_0$ and $G_1$, if it is so that vertex and edge of $G_0$ is a subs
 
 Two points are `adjacent` if there is a edge joining them. A vertex is `incident` to edge if the vertex is the end of the edge. A vertex which has a edge joining itself to itself is called a `loop`. Two edges with same pair of vertex are called `parallel`. A graph is `simple` if it has no loops or parallel edges. A `complete` graph is a graph in which *every* two point are adjacent i.e they have a edge between them.
 
-If $n$ is the number of vertices of a graph, the number of edges are $\binom{n}{2} = \frac{1}{2} n(n-1).$
+If $n$ is the number of vertices of a graph, the total number of possible edges (or, number of edges in a complete graph) are $\binom{n}{2} = \frac{1}{2} n(n-1).$
 
 A graph is `finite` if cardinality of vertices and edges are finite. If a graph has infinitely many vertices OR edges, then it is `infinite`.
+
+$\star$ Generally, unless stated otherwise - we use *finite* graphs all throughout these notes.
 
 ---
 # Tactics

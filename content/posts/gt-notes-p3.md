@@ -4,10 +4,12 @@ date = "2022-01-15"
 author = "LeiMath"
 +++
 
-We take a look at $k$-partite graphs and Turán's Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
+This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán's Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
 
 The book followed throughout is: _Graph Theory with Applications_ by _Bondy J.A., Murty U.S.R._. Please refer to the book for examples as well as visual graph drawings.
 
+---
+---
 
 # $k$-partite Graphs
 
@@ -19,6 +21,8 @@ Let $G$ be a graph with with the vertex set $V$ then if
 then if these two conditions are met, we call a graph `k-partite`. A 2-partite graph is called a `bigraph`. A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$
 
 It is not difficult to convince oneself that any graph with $n$ vertices is $n$-partite graph.
+
+$$\dotsb$$
 
 Suppose that $G^\prime$ is a _simple_ $k$-partite graph as in $G^\prime = (V_1^k;E)$ with $| V_i| = m_i$, $i \in \lbrace 1,2,3, \ldots \rbrace$. The graph is said to be `complete k-partite` if **any** two vertices belonging in two different subsets of the vertex set $V^\prime$ are adjacent, i.e, $u \in V_i , v \in V_j , i \neq j$ and $u$ is adjacent to $v$. We denote the graph $G^\prime$ as $K_{m_1, m_2, \dots , m_k}$ and more frequent notation is $T_{k}(n)$ where $n$ stands for the total number of vertices.
 
@@ -39,9 +43,9 @@ Hint: Prove by Induction.
 
 $$\dotsb$$
 
-`Theorem 2 [Turán]`: Suppose $G$ contains no $K_{m+1}$, then $e(G) \leqslant e(T_{k}(n))$. The equality holds if and only if $G \cong T_{k}(n)$. 
+`Theorem 2 [Turán]`: Suppose $G$ contains no $K_{k+1}$, then $e(G) \leqslant e(T_{k}(n))$. The equality holds if and only if $G \cong T_{k}(n)$. 
 
-Key: The $\cong$ represents 'isomorphic'. The $e(.)$ stands for the number of edges. $G$ is any simple graph. $T_{k}(n)$ represents a complete $k$-partite graph with $n$ vertices. $K_{m+1}$ is the complete graph with $m+1$ vertices.
+Key: The $\cong$ represents 'isomorphic'. The $e(.)$ stands for the number of edges. $G$ is any simple graph. $T_{k}(n)$ represents a complete $k$-partite graph with $n$ vertices. $K_{k+1}$ is the complete graph with $k+1$ vertices.
 
 The proof can be found in the book _Graph Theory with Applications_ by _Bondy J.A., Murty U.S.R._ as was mentioned in Part 1 of these notes.
 

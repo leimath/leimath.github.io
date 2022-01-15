@@ -12,6 +12,7 @@ Following the tradition of this blog, we do not present any illustrations on usi
 The book followed throughout is: _Graph Theory with Applications_ by _Bondy J.A., Murty U.S.R._. Please refer to the book for examples as well as visual graph drawings.
 
 ---
+---
 
 # Graphs 
 
@@ -39,13 +40,13 @@ For two graphs $G_1, G_2$ if there exists a bijection between the vertices of $G
 
 For a graph $G_0$ and $G_1$, if it is so that vertex and edge of $G_0$ is a subset of vertex and edge of $G_1$ then $G_0$ is called a `subgraph`.
 
-Two points are `adjacent` if there is a edge joining them. A vertex is `incident` to edge if the vertex is the end of the edge. A vertex which has a edge joining itself to itself is called a `loop`. Two edges with same pair of vertex are called `parallel`. A graph is `simple` if it has no loops or parallel edges. A `complete` graph is a graph in which *every* two point are adjacent i.e they have a edge between them.
+Two points are `adjacent` if there is a edge joining them. A vertex is `incident` to edge if the vertex is the end of the edge. A vertex which has a edge joining itself to itself is called a `loop`. Two edges with same pair of vertex are called `parallel`. A graph is `simple` if it has no loops or parallel edges. A `complete` graph is a graph in which *every* two point are adjacent i.e they have a edge between them. A complete graph with $n$ vertices is denoted with $K_n$.
 
 If $n$ is the number of vertices of a graph, the total number of possible edges (or, number of edges in a complete graph) are $\binom{n}{2} = \frac{1}{2} n(n-1).$
 
 A graph is `finite` if cardinality of vertices and edges are finite. If a graph has infinitely many vertices OR edges, then it is `infinite`.
 
-$\star$ Generally, unless stated otherwise - we use *finite* graphs all throughout these notes.
+$\star$ Generally, unless stated otherwise - we use *finite* simple graphs all throughout these notes.
 
 ---
 # Tactics

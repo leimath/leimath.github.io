@@ -11,7 +11,7 @@ The book followed throughout is: Graph Theory with Applications by Bondy J.A., M
 &lt;p>It is not difficult to convince oneself that any graph with $n$ vertices is $n$-partite graph.&lt;/p>
 &lt;p>Suppose that $G^\prime$ is a &lt;em>simple&lt;/em> $k$-partite graph as in $G^\prime = (V_1^k;E)$ with $| V_i| = m_i$, $i \in \lbrace 1,2,3, \ldots \rbrace$. The graph is said to be &lt;code>complete k-partite&lt;/code> if &lt;strong>any&lt;/strong> two vertices belonging in two different subsets of the vertex set $V^\prime$ are adjacent, i.e, $u \in V_i , v \in V_j , i \neq j$ and $u$ is adjacent to $v$. We denote the graph $G^\prime$ as $K_{m_1, m_2, \dots , m_k}$ and more frequent notation is $T_{k}(n)$ where $n$ stands for the total number of vertices.&lt;/p>
 &lt;p>A complete bigraph is shown below, denoted as $K_{2,3}$&lt;/p>
-&lt;p>&lt;img src="./img/complete-bigraph.png" alt="A complete bigraph">&lt;/p>
+&lt;p>&lt;img src="https://leimath.github.io/assets/images/complete-bigraph.png" alt="A complete bigraph">&lt;/p>
 &lt;p>Complete bigraphs do not contain triangles made with the vertices of the graph itself.&lt;/p>
 &lt;hr>
 &lt;h1 id="theorems">Theorems&lt;/h1>
@@ -401,11 +401,12 @@ I frequent in competitive programming websites, in particular - Atcoder. I have 
 &lt;p>This website is a collection of Scholarship Math Problems, Articles and my Notes. Ocassionally stumbling into Olympiad Math Problems and Mathematical Curiosities.&lt;/p>
 &lt;p>Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theory as well as Playwriting among all things. I sketch sometimes.&lt;/p>
 &lt;p>I frequent in competitive programming websites, in particular - Atcoder. I have been also into CTF Challenges to some extent as well.&lt;/p>
-&lt;p>A complete list of all the posts &lt;em>yearwise&lt;/em> can be found in the &lt;code>Listing&lt;/code> page.&lt;/p></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations Problems from December &amp;lsquo;21 Graph Theory Notes - Part 1 Graph Theory Notes - Part 2</description><content>&lt;h1 id="2022">2022&lt;/h1>
+&lt;p>A complete list of all the posts &lt;em>yearwise&lt;/em> can be found in the &lt;a href="https://leimath.github.io/listing/">Listing&lt;/a> page.&lt;/p></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations Problems from December &amp;lsquo;21 Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Part 3</description><content>&lt;h1 id="2022">2022&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://leimath.github.io/posts/fibonacci-for-the-olympiad/">Fibonacci For The Olympiad&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/diophantine-toolbox/">A Toolbox for Diophantine Equations&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/dec21-problems/">Problems from December &amp;lsquo;21&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p1/">Graph Theory Notes - Part 1&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p2/">Graph Theory Notes - Part 2&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p3/">Graph Theory Notes - Part 3&lt;/a>&lt;/li>
 &lt;/ul></content></item></channel></rss>

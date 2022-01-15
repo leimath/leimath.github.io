@@ -67,6 +67,7 @@ LeiMath
 <div class=post-content><div>
 <p>This is a series of my notes on graph theory and usage in Scholarship Problems. We look at what a graph is today and present some terminologies. We also present some basic tactics to solve elementary problems.</p>
 <p>Following the tradition of this blog, we do not present any illustrations on using the tactics as it limits the readers to thinking about the problems only through a specific approach whereas in an exam environment multiple approaches and various combination of techniques is necessary.</p>
+<p>The book followed throughout is: <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p>
 <hr>
 <h1 id=graphs>Graphs<a href=#graphs class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p>A graph is a set of points with certain vertices joined by some edge. The graph represents a binary relationship.</p>
@@ -88,8 +89,9 @@ LeiMath
 <p>For two graphs $G_1, G_2$ if there exists a bijection between the vertices of $G_1$ to $G_2$ such that the number of edges joining two points in $G_1$ equals the number the edges joining two in $G_2$, then we call such two graphs $G_1, G_2$ as <code>isomorphic</code>.</p>
 <p>For a graph $G_0$ and $G_1$, if it is so that vertex and edge of $G_0$ is a subset of vertex and edge of $G_1$ then $G_0$ is called a <code>subgraph</code>.</p>
 <p>Two points are <code>adjacent</code> if there is a edge joining them. A vertex is <code>incident</code> to edge if the vertex is the end of the edge. A vertex which has a edge joining itself to itself is called a <code>loop</code>. Two edges with same pair of vertex are called <code>parallel</code>. A graph is <code>simple</code> if it has no loops or parallel edges. A <code>complete</code> graph is a graph in which <em>every</em> two point are adjacent i.e they have a edge between them.</p>
-<p>If $n$ is the number of vertices of a graph, the number of edges are $\binom{n}{2} = \frac{1}{2} n(n-1).$</p>
+<p>If $n$ is the number of vertices of a graph, the total number of possible edges (or, number of edges in a complete graph) are $\binom{n}{2} = \frac{1}{2} n(n-1).$</p>
 <p>A graph is <code>finite</code> if cardinality of vertices and edges are finite. If a graph has infinitely many vertices OR edges, then it is <code>infinite</code>.</p>
+<p>$\star$ Generally, unless stated otherwise - we use <em>finite</em> graphs all throughout these notes.</p>
 <hr>
 <h1 id=tactics>Tactics<a href=#tactics class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p>A wide variety of questions can be tackled merely by the above definitions. The tactics to solve such problems are:</p>

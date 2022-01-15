@@ -3,7 +3,8 @@
 <title>My Graph Theory Notes - Part 2 :: LeiMath</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Degree of a Vertex The degree of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.">
+<meta name=description content="The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+Degree of a Vertex The degree of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges.">
 <meta name=keywords content>
 <meta name=robots content="noodp">
 <link rel=canonical href=https://leimath.github.io/posts/gt-notes-p2/>
@@ -17,7 +18,8 @@
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="My Graph Theory Notes - Part 2">
-<meta property="og:description" content="Degree of a Vertex The degree of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.">
+<meta property="og:description" content="The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+Degree of a Vertex The degree of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges.">
 <meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p2/">
 <meta property="og:site_name" content="LeiMath">
 <meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
@@ -63,12 +65,13 @@ LeiMath
 <span class=post-author>:: LeiMath</span>
 </div>
 <div class=post-content><div>
+<p>The book followed throughout is: <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p>
 <h1 id=degree-of-a-vertex>Degree of a Vertex<a href=#degree-of-a-vertex class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p>The <code>degree</code> of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.</p>
 <p>Let $G(V,E)$ be a graph where $V,E$ are the vertex and edge set respectively. If it happens that for ALL vertex $v$, $d(v) = k$ for some $k$, then the graph $G$ is called <code>k-regular</code>. The complete graph on $n$ vertices is $(n-1)$ regular.</p>
 <p>Theorem[I]: For any graph $G$ with $n$ vertices, the sum of degrees of all the vertices is twice as large as the number of edges. In symbols, if the $n$ vertices are $V = \lbrace v_1, v_2, \dots, v_n \rbrace$ then $$\sum\limits_{k = 1}^n d(v_k) = 2 |E|$$</p>
 <p>This is popularly known as the <code>Hand-Shaking Lemma</code>.</p>
-<p>Theorem[II]: In any graph $G$, the number of vertices with odd degree is even.</p>
+<p>Theorem[II]: In any <em>finite</em> graph $G$, the number of vertices with odd degree is even.</p>
 <p>Theorem[III]: A vertex is at most adjacent to other $n-1$ vertices in a simple graph on $n$ vertices i.e $$d(v) \leqslant n-1$$ for all $v \in V.$</p>
 <hr>
 <p>Let there be $n$ vertices of type $x$ all contained in the set $X$ i.e, $X = \lbrace x_1, x_2, \dots, x_n \rbrace$ and $m$ vertices of type $y$ in $Y$ as $Y = \lbrace y_1, y_2, \dots, y_m\rbrace$ then $X \cap Y = \phi$ and if we connect $x_i$ with $y_i$ if a relationship exists then an edge $(x_i, y_i)$ is formed. This graph $G$ is called a <code>bipartite</code> graph, or <code>even</code> graph and is denoted by $G = (X,Y; E)$</p>
@@ -95,6 +98,12 @@ same number of friends at the party.</p>
 <hr>
 </div>
 <div class=pagination__buttons>
+<span class="button previous">
+<a href=https://leimath.github.io/posts/gt-notes-p3/>
+<span class=button__icon>←</span>
+<span class=button__text>My Graph Theory Notes - Part 3</span>
+</a>
+</span>
 <span class="button next">
 <a href=https://leimath.github.io/posts/gt-notes-p1/>
 <span class=button__text>My Graph Theory Notes - Part 1</span>

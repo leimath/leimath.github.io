@@ -3,8 +3,8 @@
 <title>My Graph Theory Notes - Part 3 :: LeiMath</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
-The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.">
+<meta name=description content="This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
+The book followed throughout is: Graph Theory with Applications by Bondy J.">
 <meta name=keywords content>
 <meta name=robots content="noodp">
 <link rel=canonical href=https://leimath.github.io/posts/gt-notes-p3/>
@@ -18,8 +18,8 @@ The book followed throughout is: Graph Theory with Applications by Bondy J.A., M
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="My Graph Theory Notes - Part 3">
-<meta property="og:description" content="We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
-The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.">
+<meta property="og:description" content="This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
+The book followed throughout is: Graph Theory with Applications by Bondy J.">
 <meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p3/">
 <meta property="og:site_name" content="LeiMath">
 <meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
@@ -65,8 +65,10 @@ LeiMath
 <span class=post-author>:: LeiMath</span>
 </div>
 <div class=post-content><div>
-<p>We take a look at $k$-partite graphs and Turán&rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.</p>
+<p>This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.</p>
 <p>The book followed throughout is: <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p>
+<hr>
+<hr>
 <h1 id=k-partite-graphs>$k$-partite Graphs<a href=#k-partite-graphs class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p>Let $G$ be a graph with with the vertex set $V$ then if</p>
 <ol>
@@ -75,6 +77,7 @@ LeiMath
 </ol>
 <p>then if these two conditions are met, we call a graph <code>k-partite</code>. A 2-partite graph is called a <code>bigraph</code>. A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$</p>
 <p>It is not difficult to convince oneself that any graph with $n$ vertices is $n$-partite graph.</p>
+<p>$$\dotsb$$</p>
 <p>Suppose that $G^\prime$ is a <em>simple</em> $k$-partite graph as in $G^\prime = (V_1^k;E)$ with $| V_i| = m_i$, $i \in \lbrace 1,2,3, \ldots \rbrace$. The graph is said to be <code>complete k-partite</code> if <strong>any</strong> two vertices belonging in two different subsets of the vertex set $V^\prime$ are adjacent, i.e, $u \in V_i , v \in V_j , i \neq j$ and $u$ is adjacent to $v$. We denote the graph $G^\prime$ as $K_{m_1, m_2, \dots , m_k}$ and more frequent notation is $T_{k}(n)$ where $n$ stands for the total number of vertices.</p>
 <p>A complete bigraph is shown below, denoted as $K_{2,3}$ or $T_3 (5)$.</p>
 <p><img src=/assets/images/complete-bigraph.png alt="A complete bigraph"></p>
@@ -84,8 +87,8 @@ LeiMath
 <p><code>Theorem 1</code>: If a graph $G$ with $n$ vertices contains no triangle, the largest number of edges of $G$ is $\left[\frac{n^2}{4}\right]$ where $\left [ .\right]$ represents the greatest integer function.</p>
 <p>Hint: Prove by Induction.</p>
 <p>$$\dotsb$$</p>
-<p><code>Theorem 2 [Turán]</code>: Suppose $G$ contains no $K_{m+1}$, then $e(G) \leqslant e(T_{k}(n))$. The equality holds if and only if $G \cong T_{k}(n)$.</p>
-<p>Key: The $\cong$ represents &lsquo;isomorphic&rsquo;. The $e(.)$ stands for the number of edges. $G$ is any simple graph. $T_{k}(n)$ represents a complete $k$-partite graph with $n$ vertices. $K_{m+1}$ is the complete graph with $m+1$ vertices.</p>
+<p><code>Theorem 2 [Turán]</code>: Suppose $G$ contains no $K_{k+1}$, then $e(G) \leqslant e(T_{k}(n))$. The equality holds if and only if $G \cong T_{k}(n)$.</p>
+<p>Key: The $\cong$ represents &lsquo;isomorphic&rsquo;. The $e(.)$ stands for the number of edges. $G$ is any simple graph. $T_{k}(n)$ represents a complete $k$-partite graph with $n$ vertices. $K_{k+1}$ is the complete graph with $k+1$ vertices.</p>
 <p>The proof can be found in the book <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em> as was mentioned in Part 1 of these notes.</p>
 <p>Note 1: This theorem&rsquo;s proof is not necessary for olympiads/scholarship exams. Theorem 1 is rather common and is sometimes referred to Turán&rsquo;s theorem as well.</p>
 <p>Note 2: $e(T_k(n)) = \binom{n - k}{2} + (m-1)\binom{k+1}{2}$ where $k = \lfloor \frac{n}{m} \rfloor$</p>

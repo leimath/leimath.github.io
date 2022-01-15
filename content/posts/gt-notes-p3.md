@@ -25,7 +25,7 @@ Suppose that $G^\prime$ is a _simple_ $k$-partite graph as in $G^\prime = (V_1^k
 
 A complete bigraph is shown below, denoted as $K_{2,3}$
 
-![A complete bigraph](./img/complete-bigraph.png)
+![A complete bigraph](/assets/images/complete-bigraph.png)
 
 Complete bigraphs do not contain triangles made with the vertices of the graph itself.
 

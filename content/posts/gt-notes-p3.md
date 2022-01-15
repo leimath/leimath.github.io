@@ -23,7 +23,7 @@ It is not difficult to convince oneself that any graph with $n$ vertices is $n$-
 Suppose that $G^\prime$ is a _simple_ $k$-partite graph as in $G^\prime = (V_1^k;E)$ with $| V_i| = m_i$, $i \in \lbrace 1,2,3, \ldots \rbrace$. The graph is said to be `complete k-partite` if **any** two vertices belonging in two different subsets of the vertex set $V^\prime$ are adjacent, i.e, $u \in V_i , v \in V_j , i \neq j$ and $u$ is adjacent to $v$. We denote the graph $G^\prime$ as $K_{m_1, m_2, \dots , m_k}$ and more frequent notation is $T_{k}(n)$ where $n$ stands for the total number of vertices.
 
 
-A complete bigraph is shown below, denoted as $K_{2,3}$
+A complete bigraph is shown below, denoted as $K_{2,3}$ or $T_3 (5)$.
 
 ![A complete bigraph](/assets/images/complete-bigraph.png)
 

@@ -33,6 +33,8 @@ A complete bigraph is shown below, denoted as $K_{2,3}$ or $T_3 (5)$.
 
 Complete bigraphs do not contain triangles made with the vertices of the graph itself.
 
+A complete graph and a complete $k$-partite graph are $k$-regular for some $k$.
+
 ---
 
 # Theorems

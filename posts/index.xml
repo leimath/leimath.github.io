@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on LeiMath</title><link>https://leimath.github.io/posts/</link><description>Recent content in Posts on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 3</title><link>https://leimath.github.io/posts/gt-notes-p3/</link><pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p3/</guid><description>This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on LeiMath</title><link>https://leimath.github.io/posts/</link><description>Recent content in Posts on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 4</title><link>https://leimath.github.io/posts/gt-notes-p4/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p4/</guid><description>This is the fourth part of the graph theory notes. We take a look at Trees.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+Trees Before introducing trees, here are some essential terminologies:
+Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
+If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a chain from $v_0$ and $v_m$.</description><content>&lt;p>This is the fourth part of the graph theory notes. We take a look at Trees.&lt;/p>
+&lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="trees">Trees&lt;/h1>
+&lt;p>Before introducing trees, here are some essential terminologies:&lt;/p>
+&lt;p>Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$&lt;/p>
+&lt;ol>
+&lt;li>If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a &lt;code>chain&lt;/code> from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$&lt;/li>
+&lt;li>$m$ is called the &lt;code>length&lt;/code> of the chain.&lt;/li>
+&lt;li>If $v_0$ and $v_m$ are the same, then the chain is called a &lt;code>cycle&lt;/code>. Note that the proper definition for a cycle requires all $v_i$ , $i \in \lbrace 2,m-1 \rbrace$ to be distinct and $v_0 = v_m$ however we do not use the distinctness part for use in these notes for simplicity.&lt;/li>
+&lt;li>If a graph is not cyclic then it is called acyclic.&lt;/li>
+&lt;li>If a chain exists between &lt;strong>ANY&lt;/strong> two vertices, then the graph is called connected, else the graph is disconnected.&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>A connected graph which contains no cycle (i.e, acyclic) is called a &lt;code>tree&lt;/code>. It is denoted by $T$. By definition, tree is a simple graph. A tree can be used to construct a graph with more than $n-1$ edges, hence such a tree is called &lt;code>generating tree&lt;/code> of the graph.&lt;/p>
+&lt;p>A graph without circles must be composed of one or more trees whose vertices are disjoint, such a graph is called a &lt;code>forest&lt;/code>.&lt;/p>
+&lt;p>The vertex of a tree which has degree 1 is called a &lt;code>leaf&lt;/code> or a &lt;code>pendant vertex&lt;/code>.&lt;/p>
+&lt;hr>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>&lt;code>Theorem 1&lt;/code>: If a tree has no less than two vertices, then it has at least two leaves (pendant vertices).&lt;/p>
+&lt;p>&lt;em>Proof 1&lt;/em> : Suppose we start from some vertex $u$, along the edges of $T$, every edge can only be passed by once. Since a tree has no cycle, it cannot return to the vertices which have been passed. It means that each vertex can be passed at most once. If the vertex we pass is not a pendant vertex, because its degree is more than 1 , we can continue. But the number of vertices of $T$ is finite, so it is impossible to continue forever. If we cannot continue further at $v$, then $v$ is a pendant vertex.
+We start from a pendant vertex $v$ and we can end up at another pendant vertex $v^{\prime}$. So tree $T$ has at least two pendant vertices.&lt;/p>
+&lt;p>&lt;em>Proof 2&lt;/em> : Assume that $\mu=u v_{1} v_{2} \cdots v_{k} v$ is the longest chain of $T$, we can show that $d(u)=d(v)=1$, i.e. $u, v$ are pendant vertices.
+In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\right)$ adjacent to $u$. If $w$ is one of $v_{2}, \ldots, v_{k}, v$, then a cycle occurs. It contradicts the definition of tree. If $w$ is different from $v_{2}, \ldots, v_{k}$, $v$, then $w u v_{1} \cdots v_{k} v$ is a chain longer than $\mu$, a contradiction. So $d(u)=1$. Similarly, $d(v)=1$. Hence tree $T$ has at least two pendant vertices.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 2[Pösá]&lt;/code> Let $V$ be the set of all the vertices of $G, E$ the set of all the edges of $G$. Prove that if $|E| \geqslant|V|+4$, then there must be two cycles which have no common edges.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 3&lt;/code>: Let $n$ be the number of vertices of $T$, then the number of edges of $T$ is $n - 1$.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 4&lt;/code>: Let $T$ be a graph with $n$ vertices and $e$ edges. Then the following three propositions are equivalent:&lt;/p>
+&lt;ul>
+&lt;li>$T$ is a tree&lt;/li>
+&lt;li>$T$ has no cycle, and edges of $T$ equal $n-1$&lt;/li>
+&lt;li>$T$ is connected, and edges of $T$ equal $n-1$&lt;/li>
+&lt;/ul>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 5&lt;/code>: If $T$ is a tree then $T$ is connected, but after deleting any edge of $T$, the obtained graph $G$ is disconnected.&lt;/p>
+&lt;p>&lt;code>Corollary&lt;/code>: If $T$ is a tree and $T$ then after adding an edge the obtained graph contains only one unique cycle.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Optimization of Tree&lt;/code>: Tree is a graph with the least number of edges. Tree is also a graph without a cycle which the has the most possible number of edges.&lt;/p>
+&lt;p>&lt;code>Theorem 6&lt;/code>: In any graph $G$, let $e$ denote the number of edges and $n$ be the number of vertices. If $e &amp;lt; n - 1$ then $G$ is disconnected. If $e &amp;gt; n -1$ then $G$ must have a cycle&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 7&lt;/code>: If there is only one chain between any two vertices of $T$ then $T$ must be a tree.&lt;/p>
+&lt;hr>
+&lt;h1 id="tactics">Tactics&lt;/h1>
+&lt;ul>
+&lt;li>&lt;code>Proof by construction&lt;/code>: Theorem 1 Proof 1 is an example. It can be employed when the given question is intuitvely obvious enough.&lt;/li>
+&lt;li>&lt;code>Longest Chain Method&lt;/code>: Theorem 2 Proof 2 is an example. It relies on the principles of Neighbourhood Dragging (more accurately, the reverse principle of neighbourhood dragging) as discussed in Part 1 of the notes. We pick an element and argue if the neighbours belong in the chain or not to reach some sort of contradiction.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> Prove Pösá&amp;rsquo;s Theorem (Theorem 2 above).&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> [USAMO 1986] In a lecture, there are five mathematicians. Each of them took a nap twice and every two of them took naps at the same time. Prove that there must be three persons who took naps at the same time.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> Given a number table with $n$ rows and $n$ columns, every two rows are different. Prove that there must exist a column, after deleting it, every two rows are still different.&lt;/p>
+&lt;p>&lt;code>4.&lt;/code> [CMC 1987] $n(n&amp;gt;3)$ table tennis players play several single games. The opponents of any two players are different. Prove that we can remove one player so that the opponents of any two players in the remaining players are still different.&lt;/p>
+&lt;p>&lt;code>5.&lt;/code> If a graph $G$ has $n$ vertices and $n-1$ edges, then $G$ is a tree. Prove or disprove.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 3</title><link>https://leimath.github.io/posts/gt-notes-p3/</link><pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p3/</guid><description>This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
 The book followed throughout is: Graph Theory with Applications by Bondy J.</description><content>&lt;p>This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.&lt;/p>
 &lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
 &lt;hr>
@@ -16,6 +76,7 @@ The book followed throughout is: Graph Theory with Applications by Bondy J.</des
 &lt;p>A complete bigraph is shown below, denoted as $K_{2,3}$ or $T_3 (5)$.&lt;/p>
 &lt;p>&lt;img src="https://leimath.github.io/assets/images/complete-bigraph.png" alt="A complete bigraph">&lt;/p>
 &lt;p>Complete bigraphs do not contain triangles made with the vertices of the graph itself.&lt;/p>
+&lt;p>A complete graph and a complete $k$-partite graph are $k$-regular for some $k$.&lt;/p>
 &lt;hr>
 &lt;h1 id="theorems">Theorems&lt;/h1>
 &lt;p>&lt;code>Theorem 1&lt;/code>: If a graph $G$ with $n$ vertices contains no triangle, the largest number of edges of $G$ is $\left[\frac{n^2}{4}\right]$ where $\left [ .\right]$ represents the greatest integer function.&lt;/p>

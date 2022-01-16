@@ -1,0 +1,160 @@
+<!doctype html><html lang=en>
+<head>
+<title>My Graph Theory Notes - Part 4 :: LeiMath</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="This is the fourth part of the graph theory notes. We take a look at Trees.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+  Trees Before introducing trees, here are some essential terminologies:
+Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
+ If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a chain from $v_0$ and $v_m$.">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<link rel=canonical href=https://leimath.github.io/posts/gt-notes-p4/>
+<link rel=stylesheet href=https://leimath.github.io/assets/style.css>
+<link rel=stylesheet href=https://leimath.github.io/assets/green.css>
+<link rel=apple-touch-icon href=https://leimath.github.io/img/apple-touch-icon-192x192.png>
+<link rel="shortcut icon" href=https://leimath.github.io/img/favicon/green.png>
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content>
+<meta name=twitter:creator content="LeiMath">
+<meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My Graph Theory Notes - Part 4">
+<meta property="og:description" content="This is the fourth part of the graph theory notes. We take a look at Trees.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+  Trees Before introducing trees, here are some essential terminologies:
+Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
+ If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a chain from $v_0$ and $v_m$.">
+<meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p4/">
+<meta property="og:site_name" content="LeiMath">
+<meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+<meta property="article:published_time" content="2022-01-16 00:00:00 +0000 UTC">
+</head>
+<body class=green>
+<div class="container headings--one-size">
+<header class=header>
+<div class=header__inner>
+<div class=header__logo>
+<a href=/>
+<div class=logo>
+LeiMath
+</div>
+</a>
+</div>
+<div class=menu-trigger>menu</div>
+</div>
+<nav class=menu>
+<ul class="menu__inner menu__inner--desktop">
+<li><a href=/about>About</a></li>
+<li><a href=/listing>Listing</a></li>
+</ul>
+<ul class="menu__inner menu__inner--mobile">
+<li><a href=/about>About</a></li>
+<li><a href=/listing>Listing</a></li>
+</ul>
+</nav>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}}</script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+</header>
+<div class=content>
+<div class=post>
+<h1 class=post-title>
+<a href=https://leimath.github.io/posts/gt-notes-p4/>My Graph Theory Notes - Part 4</a></h1>
+<div class=post-meta>
+<span class=post-date>
+2022-01-16
+</span>
+<span class=post-author>:: LeiMath</span>
+</div>
+<div class=post-content><div>
+<p>This is the fourth part of the graph theory notes. We take a look at Trees.</p>
+<p>The book followed throughout is: <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p>
+<hr>
+<hr>
+<h1 id=trees>Trees<a href=#trees class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>Before introducing trees, here are some essential terminologies:</p>
+<p>Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$</p>
+<ol>
+<li>If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a <code>chain</code> from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$</li>
+<li>$m$ is called the <code>length</code> of the chain.</li>
+<li>If $v_0$ and $v_m$ are the same, then the chain is called a <code>cycle</code>. Note that the proper definition for a cycle requires all $v_i$ , $i \in \lbrace 2,m-1 \rbrace$ to be distinct and $v_0 = v_m$ however we do not use the distinctness part for use in these notes for simplicity.</li>
+<li>If a graph is not cyclic then it is called acyclic.</li>
+<li>If a chain exists between <strong>ANY</strong> two vertices, then the graph is called connected, else the graph is disconnected.</li>
+</ol>
+<p>$$\dotsb$$</p>
+<p>A connected graph which contains no cycle (i.e, acyclic) is called a <code>tree</code>. It is denoted by $T$. By definition, tree is a simple graph. A tree can be used to construct a graph with more than $n-1$ edges, hence such a tree is called <code>generating tree</code> of the graph.</p>
+<p>A graph without circles must be composed of one or more trees whose vertices are disjoint, such a graph is called a <code>forest</code>.</p>
+<p>The vertex of a tree which has degree 1 is called a <code>leaf</code> or a <code>pendant vertex</code>.</p>
+<hr>
+<h1 id=theorems>Theorems<a href=#theorems class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p><code>Theorem 1</code>: If a tree has no less than two vertices, then it has at least two leaves (pendant vertices).</p>
+<p><em>Proof 1</em> : Suppose we start from some vertex $u$, along the edges of $T$, every edge can only be passed by once. Since a tree has no cycle, it cannot return to the vertices which have been passed. It means that each vertex can be passed at most once. If the vertex we pass is not a pendant vertex, because its degree is more than 1 , we can continue. But the number of vertices of $T$ is finite, so it is impossible to continue forever. If we cannot continue further at $v$, then $v$ is a pendant vertex.
+We start from a pendant vertex $v$ and we can end up at another pendant vertex $v^{\prime}$. So tree $T$ has at least two pendant vertices.</p>
+<p><em>Proof 2</em> : Assume that $\mu=u v_{1} v_{2} \cdots v_{k} v$ is the longest chain of $T$, we can show that $d(u)=d(v)=1$, i.e. $u, v$ are pendant vertices.
+In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\right)$ adjacent to $u$. If $w$ is one of $v_{2}, \ldots, v_{k}, v$, then a cycle occurs. It contradicts the definition of tree. If $w$ is different from $v_{2}, \ldots, v_{k}$, $v$, then $w u v_{1} \cdots v_{k} v$ is a chain longer than $\mu$, a contradiction. So $d(u)=1$. Similarly, $d(v)=1$. Hence tree $T$ has at least two pendant vertices.</p>
+<p>$$\dotsb$$</p>
+<p><code>Theorem 2[Pösá]</code> Let $V$ be the set of all the vertices of $G, E$ the set of all the edges of $G$. Prove that if $|E| \geqslant|V|+4$, then there must be two cycles which have no common edges.</p>
+<p>$$\dotsb$$</p>
+<p><code>Theorem 3</code>: Let $n$ be the number of vertices of $T$, then the number of edges of $T$ is $n - 1$.</p>
+<p>$$\dotsb$$</p>
+<p><code>Theorem 4</code>: Let $T$ be a graph with $n$ vertices and $e$ edges. Then the following three propositions are equivalent:</p>
+<ul>
+<li>$T$ is a tree</li>
+<li>$T$ has no cycle, and edges of $T$ equal $n-1$</li>
+<li>$T$ is connected, and edges of $T$ equal $n-1$</li>
+</ul>
+<p>$$\dotsb$$</p>
+<p><code>Theorem 5</code>: If $T$ is a tree then $T$ is connected, but after deleting any edge of $T$, the obtained graph $G$ is disconnected.</p>
+<p><code>Corollary</code>: If $T$ is a tree and $T$ then after adding an edge the obtained graph contains only one unique cycle.</p>
+<p>$$\dotsb$$</p>
+<p><code>Optimization of Tree</code>: Tree is a graph with the least number of edges. Tree is also a graph without a cycle which the has the most possible number of edges.</p>
+<p><code>Theorem 6</code>: In any graph $G$, let $e$ denote the number of edges and $n$ be the number of vertices. If $e &lt; n - 1$ then $G$ is disconnected. If $e > n -1$ then $G$ must have a cycle</p>
+<p>$$\dotsb$$</p>
+<p><code>Theorem 7</code>: If there is only one chain between any two vertices of $T$ then $T$ must be a tree.</p>
+<hr>
+<h1 id=tactics>Tactics<a href=#tactics class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<ul>
+<li><code>Proof by construction</code>: Theorem 1 Proof 1 is an example. It can be employed when the given question is intuitvely obvious enough.</li>
+<li><code>Longest Chain Method</code>: Theorem 2 Proof 2 is an example. It relies on the principles of Neighbourhood Dragging (more accurately, the reverse principle of neighbourhood dragging) as discussed in Part 1 of the notes. We pick an element and argue if the neighbours belong in the chain or not to reach some sort of contradiction.</li>
+</ul>
+<hr>
+<h1 id=questions>Questions<a href=#questions class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p><code>1.</code> Prove Pösá&rsquo;s Theorem (Theorem 2 above).</p>
+<p><code>2.</code> [USAMO 1986] In a lecture, there are five mathematicians. Each of them took a nap twice and every two of them took naps at the same time. Prove that there must be three persons who took naps at the same time.</p>
+<p><code>3.</code> Given a number table with $n$ rows and $n$ columns, every two rows are different. Prove that there must exist a column, after deleting it, every two rows are still different.</p>
+<p><code>4.</code> [CMC 1987] $n(n>3)$ table tennis players play several single games. The opponents of any two players are different. Prove that we can remove one player so that the opponents of any two players in the remaining players are still different.</p>
+<p><code>5.</code> If a graph $G$ has $n$ vertices and $n-1$ edges, then $G$ is a tree. Prove or disprove.</p>
+</div></div>
+<div class=pagination>
+<div class=pagination__title>
+<span class=pagination__title-h>Read other posts</span>
+<hr>
+</div>
+<div class=pagination__buttons>
+<span class="button next">
+<a href=https://leimath.github.io/posts/gt-notes-p3/>
+<span class=button__text>My Graph Theory Notes - Part 3</span>
+<span class=button__icon>→</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+<footer class=footer>
+<div class=footer__inner>
+<div class=copyright>
+<span>2022</a></span>
+<span>::</span>
+</div>
+</div>
+</footer>
+<script src=https://leimath.github.io/assets/main.js></script>
+<script src=https://leimath.github.io/assets/prism.js></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>notes on LeiMath</title><link>https://leimath.github.io/tags/notes/</link><description>Recent content in notes on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 4</title><link>https://leimath.github.io/posts/gt-notes-p4/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p4/</guid><description>This is the fourth part of the graph theory notes. We take a look at Trees.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+Trees Before introducing trees, here are some essential terminologies:
+Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
+If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a chain from $v_0$ and $v_m$.</description><content>&lt;p>This is the fourth part of the graph theory notes. We take a look at Trees.&lt;/p>
+&lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="trees">Trees&lt;/h1>
+&lt;p>Before introducing trees, here are some essential terminologies:&lt;/p>
+&lt;p>Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$&lt;/p>
+&lt;ol>
+&lt;li>If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a &lt;code>chain&lt;/code> from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$&lt;/li>
+&lt;li>$m$ is called the &lt;code>length&lt;/code> of the chain.&lt;/li>
+&lt;li>If $v_0$ and $v_m$ are the same, then the chain is called a &lt;code>cycle&lt;/code>. Note that the proper definition for a cycle requires all $v_i$ , $i \in \lbrace 2,m-1 \rbrace$ to be distinct and $v_0 = v_m$ however we do not use the distinctness part for use in these notes for simplicity.&lt;/li>
+&lt;li>If a graph is not cyclic then it is called acyclic.&lt;/li>
+&lt;li>If a chain exists between &lt;strong>ANY&lt;/strong> two vertices, then the graph is called connected, else the graph is disconnected.&lt;/li>
+&lt;/ol>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>A connected graph which contains no cycle (i.e, acyclic) is called a &lt;code>tree&lt;/code>. It is denoted by $T$. By definition, tree is a simple graph. A tree can be used to construct a graph with more than $n-1$ edges, hence such a tree is called &lt;code>generating tree&lt;/code> of the graph.&lt;/p>
+&lt;p>A graph without circles must be composed of one or more trees whose vertices are disjoint, such a graph is called a &lt;code>forest&lt;/code>.&lt;/p>
+&lt;p>The vertex of a tree which has degree 1 is called a &lt;code>leaf&lt;/code> or a &lt;code>pendant vertex&lt;/code>.&lt;/p>
+&lt;hr>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>&lt;code>Theorem 1&lt;/code>: If a tree has no less than two vertices, then it has at least two leaves (pendant vertices).&lt;/p>
+&lt;p>&lt;em>Proof 1&lt;/em> : Suppose we start from some vertex $u$, along the edges of $T$, every edge can only be passed by once. Since a tree has no cycle, it cannot return to the vertices which have been passed. It means that each vertex can be passed at most once. If the vertex we pass is not a pendant vertex, because its degree is more than 1 , we can continue. But the number of vertices of $T$ is finite, so it is impossible to continue forever. If we cannot continue further at $v$, then $v$ is a pendant vertex.
+We start from a pendant vertex $v$ and we can end up at another pendant vertex $v^{\prime}$. So tree $T$ has at least two pendant vertices.&lt;/p>
+&lt;p>&lt;em>Proof 2&lt;/em> : Assume that $\mu=u v_{1} v_{2} \cdots v_{k} v$ is the longest chain of $T$, we can show that $d(u)=d(v)=1$, i.e. $u, v$ are pendant vertices.
+In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\right)$ adjacent to $u$. If $w$ is one of $v_{2}, \ldots, v_{k}, v$, then a cycle occurs. It contradicts the definition of tree. If $w$ is different from $v_{2}, \ldots, v_{k}$, $v$, then $w u v_{1} \cdots v_{k} v$ is a chain longer than $\mu$, a contradiction. So $d(u)=1$. Similarly, $d(v)=1$. Hence tree $T$ has at least two pendant vertices.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 2[Pösá]&lt;/code> Let $V$ be the set of all the vertices of $G, E$ the set of all the edges of $G$. Prove that if $|E| \geqslant|V|+4$, then there must be two cycles which have no common edges.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 3&lt;/code>: Let $n$ be the number of vertices of $T$, then the number of edges of $T$ is $n - 1$.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 4&lt;/code>: Let $T$ be a graph with $n$ vertices and $e$ edges. Then the following three propositions are equivalent:&lt;/p>
+&lt;ul>
+&lt;li>$T$ is a tree&lt;/li>
+&lt;li>$T$ has no cycle, and edges of $T$ equal $n-1$&lt;/li>
+&lt;li>$T$ is connected, and edges of $T$ equal $n-1$&lt;/li>
+&lt;/ul>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 5&lt;/code>: If $T$ is a tree then $T$ is connected, but after deleting any edge of $T$, the obtained graph $G$ is disconnected.&lt;/p>
+&lt;p>&lt;code>Corollary&lt;/code>: If $T$ is a tree and $T$ then after adding an edge the obtained graph contains only one unique cycle.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Optimization of Tree&lt;/code>: Tree is a graph with the least number of edges. Tree is also a graph without a cycle which the has the most possible number of edges.&lt;/p>
+&lt;p>&lt;code>Theorem 6&lt;/code>: In any graph $G$, let $e$ denote the number of edges and $n$ be the number of vertices. If $e &amp;lt; n - 1$ then $G$ is disconnected. If $e &amp;gt; n -1$ then $G$ must have a cycle&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 7&lt;/code>: If there is only one chain between any two vertices of $T$ then $T$ must be a tree.&lt;/p>
+&lt;hr>
+&lt;h1 id="tactics">Tactics&lt;/h1>
+&lt;ul>
+&lt;li>&lt;code>Proof by construction&lt;/code>: Theorem 1 Proof 1 is an example. It can be employed when the given question is intuitvely obvious enough.&lt;/li>
+&lt;li>&lt;code>Longest Chain Method&lt;/code>: Theorem 2 Proof 2 is an example. It relies on the principles of Neighbourhood Dragging (more accurately, the reverse principle of neighbourhood dragging) as discussed in Part 1 of the notes. We pick an element and argue if the neighbours belong in the chain or not to reach some sort of contradiction.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> Prove Pösá&amp;rsquo;s Theorem (Theorem 2 above).&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> [USAMO 1986] In a lecture, there are five mathematicians. Each of them took a nap twice and every two of them took naps at the same time. Prove that there must be three persons who took naps at the same time.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> Given a number table with $n$ rows and $n$ columns, every two rows are different. Prove that there must exist a column, after deleting it, every two rows are still different.&lt;/p>
+&lt;p>&lt;code>4.&lt;/code> [CMC 1987] $n(n&amp;gt;3)$ table tennis players play several single games. The opponents of any two players are different. Prove that we can remove one player so that the opponents of any two players in the remaining players are still different.&lt;/p>
+&lt;p>&lt;code>5.&lt;/code> If a graph $G$ has $n$ vertices and $n-1$ edges, then $G$ is a tree. Prove or disprove.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 3</title><link>https://leimath.github.io/posts/gt-notes-p3/</link><pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p3/</guid><description>This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.
+The book followed throughout is: Graph Theory with Applications by Bondy J.</description><content>&lt;p>This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán&amp;rsquo;s Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.&lt;/p>
+&lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="k-partite-graphs">$k$-partite Graphs&lt;/h1>
+&lt;p>Let $G$ be a graph with with the vertex set $V$ then if&lt;/p>
+&lt;ol>
+&lt;li>The vertex set can be decomposed into a union of $k$ subsets such that any two subsets are disjoint i.e $$V = \bigcup\limits_{i = 1}^k V_i \qquad V_i \cap V_j = \phi$$ for some $i \neq j$&lt;/li>
+&lt;li>There is no edge whose two vertices are in the same subset&lt;/li>
+&lt;/ol>
+&lt;p>then if these two conditions are met, we call a graph &lt;code>k-partite&lt;/code>. A 2-partite graph is called a &lt;code>bigraph&lt;/code>. A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$&lt;/p>
+&lt;p>It is not difficult to convince oneself that any graph with $n$ vertices is $n$-partite graph.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>Suppose that $G^\prime$ is a &lt;em>simple&lt;/em> $k$-partite graph as in $G^\prime = (V_1^k;E)$ with $| V_i| = m_i$, $i \in \lbrace 1,2,3, \ldots \rbrace$. The graph is said to be &lt;code>complete k-partite&lt;/code> if &lt;strong>any&lt;/strong> two vertices belonging in two different subsets of the vertex set $V^\prime$ are adjacent, i.e, $u \in V_i , v \in V_j , i \neq j$ and $u$ is adjacent to $v$. We denote the graph $G^\prime$ as $K_{m_1, m_2, \dots , m_k}$ and more frequent notation is $T_{k}(n)$ where $n$ stands for the total number of vertices.&lt;/p>
+&lt;p>A complete bigraph is shown below, denoted as $K_{2,3}$ or $T_3 (5)$.&lt;/p>
+&lt;p>&lt;img src="https://leimath.github.io/assets/images/complete-bigraph.png" alt="A complete bigraph">&lt;/p>
+&lt;p>Complete bigraphs do not contain triangles made with the vertices of the graph itself.&lt;/p>
+&lt;p>A complete graph and a complete $k$-partite graph are $k$-regular for some $k$.&lt;/p>
+&lt;hr>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>&lt;code>Theorem 1&lt;/code>: If a graph $G$ with $n$ vertices contains no triangle, the largest number of edges of $G$ is $\left[\frac{n^2}{4}\right]$ where $\left [ .\right]$ represents the greatest integer function.&lt;/p>
+&lt;p>Hint: Prove by Induction.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 2 [Turán]&lt;/code>: Suppose $G$ contains no $K_{k+1}$, then $e(G) \leqslant e(T_{k}(n))$. The equality holds if and only if $G \cong T_{k}(n)$.&lt;/p>
+&lt;p>Key: The $\cong$ represents &amp;lsquo;isomorphic&amp;rsquo;. The $e(.)$ stands for the number of edges. $G$ is any simple graph. $T_{k}(n)$ represents a complete $k$-partite graph with $n$ vertices. $K_{k+1}$ is the complete graph with $k+1$ vertices.&lt;/p>
+&lt;p>The proof can be found in the book &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em> as was mentioned in Part 1 of these notes.&lt;/p>
+&lt;p>Note 1: This theorem&amp;rsquo;s proof is not necessary for olympiads/scholarship exams. Theorem 1 is rather common and is sometimes referred to Turán&amp;rsquo;s theorem as well.&lt;/p>
+&lt;p>Note 2: $e(T_k(n)) = \binom{n - k}{2} + (m-1)\binom{k+1}{2}$ where $k = \lfloor \frac{n}{m} \rfloor$&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> Prove that if there are $2n+1$ vertices and $n^2 + n + 1$ edges in a simple graph $G$, then $G$ must contain a triangle.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> $G$ is a graph with $n$ vertices and $n+1$ edges. Prove that there exists at least one vertex whose degree is no less than 3.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> In a circular city whose radius is 6 kilometers, there are 18 police cars making the rounds. They use wireless equipments to communicate with each other. If the wireless is effective within 9 kilometers. Prove that at any time, there must exist two cars, each of them can communicate with five other cars.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 2</title><link>https://leimath.github.io/posts/gt-notes-p2/</link><pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p2/</guid><description>This is the second part of the graph theory notes. We take a look at Degree of a Vertex and the so-called Hand-Shaking Lemma in this post.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+Degree of a Vertex The degree of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$.</description><content>&lt;p>This is the second part of the graph theory notes. We take a look at Degree of a Vertex and the so-called Hand-Shaking Lemma in this post.&lt;/p>
+&lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="degree-of-a-vertex">Degree of a Vertex&lt;/h1>
+&lt;p>The &lt;code>degree&lt;/code> of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.&lt;/p>
+&lt;p>Let $G(V,E)$ be a graph where $V,E$ are the vertex and edge set respectively. If it happens that for ALL vertex $v$, $d(v) = k$ for some $k$, then the graph $G$ is called &lt;code>k-regular&lt;/code>. The complete graph on $n$ vertices is $(n-1)$ regular.&lt;/p>
+&lt;hr>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>Theorem[I]: For any graph $G$ with $n$ vertices, the sum of degrees of all the vertices is twice as large as the number of edges. In symbols, if the $n$ vertices are $V = \lbrace v_1, v_2, \dots, v_n \rbrace$ then $$\sum\limits_{k = 1}^n d(v_k) = 2 |E|$$&lt;/p>
+&lt;p>This is popularly known as the &lt;code>Hand-Shaking Lemma&lt;/code>.&lt;/p>
+&lt;p>Theorem[II]: In any &lt;em>finite&lt;/em> graph $G$, the number of vertices with odd degree is even.&lt;/p>
+&lt;p>Theorem[III]: A vertex is at most adjacent to other $n-1$ vertices in a simple graph on $n$ vertices i.e $$d(v) \leqslant n-1$$ for all $v \in V.$&lt;/p>
+&lt;hr>
+&lt;p>Let there be $n$ vertices of type $x$ all contained in the set $X$ i.e, $X = \lbrace x_1, x_2, \dots, x_n \rbrace$ and $m$ vertices of type $y$ in $Y$ as $Y = \lbrace y_1, y_2, \dots, y_m\rbrace$ then $X \cap Y = \phi$ and if we connect $x_i$ with $y_i$ if a relationship exists then an edge $(x_i, y_i)$ is formed. This graph $G$ is called a &lt;code>bipartite&lt;/code> graph, or &lt;code>even&lt;/code> graph and is denoted by $G = (X,Y; E)$&lt;/p>
+&lt;p>If $G$ is a simple graph on $n$ vertices, then if we generate a graph by deleting all the edges belonging to $G$ from the complete graph $K_n$, this is called the &lt;code>complementary&lt;/code> graph of G, denoted by $\bar{G}$.&lt;/p>
+&lt;hr>
+&lt;h1 id="tactics">Tactics&lt;/h1>
+&lt;ul>
+&lt;li>Looking for some contradiction with the use of Hand-Shaking Lemma.&lt;/li>
+&lt;li>Selectively looking for what the degree of a vertex value can be.&lt;/li>
+&lt;li>Looking at the subgraph by deleting some edges, vertices and then reaching some contradiction.&lt;/li>
+&lt;li>Getting bounds on the degree of all vertex values.&lt;/li>
+&lt;li>Viewing $d(v)$ as some algebraic object to use inequalities in it.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> Show that at any party, there are always at least two people with exactly the
+same number of friends at the party.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> A cube with edge of length $n$ is cut into $n^3$ unit cubes by planes parallel to its sides. How many pairs of unit cubes whose common vertices are no more than $2$ are there?&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> There are $n$ points on the plane. Prove that the number of pairs of points whose distance is $1$ would not exceed $$\frac{n}{4} + \frac{\sqrt{2}}{2}n^{\frac{3}{2}}$$&lt;/p></content></item><item><title>My Graph Theory Notes - Part 1</title><link>https://leimath.github.io/posts/gt-notes-p1/</link><pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p1/</guid><description>This is a series of my notes on graph theory and usage in Scholarship Problems. We look at what a graph is today and present some terminologies. We also present some basic tactics to solve elementary problems.
+Following the tradition of this blog, we do not present any illustrations on using the tactics as it limits the readers to thinking about the problems only through a specific approach whereas in an exam environment multiple approaches and various combination of techniques is necessary.</description><content>&lt;p>This is a series of my notes on graph theory and usage in Scholarship Problems. We look at what a graph is today and present some terminologies. We also present some basic tactics to solve elementary problems.&lt;/p>
+&lt;p>Following the tradition of this blog, we do not present any illustrations on using the tactics as it limits the readers to thinking about the problems only through a specific approach whereas in an exam environment multiple approaches and various combination of techniques is necessary.&lt;/p>
+&lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="graphs">Graphs&lt;/h1>
+&lt;p>A graph is a set of points with certain vertices joined by some edge. The graph represents a binary relationship.&lt;/p>
+&lt;p>When to look through a Graph Theoritic perspective ? Whenever there is a clear-cut distinction provided in the question as some &amp;ldquo;objects&amp;rdquo; and some &amp;ldquo;relationship&amp;rdquo; between the objects.&lt;/p>
+&lt;p>To represent such objects, we use a point and call it &amp;ldquo;vertex&amp;rdquo; and to signify the relationship between two vertex, we draw a line between them and call it an &amp;ldquo;edge&amp;rdquo;. Whatever figure this generates, we call it a graph.&lt;/p>
+&lt;p>We present the proper definition just for the sake of completeness.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Graph[Definition]: A graph is a triplet $(V,E,\varphi)$ where $V$ and $E$ are two disjoint sets, $V$ is non-empty and $\varphi$ is a mapping from $V \times V \to E.$ The set $V$ is the vertex set, $E$ is called the edge set an $\varphi$ is the incidence function.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Rules for Graphs:&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>$\qquad$ [I] It is allowed that vertices and edges may not be in the same plane&lt;/p>
+&lt;p>$\qquad$ [II] It is NOT allowed for an edge to pass through a third vertex&lt;/p>
+&lt;p>$\qquad$ [III] It is NOT allowed for an edge to intersect itself.&lt;/p>
+&lt;hr>
+&lt;p>For two graphs $G_1, G_2$ if there exists a bijection between the vertices of $G_1$ to $G_2$ such that the number of edges joining two points in $G_1$ equals the number the edges joining two in $G_2$, then we call such two graphs $G_1, G_2$ as &lt;code>isomorphic&lt;/code>.&lt;/p>
+&lt;p>For a graph $G_0$ and $G_1$, if it is so that vertex and edge of $G_0$ is a subset of vertex and edge of $G_1$ then $G_0$ is called a &lt;code>subgraph&lt;/code>.&lt;/p>
+&lt;p>Two points are &lt;code>adjacent&lt;/code> if there is a edge joining them. A vertex is &lt;code>incident&lt;/code> to edge if the vertex is the end of the edge. A vertex which has a edge joining itself to itself is called a &lt;code>loop&lt;/code>. Two edges with same pair of vertex are called &lt;code>parallel&lt;/code>. A graph is &lt;code>simple&lt;/code> if it has no loops or parallel edges. A &lt;code>complete&lt;/code> graph is a graph in which &lt;em>every&lt;/em> two point are adjacent i.e they have a edge between them. A complete graph with $n$ vertices is denoted with $K_n$.&lt;/p>
+&lt;p>If $n$ is the number of vertices of a graph, the total number of possible edges (or, number of edges in a complete graph) are $\binom{n}{2} = \frac{1}{2} n(n-1).$&lt;/p>
+&lt;p>A graph is &lt;code>finite&lt;/code> if cardinality of vertices and edges are finite. If a graph has infinitely many vertices OR edges, then it is &lt;code>infinite&lt;/code>.&lt;/p>
+&lt;p>$\star$ Generally, unless stated otherwise - we use &lt;em>finite&lt;/em> simple graphs all throughout these notes.&lt;/p>
+&lt;hr>
+&lt;h1 id="tactics">Tactics&lt;/h1>
+&lt;p>A wide variety of questions can be tackled merely by the above definitions. The tactics to solve such problems are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Reformulate the question&lt;/code> : This sounds simple enough but not always clicks to mind by a first look. After translating the question in graph theoritic terms and &lt;strong>constructing a graph&lt;/strong>, a few too many questions are tremendously simplified to some form of logical argument or something to do with the data provided/inferred.&lt;/li>
+&lt;li>&lt;code>Parity&lt;/code> : Somehow reach contradictions with even-odd arguments. Works best if the question already provides some concrete data on some variable bein even/odd.&lt;/li>
+&lt;li>&lt;code>Coloring&lt;/code> : Usually works great when some form of trait is to be deonstrated among $2 + k$ objects. Then the problem can be reduced to showing monochromatic structure among these $2+k$ objects.&lt;/li>
+&lt;li>&lt;code>Pigeonhole principle&lt;/code> : If we put $n$ pigeons in less than $n$ pigeonholes, then at least one pigeonhole contains more than one pigeons. Simple enough to state, but it might take a while to frame the question to use this, the most apt use case is when paired with the above mention &amp;ldquo;coloring&amp;rdquo; strategy.&lt;/li>
+&lt;li>&lt;code>Neighborhood Dragging&lt;/code> : We consider the neighbourhood (denoted by the set $N$) of two defined objects, or vertex (in the question) and then argue if a foreign object can be in it or not (usually depends on the question for partculars).&lt;/li>
+&lt;li>&lt;code>WLOG vertex&lt;/code> : In some instances where the graph isn&amp;rsquo;t particularly defined well, we might WLOG assume a pair of vertex or an edge to exist.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> There are 50001 people in a party. Suppose that each of them shakes hands with at least one person. Prove that there must be someone who shakes hands with at least two persons.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> There are $n$ athelete who attend a meeting. For any four athelete, there is one person who has shaked hands with the other three.
+Prove that for any four athelete, there must be one person who
+shakes hands with the rest of the $n - 1$ athelete.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> [USAMO 1978] Nine mathematicians meet at an international mathematics conference. For any three persons, at least two of them can have a talk in the same language. If each mathematician can speak at most three languages, prove that at least three mathematicians can have a talk in the same language.&lt;/p>
+&lt;p>&lt;code>4.&lt;/code> There are $n$ fruit boxes. Any two fruit box have the
+same kind of fruit inside and every kind of fruit is contained
+in just two fruit boxes. How many kinds of fruit are there?&lt;/p>
+&lt;p>&lt;code>5.&lt;/code> In a bus with any $m$ travellers, $m \geqslant 3$, they have only one common friend. If $A$ is friends with $B$ then $B$ is friends with $A$, anyone is not a friend of ownself. How many people are there in the carriage ?&lt;/p>
+&lt;p>$$\dots$$&lt;/p>
+&lt;p>In the next post we look at Degree of a Vertex and other related topics.&lt;/p></content></item></channel></rss>

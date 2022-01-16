@@ -2,6 +2,16 @@
 title = "My Graph Theory Notes - Part 1"
 date = "2022-01-13"
 author = "LeiMath"
+tags = [
+    "graph_theory",
+    "graphs",
+    "notes"
+]
+series = ["GT Notes"]
+categories = [
+    "graph_theory",
+    "math",
+]
 +++
 
 This is a series of my notes on graph theory and usage in Scholarship Problems. We look at what a graph is today and present some terminologies. We also present some basic tactics to solve elementary problems. 

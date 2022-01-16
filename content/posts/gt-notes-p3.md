@@ -2,6 +2,16 @@
 title = "My Graph Theory Notes - Part 3"
 date = "2022-01-15"
 author = "LeiMath"
+tags = [
+    "graph_theory",
+    "graphs",
+    "notes"
+]
+series = ["GT Notes"]
+categories = [
+    "graph_theory",
+    "math",
+]
 +++
 
 This is the third part of the graph theory notes. We take a look at $k$-partite graphs and Turán's Theorem. We omit the Tactics section since most problems can be handled by tactics mentioned earlier combined with the powerful results mentioned below. However, it might be worthwhile to see the connection of Inequalities (like - AM-GM, Cauchy-Schwartz etc) to problems related with finding bounds of edges.

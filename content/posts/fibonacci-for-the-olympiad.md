@@ -2,6 +2,11 @@
 title = "Fibonacci For the Olympiad"
 date = "2022-01-03"
 author = "LeiMath"
+tags = [
+    "fibonacci",
+    "olympiads",
+    "maths"
+]
 +++
 
 

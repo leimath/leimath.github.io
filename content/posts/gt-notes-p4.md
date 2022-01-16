@@ -2,6 +2,16 @@
 title = "My Graph Theory Notes - Part 4"
 date = "2022-01-16"
 author = "LeiMath"
+tags = [
+    "graph_theory",
+    "graphs",
+    "notes",
+]
+categories = [
+    "graph_theory",
+    "math",
+]
+series = ["GT Notes"]
 +++
 
 

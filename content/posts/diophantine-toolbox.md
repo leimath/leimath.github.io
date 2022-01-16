@@ -2,6 +2,11 @@
 title = "A Toolbox for Diophantine Equations"
 date = "2022-01-10"
 author = "LeiMath"
+tags = [
+    "number_theory",
+    "diophantine_equations",
+    "maths"
+]
 +++
 
 

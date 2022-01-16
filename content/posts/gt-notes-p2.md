@@ -2,6 +2,16 @@
 title = "My Graph Theory Notes - Part 2"
 date = "2022-01-14"
 author = "LeiMath"
+tags = [
+    "graph_theory",
+    "graphs",
+    "notes"
+]
+series = ["GT Notes"]
+categories = [
+    "graph_theory",
+    "math",
+]
 +++
 
 This is the second part of the graph theory notes. We take a look at Degree of a Vertex and the so-called Hand-Shaking Lemma in this post.

@@ -28,7 +28,7 @@ Let $G$ be a graph with with the vertex set $V$ then if
 1. The vertex set can be decomposed into a union of $k$ subsets such that any two subsets are disjoint i.e $$V = \bigcup\limits_{i = 1}^k V_i \qquad V_i \cap V_j = \phi$$ for some $i \neq j$
 2. There is no edge whose two vertices are in the same subset
 
-then if these two conditions are met, we call a graph `k-partite`. A 2-partite graph is called a `bigraph`. A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$
+then if these two conditions are met, we call a graph `k-partite`. A 2-partite graph is called a `bigraph` (which are the same as previously defined term, _bipartite graph_). A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$
 
 It is not difficult to convince oneself that any graph with $n$ vertices is $n$-partite graph.
 
@@ -66,6 +66,10 @@ Note 1: This theorem's proof is not necessary for olympiads/scholarship exams. T
 Note 2: $e(T_k(n)) = \binom{n - k}{2} + (m-1)\binom{k+1}{2}$ where $k = \lfloor	\frac{n}{m} \rfloor$
 
 $$\dotsb$$
+
+`Theorem 3`: ["Marriage Lemma" or Hall's Matching Theorem] Let $G$ be a bipartite graph with parts $A$ and $B$. Suppose that $B$ has at least as many vertices as $A$. Then $G$ has a matching using all the vertices of $A$ if and only if for any subset $S$ of $k$ vertices of $A$, there are at least $k$ vertices in $B$ adjacent to some vertex of $A$.
+
+In particular, if every vertex of $A$ has the same degree $a$ and every vertex of $B$ has the same degree $b$, then $G$ has a matching using every vertex of $A$.
 
 ---
 

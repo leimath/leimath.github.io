@@ -86,6 +86,8 @@ $$\dotsb$$
 
 `Theorem 7`: If there is only one chain between any two vertices of $T$ then $T$ must be a tree.
 
+`Theorem 8`: A graph is bipartite if and only if it contains no odd cycle
+
 
 ---
 

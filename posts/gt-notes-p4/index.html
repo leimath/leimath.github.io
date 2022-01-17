@@ -7,7 +7,7 @@
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
   Trees Before introducing trees, here are some essential terminologies:
 Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
- If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a chain from $v_0$ and $v_m$.">
+ If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ exists and $v_{i-1}$ is adjacent to $v_i$ then we call the sequence a chain from $v_0$ and $v_m$.">
 <meta name=keywords content>
 <meta name=robots content="noodp">
 <link rel=canonical href=https://leimath.github.io/posts/gt-notes-p4/>
@@ -25,7 +25,7 @@ Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
   Trees Before introducing trees, here are some essential terminologies:
 Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
- If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a chain from $v_0$ and $v_m$.">
+ If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ exists and $v_{i-1}$ is adjacent to $v_i$ then we call the sequence a chain from $v_0$ and $v_m$.">
 <meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p4/">
 <meta property="og:site_name" content="LeiMath">
 <meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
@@ -86,7 +86,7 @@ LeiMath
 <p>Before introducing trees, here are some essential terminologies:</p>
 <p>Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$</p>
 <ol>
-<li>If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a <code>chain</code> from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$</li>
+<li>If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ exists and $v_{i-1}$ is adjacent to $v_i$ then we call the sequence a <code>chain</code> from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$.</li>
 <li>$m$ is called the <code>length</code> of the chain.</li>
 <li>If $v_0$ and $v_m$ are the same, then the chain is called a <code>cycle</code>. Note that the proper definition for a cycle requires all $v_i$ , $i \in \lbrace 2,m-1 \rbrace$ to be distinct and $v_0 = v_m$ however we do not use the distinctness part for use in these notes for simplicity.</li>
 <li>If a graph is not cyclic then it is called acyclic.</li>
@@ -142,6 +142,12 @@ In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\ri
 <hr>
 </div>
 <div class=pagination__buttons>
+<span class="button previous">
+<a href=https://leimath.github.io/posts/gt-notes-p5/>
+<span class=button__icon>←</span>
+<span class=button__text>My Graph Theory Notes - Part 5</span>
+</a>
+</span>
 <span class="button next">
 <a href=https://leimath.github.io/posts/gt-notes-p3/>
 <span class=button__text>My Graph Theory Notes - Part 3</span>

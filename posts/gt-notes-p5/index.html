@@ -1,0 +1,143 @@
+<!doctype html><html lang=en>
+<head>
+<title>My Graph Theory Notes - Part 5 :: LeiMath</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+  Regarding the Konigsberg Problem The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<link rel=canonical href=https://leimath.github.io/posts/gt-notes-p5/>
+<link rel=stylesheet href=https://leimath.github.io/assets/style.css>
+<link rel=stylesheet href=https://leimath.github.io/assets/green.css>
+<link rel=apple-touch-icon href=https://leimath.github.io/img/apple-touch-icon-192x192.png>
+<link rel="shortcut icon" href=https://leimath.github.io/img/favicon/green.png>
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content>
+<meta name=twitter:creator content="LeiMath">
+<meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My Graph Theory Notes - Part 5">
+<meta property="og:description" content="This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+  Regarding the Konigsberg Problem The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.">
+<meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p5/">
+<meta property="og:site_name" content="LeiMath">
+<meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+<meta property="article:section" content="graph_theory">
+<meta property="article:section" content="math">
+<meta property="article:published_time" content="2022-01-17 00:00:00 +0000 UTC">
+</head>
+<body class=green>
+<div class="container headings--one-size">
+<header class=header>
+<div class=header__inner>
+<div class=header__logo>
+<a href=/>
+<div class=logo>
+LeiMath
+</div>
+</a>
+</div>
+<div class=menu-trigger>menu</div>
+</div>
+<nav class=menu>
+<ul class="menu__inner menu__inner--desktop">
+<li><a href=/about>About</a></li>
+<li><a href=/listing>Listing</a></li>
+</ul>
+<ul class="menu__inner menu__inner--mobile">
+<li><a href=/about>About</a></li>
+<li><a href=/listing>Listing</a></li>
+</ul>
+</nav>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}}</script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+</header>
+<div class=content>
+<div class=post>
+<h1 class=post-title>
+<a href=https://leimath.github.io/posts/gt-notes-p5/>My Graph Theory Notes - Part 5</a></h1>
+<div class=post-meta>
+<span class=post-date>
+2022-01-17
+</span>
+<span class=post-author>:: LeiMath</span>
+</div>
+<span class=post-tags>
+#<a href=https://leimath.github.io/tags/graph_theory/>graph_theory</a>&nbsp;
+#<a href=https://leimath.github.io/tags/graphs/>graphs</a>&nbsp;
+#<a href=https://leimath.github.io/tags/notes/>notes</a>&nbsp;
+</span>
+<div class=post-content><div>
+<p>This is the fifth part of the graph theory notes. We take a look at Euler&rsquo;s Problem and its resolution in this post.</p>
+<p>The book followed throughout is: <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p>
+<hr>
+<hr>
+<h1 id=regarding-the-konigsberg-problem>Regarding the Konigsberg Problem<a href=#regarding-the-konigsberg-problem class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to <a href="https://www.youtube.com/watch?v=nZwSo4vfw6c">here - for a audiovisual treatment</a> or <a href=https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem>here - for a full report on it.</a></p>
+<p>The key question that was put forward against Euler was: Can a traveler go through every bridge once and only once ?</p>
+<p>His solution led to many theorems that came forward and is presented below.</p>
+<hr>
+<h1 id=eulerian-graphs>Eulerian Graphs<a href=#eulerian-graphs class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>A <code>tour</code> of a graph $G$ is a closed walk that traverses each edge of $G$ <strong>at least</strong> once.
+If a cycle in a graph traverses every edge of the graph <strong>exactly</strong> once then the cycle is termed as <code>Euler Tour</code> (old books also call it <code>Euler Trail</code> as well).
+A graph where Euler tour is admitted is called a <code>Eulerian Graph</code>.</p>
+<p>Note that in various instances a <em>chain</em> is also referred to as a <code>walk</code>.
+A <code>path</code> is any walk (or, chain) with distinct vertices.</p>
+<hr>
+<h1 id=theorems>Theorems<a href=#theorems class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p><code>Theorem 1</code>: A finite graph $G$ is a chain or a cycle if and only if $G$ is connected and the number of vertices with odd degree in $G$ is equal to $2$ or $0$. When and only when the number of vertices with odd degrees in $G$ is equal to $0$, the connected graph $G$ is a cycle.</p>
+<p><code>Theorem 2</code>: If $G$ is a connected graph and has $2k$ odd vertices, then graph $G$ can be drawn by lifting one&rsquo;s pen $k$ times and at least $k$ times.</p>
+<p><code>Theorem 3</code>: A nonempty connected graph is Eulerian if and only if it has
+no vertices of odd degree.</p>
+<p><code>Theorem 4</code>: A connected graph has an Euler trail if and only if it has at
+most two vertices of odd-degree</p>
+<p>Note: Some theorems are quite tricky, especially Theorem 1, and non-intuitive. Please refer to the book mentioned above for proofs else, skip them.</p>
+<hr>
+<h1 id=tactics>Tactics<a href=#tactics class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>Along with previously discussed tactics, some extra ones are:</p>
+<ul>
+<li><code>Coloring</code>: We try to divide the graph into subgraphs and see if keep some color invariant results in some concrete evaluation of data given in the question paired with the theorems presented above.</li>
+<li><code>Principle of Least Action</code>: We try to generate a tour which requires the least <em>weightage</em> (weightage can mean the degree value, moves set or any other restriction) and then try to see at cases which either maximize or minimize some condition respectively.</li>
+</ul>
+<hr>
+<h1 id=questions>Questions<a href=#questions class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p><code>1.</code> Arrange $n$ vertices $v_{1}, v_{2}, \ldots, v_{n}$ in order on a line. Each vertex is colored in red or blue. If the ends of a segment $v_{i} v_{i+1}$ are colored differently, we call it a standard segment. Suppose the colors of $v_{1}$ and $v_{n}$ are different. Prove that the number of the standard segments is odd.</p>
+<p><code>2.</code> (CMC 5th) A graph which consists of a convex $n$-polygon and $n-3$ disjoint diagonal lines in the polygon is called a subdivision graph.
+Prove that there exists a <code>subdivision graph</code> which is a cycle drawn without lifting one&rsquo;s pen (i. e. start from a vertex, go through each segment only once and return the starting point) if and only if $3 \mid n$.</p>
+<p><code>3.</code> On an $8 \times 8$ chessboard with 64 black and white squares we move a knight. In whatever direction the knight moves, is it possible to make the knight move to all the squares and each square only once? (A knight moves from a corner square of a rectangle with $2 \times 3$ black and white squares to another corner square diagonal to the starting position.)</p>
+</div></div>
+<div class=pagination>
+<div class=pagination__title>
+<span class=pagination__title-h>Read other posts</span>
+<hr>
+</div>
+<div class=pagination__buttons>
+<span class="button next">
+<a href=https://leimath.github.io/posts/gt-notes-p4/>
+<span class=button__text>My Graph Theory Notes - Part 4</span>
+<span class=button__icon>→</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+<footer class=footer>
+<div class=footer__inner>
+<div class=copyright>
+<span>2022</a></span>
+<span>::</span>
+</div>
+</div>
+</footer>
+<script src=https://leimath.github.io/assets/main.js></script>
+<script src=https://leimath.github.io/assets/prism.js></script>
+</div>
+</body>
+</html>

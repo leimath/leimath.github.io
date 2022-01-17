@@ -1,8 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>notes on LeiMath</title><link>https://leimath.github.io/tags/notes/</link><description>Recent content in notes on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 4</title><link>https://leimath.github.io/posts/gt-notes-p4/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p4/</guid><description>This is the fourth part of the graph theory notes. We take a look at Trees.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>notes on LeiMath</title><link>https://leimath.github.io/tags/notes/</link><description>Recent content in notes on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 5</title><link>https://leimath.github.io/posts/gt-notes-p5/</link><pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p5/</guid><description>This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+Regarding the Konigsberg Problem The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.</description><content>&lt;p>This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.&lt;/p>
+&lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="regarding-the-konigsberg-problem">Regarding the Konigsberg Problem&lt;/h1>
+&lt;p>The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to &lt;a href="https://www.youtube.com/watch?v=nZwSo4vfw6c">here - for a audiovisual treatment&lt;/a> or &lt;a href="https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem">here - for a full report on it.&lt;/a>&lt;/p>
+&lt;p>The key question that was put forward against Euler was: Can a traveler go through every bridge once and only once ?&lt;/p>
+&lt;p>His solution led to many theorems that came forward and is presented below.&lt;/p>
+&lt;hr>
+&lt;h1 id="eulerian-graphs">Eulerian Graphs&lt;/h1>
+&lt;p>A &lt;code>tour&lt;/code> of a graph $G$ is a closed walk that traverses each edge of $G$ &lt;strong>at least&lt;/strong> once.
+If a cycle in a graph traverses every edge of the graph &lt;strong>exactly&lt;/strong> once then the cycle is termed as &lt;code>Euler Tour&lt;/code> (old books also call it &lt;code>Euler Trail&lt;/code> as well).
+A graph where Euler tour is admitted is called a &lt;code>Eulerian Graph&lt;/code>.&lt;/p>
+&lt;p>Note that in various instances a &lt;em>chain&lt;/em> is also referred to as a &lt;code>walk&lt;/code>.
+A &lt;code>path&lt;/code> is any walk (or, chain) with distinct vertices.&lt;/p>
+&lt;hr>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>&lt;code>Theorem 1&lt;/code>: A finite graph $G$ is a chain or a cycle if and only if $G$ is connected and the number of vertices with odd degree in $G$ is equal to $2$ or $0$. When and only when the number of vertices with odd degrees in $G$ is equal to $0$, the connected graph $G$ is a cycle.&lt;/p>
+&lt;p>&lt;code>Theorem 2&lt;/code>: If $G$ is a connected graph and has $2k$ odd vertices, then graph $G$ can be drawn by lifting one&amp;rsquo;s pen $k$ times and at least $k$ times.&lt;/p>
+&lt;p>&lt;code>Theorem 3&lt;/code>: A nonempty connected graph is Eulerian if and only if it has
+no vertices of odd degree.&lt;/p>
+&lt;p>&lt;code>Theorem 4&lt;/code>: A connected graph has an Euler trail if and only if it has at
+most two vertices of odd-degree&lt;/p>
+&lt;p>Note: Some theorems are quite tricky, especially Theorem 1, and non-intuitive. Please refer to the book mentioned above for proofs else, skip them.&lt;/p>
+&lt;hr>
+&lt;h1 id="tactics">Tactics&lt;/h1>
+&lt;p>Along with previously discussed tactics, some extra ones are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Coloring&lt;/code>: We try to divide the graph into subgraphs and see if keep some color invariant results in some concrete evaluation of data given in the question paired with the theorems presented above.&lt;/li>
+&lt;li>&lt;code>Principle of Least Action&lt;/code>: We try to generate a tour which requires the least &lt;em>weightage&lt;/em> (weightage can mean the degree value, moves set or any other restriction) and then try to see at cases which either maximize or minimize some condition respectively.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> Arrange $n$ vertices $v_{1}, v_{2}, \ldots, v_{n}$ in order on a line. Each vertex is colored in red or blue. If the ends of a segment $v_{i} v_{i+1}$ are colored differently, we call it a standard segment. Suppose the colors of $v_{1}$ and $v_{n}$ are different. Prove that the number of the standard segments is odd.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> (CMC 5th) A graph which consists of a convex $n$-polygon and $n-3$ disjoint diagonal lines in the polygon is called a subdivision graph.
+Prove that there exists a &lt;code>subdivision graph&lt;/code> which is a cycle drawn without lifting one&amp;rsquo;s pen (i. e. start from a vertex, go through each segment only once and return the starting point) if and only if $3 \mid n$.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> On an $8 \times 8$ chessboard with 64 black and white squares we move a knight. In whatever direction the knight moves, is it possible to make the knight move to all the squares and each square only once? (A knight moves from a corner square of a rectangle with $2 \times 3$ black and white squares to another corner square diagonal to the starting position.)&lt;/p></content></item><item><title>My Graph Theory Notes - Part 4</title><link>https://leimath.github.io/posts/gt-notes-p4/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p4/</guid><description>This is the fourth part of the graph theory notes. We take a look at Trees.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
 Trees Before introducing trees, here are some essential terminologies:
 Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
-If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a chain from $v_0$ and $v_m$.</description><content>&lt;p>This is the fourth part of the graph theory notes. We take a look at Trees.&lt;/p>
+If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ exists and $v_{i-1}$ is adjacent to $v_i$ then we call the sequence a chain from $v_0$ and $v_m$.</description><content>&lt;p>This is the fourth part of the graph theory notes. We take a look at Trees.&lt;/p>
 &lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
 &lt;hr>
 &lt;hr>
@@ -10,7 +48,7 @@ If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequen
 &lt;p>Before introducing trees, here are some essential terminologies:&lt;/p>
 &lt;p>Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$&lt;/p>
 &lt;ol>
-&lt;li>If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a &lt;code>chain&lt;/code> from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$&lt;/li>
+&lt;li>If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ exists and $v_{i-1}$ is adjacent to $v_i$ then we call the sequence a &lt;code>chain&lt;/code> from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$.&lt;/li>
 &lt;li>$m$ is called the &lt;code>length&lt;/code> of the chain.&lt;/li>
 &lt;li>If $v_0$ and $v_m$ are the same, then the chain is called a &lt;code>cycle&lt;/code>. Note that the proper definition for a cycle requires all $v_i$ , $i \in \lbrace 2,m-1 \rbrace$ to be distinct and $v_0 = v_m$ however we do not use the distinctness part for use in these notes for simplicity.&lt;/li>
 &lt;li>If a graph is not cyclic then it is called acyclic.&lt;/li>

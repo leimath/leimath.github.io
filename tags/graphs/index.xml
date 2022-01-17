@@ -84,6 +84,7 @@ In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\ri
 &lt;p>&lt;code>Theorem 6&lt;/code>: In any graph $G$, let $e$ denote the number of edges and $n$ be the number of vertices. If $e &amp;lt; n - 1$ then $G$ is disconnected. If $e &amp;gt; n -1$ then $G$ must have a cycle&lt;/p>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;p>&lt;code>Theorem 7&lt;/code>: If there is only one chain between any two vertices of $T$ then $T$ must be a tree.&lt;/p>
+&lt;p>&lt;code>Theorem 8&lt;/code>: A graph is bipartite if and only if it contains no odd cycle&lt;/p>
 &lt;hr>
 &lt;h1 id="tactics">Tactics&lt;/h1>
 &lt;ul>
@@ -107,7 +108,7 @@ The book followed throughout is: Graph Theory with Applications by Bondy J.</des
 &lt;li>The vertex set can be decomposed into a union of $k$ subsets such that any two subsets are disjoint i.e $$V = \bigcup\limits_{i = 1}^k V_i \qquad V_i \cap V_j = \phi$$ for some $i \neq j$&lt;/li>
 &lt;li>There is no edge whose two vertices are in the same subset&lt;/li>
 &lt;/ol>
-&lt;p>then if these two conditions are met, we call a graph &lt;code>k-partite&lt;/code>. A 2-partite graph is called a &lt;code>bigraph&lt;/code>. A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$&lt;/p>
+&lt;p>then if these two conditions are met, we call a graph &lt;code>k-partite&lt;/code>. A 2-partite graph is called a &lt;code>bigraph&lt;/code> (which are the same as previously defined term, &lt;em>bipartite graph&lt;/em>). A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$&lt;/p>
 &lt;p>It is not difficult to convince oneself that any graph with $n$ vertices is $n$-partite graph.&lt;/p>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;p>Suppose that $G^\prime$ is a &lt;em>simple&lt;/em> $k$-partite graph as in $G^\prime = (V_1^k;E)$ with $| V_i| = m_i$, $i \in \lbrace 1,2,3, \ldots \rbrace$. The graph is said to be &lt;code>complete k-partite&lt;/code> if &lt;strong>any&lt;/strong> two vertices belonging in two different subsets of the vertex set $V^\prime$ are adjacent, i.e, $u \in V_i , v \in V_j , i \neq j$ and $u$ is adjacent to $v$. We denote the graph $G^\prime$ as $K_{m_1, m_2, \dots , m_k}$ and more frequent notation is $T_{k}(n)$ where $n$ stands for the total number of vertices.&lt;/p>
@@ -126,6 +127,8 @@ The book followed throughout is: Graph Theory with Applications by Bondy J.</des
 &lt;p>Note 1: This theorem&amp;rsquo;s proof is not necessary for olympiads/scholarship exams. Theorem 1 is rather common and is sometimes referred to Turán&amp;rsquo;s theorem as well.&lt;/p>
 &lt;p>Note 2: $e(T_k(n)) = \binom{n - k}{2} + (m-1)\binom{k+1}{2}$ where $k = \lfloor \frac{n}{m} \rfloor$&lt;/p>
 &lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 3&lt;/code>: [&amp;ldquo;Marriage Lemma&amp;rdquo; or Hall&amp;rsquo;s Matching Theorem] Let $G$ be a bipartite graph with parts $A$ and $B$. Suppose that $B$ has at least as many vertices as $A$. Then $G$ has a matching using all the vertices of $A$ if and only if for any subset $S$ of $k$ vertices of $A$, there are at least $k$ vertices in $B$ adjacent to some vertex of $A$.&lt;/p>
+&lt;p>In particular, if every vertex of $A$ has the same degree $a$ and every vertex of $B$ has the same degree $b$, then $G$ has a matching using every vertex of $A$.&lt;/p>
 &lt;hr>
 &lt;h1 id="questions">Questions&lt;/h1>
 &lt;p>&lt;code>1.&lt;/code> Prove that if there are $2n+1$ vertices and $n^2 + n + 1$ edges in a simple graph $G$, then $G$ must contain a triangle.&lt;/p>
@@ -147,7 +150,8 @@ Degree of a Vertex The degree of a vertex $v$ in a graph $G$, denoted by $d_G(v)
 &lt;p>Theorem[III]: A vertex is at most adjacent to other $n-1$ vertices in a simple graph on $n$ vertices i.e $$d(v) \leqslant n-1$$ for all $v \in V.$&lt;/p>
 &lt;hr>
 &lt;p>Let there be $n$ vertices of type $x$ all contained in the set $X$ i.e, $X = \lbrace x_1, x_2, \dots, x_n \rbrace$ and $m$ vertices of type $y$ in $Y$ as $Y = \lbrace y_1, y_2, \dots, y_m\rbrace$ then $X \cap Y = \phi$ and if we connect $x_i$ with $y_i$ if a relationship exists then an edge $(x_i, y_i)$ is formed. This graph $G$ is called a &lt;code>bipartite&lt;/code> graph, or &lt;code>even&lt;/code> graph and is denoted by $G = (X,Y; E)$&lt;/p>
-&lt;p>If $G$ is a simple graph on $n$ vertices, then if we generate a graph by deleting all the edges belonging to $G$ from the complete graph $K_n$, this is called the &lt;code>complementary&lt;/code> graph of G, denoted by $\bar{G}$.&lt;/p>
+&lt;p>If $G$ is a simple graph on $n$ vertices, then if we generate a graph by deleting all the edges belonging to $G$ from the complete graph $K_n$, this is called the &lt;code>complementary&lt;/code> graph of G, denoted by $\bar{G}$.
+The complement of the graph with $n$ vertices and no edges is the complete graph on $n$ vertices, and is denoted $K_{n}$.&lt;/p>
 &lt;hr>
 &lt;h1 id="tactics">Tactics&lt;/h1>
 &lt;ul>

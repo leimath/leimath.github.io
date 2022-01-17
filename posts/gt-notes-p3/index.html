@@ -82,7 +82,7 @@ LeiMath
 <li>The vertex set can be decomposed into a union of $k$ subsets such that any two subsets are disjoint i.e $$V = \bigcup\limits_{i = 1}^k V_i \qquad V_i \cap V_j = \phi$$ for some $i \neq j$</li>
 <li>There is no edge whose two vertices are in the same subset</li>
 </ol>
-<p>then if these two conditions are met, we call a graph <code>k-partite</code>. A 2-partite graph is called a <code>bigraph</code>. A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$</p>
+<p>then if these two conditions are met, we call a graph <code>k-partite</code>. A 2-partite graph is called a <code>bigraph</code> (which are the same as previously defined term, <em>bipartite graph</em>). A $k$-partite graph is denoted by $G = (V_1,V_2,\dots,V_k;E)$ or $G = (V_1^k;E)$</p>
 <p>It is not difficult to convince oneself that any graph with $n$ vertices is $n$-partite graph.</p>
 <p>$$\dotsb$$</p>
 <p>Suppose that $G^\prime$ is a <em>simple</em> $k$-partite graph as in $G^\prime = (V_1^k;E)$ with $| V_i| = m_i$, $i \in \lbrace 1,2,3, \ldots \rbrace$. The graph is said to be <code>complete k-partite</code> if <strong>any</strong> two vertices belonging in two different subsets of the vertex set $V^\prime$ are adjacent, i.e, $u \in V_i , v \in V_j , i \neq j$ and $u$ is adjacent to $v$. We denote the graph $G^\prime$ as $K_{m_1, m_2, \dots , m_k}$ and more frequent notation is $T_{k}(n)$ where $n$ stands for the total number of vertices.</p>
@@ -101,6 +101,8 @@ LeiMath
 <p>Note 1: This theorem&rsquo;s proof is not necessary for olympiads/scholarship exams. Theorem 1 is rather common and is sometimes referred to Turán&rsquo;s theorem as well.</p>
 <p>Note 2: $e(T_k(n)) = \binom{n - k}{2} + (m-1)\binom{k+1}{2}$ where $k = \lfloor \frac{n}{m} \rfloor$</p>
 <p>$$\dotsb$$</p>
+<p><code>Theorem 3</code>: [&ldquo;Marriage Lemma&rdquo; or Hall&rsquo;s Matching Theorem] Let $G$ be a bipartite graph with parts $A$ and $B$. Suppose that $B$ has at least as many vertices as $A$. Then $G$ has a matching using all the vertices of $A$ if and only if for any subset $S$ of $k$ vertices of $A$, there are at least $k$ vertices in $B$ adjacent to some vertex of $A$.</p>
+<p>In particular, if every vertex of $A$ has the same degree $a$ and every vertex of $B$ has the same degree $b$, then $G$ has a matching using every vertex of $A$.</p>
 <hr>
 <h1 id=questions>Questions<a href=#questions class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p><code>1.</code> Prove that if there are $2n+1$ vertices and $n^2 + n + 1$ edges in a simple graph $G$, then $G$ must contain a triangle.</p>

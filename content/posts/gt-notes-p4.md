@@ -28,7 +28,7 @@ Before introducing trees, here are some essential terminologies:
 
 Let $G$ be a graph and its edges are $e_1,e_2,e_3,e_4,\ldots,e_m$
 
-1. If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ then we call the sequence a `chain` from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$
+1. If edge $e_i = (v_{i-1},v_i)$ for $i = 1,2,3, \ldots, m$ exists and $v_{i-1}$ is adjacent to $v_i$ then we call the sequence a `chain` from $v_0$ and $v_m$. It is denoted as $v_0v_1\ldots v_m$. 
 2. $m$ is called the `length` of the chain.
 3. If $v_0$ and $v_m$ are the same, then the chain is called a `cycle`. Note that the proper definition for a cycle requires all $v_i$ , $i \in \lbrace 2,m-1 \rbrace$ to be distinct and $v_0 = v_m$ however we do not use the distinctness part for use in these notes for simplicity.
 4. If a graph is not cyclic then it is called acyclic.

@@ -8,7 +8,7 @@ author = "LeiMath"
 
 My name is `Im Saesin` (alias : LeiMath) and this is my blog. I am currently a student.
 
-This website is a collection of Scholarship Math Problems, Articles and my Notes. Ocassionally stumbling into Olympiad Math Problems and Mathematical Curiosities.
+This website is a collection of Scholarship Math Problems, Articles and my Notes. Ocassionally stumbling into Olympiad Math Problems and Mathematical Curiosities. I am very interested in the works and life of Pierre de Fermat.
 
 Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theory as well as Playwriting among all things. I sketch sometimes. 
 

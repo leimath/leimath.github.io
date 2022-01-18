@@ -35,7 +35,9 @@ $G_n$: The ratio of two successive term in the Fibonacci Sequence, i.e, $\displa
 
 # Binet's Formula
 
-$$F_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\right)$$
+$$F_{n}=\frac{1}{\sqrt{5}}\left(\frac{\sqrt{5}+1}{2}\right)^{n}-\frac{(-1)^{n}}{\sqrt{5}}\left(\frac{\sqrt{5}-1}{2}\right)^{n}$$
+
+for $n \geq 0$.
 
 
 ---
@@ -110,5 +112,37 @@ Then induction on $k \geq 2$ and using the recurrence for the Fibonacci numbers 
 This above theorem while may or may not be useful, has seen usage because of the proof. The idea of finite pairs of remainders and that eventually some remainder of index values will repeat has been used in question based on divisibility sequences.
 
 ---
+
+# Questions
+
+Key: [D] means Very Difficult. [E] means Easy. [M] means Moderate. [E-M] means between Easy to Moderate. Difficulty grading is ofcourse relative.
+
+`1.` [E] Prove that if $a_{n}=F_{2 n-1}, b_{n}=2 F_{n} F_{n-1}$, and $c_{n}=F_{n}^{2}-F_{n-1}^{2}$, then $a_{n}^{2}=b_{n}^{2}+c_{n}^{2} .$
+
+`2.` [D] [IMO Longlist 1974 2] Let $\left\{u_{n}\right\}$ be the Fibonacci sequence, i.e., $u_{0}=0, u_{1}=1$, $u_{n}=u_{n-1}+u_{n-2}$ for $n>1$. Prove that there exist infinitely many prime numbers $p$ that divide $u_{p-1}$.
+
+`3.` [D] Prove that, for every $n \in \mathbb{N}$, we have
+$$
+\sum_{j=1}^{n}\left(\begin{array}{l}
+n \\
+j
+\end{array}\right) F_{2 n+1-j}=F_{2 n+1}-1,
+$$
+where $F_{k}$ is the $k$-th Fibonacci number.
+
+`4.` [M] Let $F_{n}$ be the $n^{\text {th }}$ Fibonacci number defined by $F_{1}=F_{2}=1$ and $F_{n+2}=F_{n+1}+F_{n}$ for $n \in \mathbb{N}$. Prove that
+$$
+\sum_{k=0}^{n}\left(\begin{array}{c}
+n-k+1 \\
+k
+\end{array}\right)=F_{n+2}
+$$
+
+`5.` [E-M] Prove
+$$
+f_{n}^{4}-f_{n-2} f_{n-1} f_{n+1} f_{n+2}=1, \quad n \geq 3
+$$
+
+Note: The identity in `5.` is called the `Gelin-Cesàro` identity.
 
 $$\dots$$

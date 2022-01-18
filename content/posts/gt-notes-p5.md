@@ -71,7 +71,7 @@ Along with previously discussed tactics, some extra ones are:
 
 `1.` Arrange $n$ vertices $v_{1}, v_{2}, \ldots, v_{n}$ in order on a line. Each vertex is colored in red or blue. If the ends of a segment $v_{i} v_{i+1}$ are colored differently, we call it a standard segment. Suppose the colors of $v_{1}$ and $v_{n}$ are different. Prove that the number of the standard segments is odd.
 
-`2.` (CMC 5th) A graph which consists of a convex $n$-polygon and $n-3$ disjoint diagonal lines in the polygon is called a subdivision graph.
+`2.` [CMC 5th] A graph which consists of a convex $n$-polygon and $n-3$ disjoint diagonal lines in the polygon is called a subdivision graph.
 Prove that there exists a `subdivision graph` which is a cycle drawn without lifting one's pen (i. e. start from a vertex, go through each segment only once and return the starting point) if and only if $3 \mid n$. 
 
 `3.` On an $8 \times 8$ chessboard with 64 black and white squares we move a knight. In whatever direction the knight moves, is it possible to make the knight move to all the squares and each square only once? (A knight moves from a corner square of a rectangle with $2 \times 3$ black and white squares to another corner square diagonal to the starting position.)

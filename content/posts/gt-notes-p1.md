@@ -64,8 +64,8 @@ $\star$ Generally, unless stated otherwise - we use *finite* simple graphs all t
 A wide variety of questions can be tackled merely by the above definitions. The tactics to solve such problems are:
 
 * `Reformulate the question` : This sounds simple enough but not always clicks to mind by a first look. After translating the question in graph theoritic terms and **constructing a graph**, a few too many questions are tremendously simplified to some form of logical argument or something to do with the data provided/inferred. 
-* `Parity` : Somehow reach contradictions with even-odd arguments. Works best if the question already provides some concrete data on some variable bein even/odd. 
-* `Coloring` : Usually works great when some form of trait is to be deonstrated among $2 + k$ objects. Then the problem can be reduced to showing monochromatic structure among these $2+k$ objects. 
+* `Parity` : Somehow reach contradictions with even-odd arguments. Works best if the question already provides some concrete data on some variable being even/odd. 
+* `Coloring` : Usually works great when some form of trait is to be demonstrated among $2 + k$ objects. Then the problem can be reduced to showing monochromatic structure among these $2+k$ objects. 
 * `Pigeonhole principle` :  If we put $n$ pigeons in less than $n$ pigeonholes, then at least one pigeonhole contains more than one pigeons. Simple enough to state, but it might take a while to frame the question to use this, the most apt use case is when paired with the above mention "coloring" strategy. 
 * `Neighborhood Dragging` : We consider the neighbourhood (denoted by the set $N$) of two defined objects, or vertex (in the question) and then argue if a foreign object can be in it or not (usually depends on the question for partculars).
 * `WLOG vertex` : In some instances where the graph isn't particularly defined well, we might WLOG assume a pair of vertex or an edge to exist.

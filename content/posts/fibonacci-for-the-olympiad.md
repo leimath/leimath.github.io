@@ -123,10 +123,7 @@ Key: [D] means Very Difficult. [E] means Easy. [M] means Moderate. [E-M] means b
 
 `3.` [D] Prove that, for every $n \in \mathbb{N}$, we have
 $$
-\sum_{j=1}^{n}\left(\begin{array}{l}
-n \\
-j
-\end{array}\right) F_{2 n+1-j}=F_{2 n+1}-1,
+\sum_{j=1}^{n}\binom{n}{j} F_{2 n+1-j}=F_{2 n+1}-1,
 $$
 where $F_{k}$ is the $k$-th Fibonacci number.
 

@@ -119,7 +119,7 @@ Key: [D] means Very Difficult. [E] means Easy. [M] means Moderate. [E-M] means b
 
 `1.` [E] Prove that if $a_{n}=F_{2 n-1}, b_{n}=2 F_{n} F_{n-1}$, and $c_{n}=F_{n}^{2}-F_{n-1}^{2}$, then $a_{n}^{2}=b_{n}^{2}+c_{n}^{2} .$
 
-`2.` [D] [IMO Longlist 1974 2] Let $\left\{u_{n}\right\}$ be the Fibonacci sequence, i.e., $u_{0}=0, u_{1}=1$, $u_{n}=u_{n-1}+u_{n-2}$ for $n>1$. Prove that there exist infinitely many prime numbers $p$ that divide $u_{p-1}$.
+`2.` [D] [IMO Longlist 1974 2] Let $\lbrace u_{n}\rbrace$ be the Fibonacci sequence, i.e., $u_{0}=0, u_{1}=1$, $u_{n}=u_{n-1}+u_{n-2}$ for $n>1$. Prove that there exist infinitely many prime numbers $p$ that divide $u_{p-1}$.
 
 `3.` [D] Prove that, for every $n \in \mathbb{N}$, we have
 $$

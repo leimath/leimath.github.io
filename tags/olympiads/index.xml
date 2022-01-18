@@ -117,10 +117,7 @@ $$
 where $F_{k}$ is the $k$-th Fibonacci number.&lt;/p>
 &lt;p>&lt;code>4.&lt;/code> [M] Let $F_{n}$ be the $n^{\text {th }}$ Fibonacci number defined by $F_{1}=F_{2}=1$ and $F_{n+2}=F_{n+1}+F_{n}$ for $n \in \mathbb{N}$. Prove that
 $$
-\sum_{k=0}^{n}\left(\begin{array}{c}
-n-k+1 \
-k
-\end{array}\right)=F_{n+2}
+\sum_{k=0}^{n} \binom{n-k+1}{k}=F_{n+2}
 $$&lt;/p>
 &lt;p>&lt;code>5.&lt;/code> [E-M] Prove
 $$

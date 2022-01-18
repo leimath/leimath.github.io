@@ -34,7 +34,7 @@ most two vertices of odd-degree&lt;/p>
 &lt;hr>
 &lt;h1 id="questions">Questions&lt;/h1>
 &lt;p>&lt;code>1.&lt;/code> Arrange $n$ vertices $v_{1}, v_{2}, \ldots, v_{n}$ in order on a line. Each vertex is colored in red or blue. If the ends of a segment $v_{i} v_{i+1}$ are colored differently, we call it a standard segment. Suppose the colors of $v_{1}$ and $v_{n}$ are different. Prove that the number of the standard segments is odd.&lt;/p>
-&lt;p>&lt;code>2.&lt;/code> (CMC 5th) A graph which consists of a convex $n$-polygon and $n-3$ disjoint diagonal lines in the polygon is called a subdivision graph.
+&lt;p>&lt;code>2.&lt;/code> [CMC 5th] A graph which consists of a convex $n$-polygon and $n-3$ disjoint diagonal lines in the polygon is called a subdivision graph.
 Prove that there exists a &lt;code>subdivision graph&lt;/code> which is a cycle drawn without lifting one&amp;rsquo;s pen (i. e. start from a vertex, go through each segment only once and return the starting point) if and only if $3 \mid n$.&lt;/p>
 &lt;p>&lt;code>3.&lt;/code> On an $8 \times 8$ chessboard with 64 black and white squares we move a knight. In whatever direction the knight moves, is it possible to make the knight move to all the squares and each square only once? (A knight moves from a corner square of a rectangle with $2 \times 3$ black and white squares to another corner square diagonal to the starting position.)&lt;/p></content></item><item><title>My Graph Theory Notes - Part 4</title><link>https://leimath.github.io/posts/gt-notes-p4/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p4/</guid><description>This is the fourth part of the graph theory notes. We take a look at Trees.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
@@ -200,8 +200,8 @@ Following the tradition of this blog, we do not present any illustrations on usi
 &lt;p>A wide variety of questions can be tackled merely by the above definitions. The tactics to solve such problems are:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>Reformulate the question&lt;/code> : This sounds simple enough but not always clicks to mind by a first look. After translating the question in graph theoritic terms and &lt;strong>constructing a graph&lt;/strong>, a few too many questions are tremendously simplified to some form of logical argument or something to do with the data provided/inferred.&lt;/li>
-&lt;li>&lt;code>Parity&lt;/code> : Somehow reach contradictions with even-odd arguments. Works best if the question already provides some concrete data on some variable bein even/odd.&lt;/li>
-&lt;li>&lt;code>Coloring&lt;/code> : Usually works great when some form of trait is to be deonstrated among $2 + k$ objects. Then the problem can be reduced to showing monochromatic structure among these $2+k$ objects.&lt;/li>
+&lt;li>&lt;code>Parity&lt;/code> : Somehow reach contradictions with even-odd arguments. Works best if the question already provides some concrete data on some variable being even/odd.&lt;/li>
+&lt;li>&lt;code>Coloring&lt;/code> : Usually works great when some form of trait is to be demonstrated among $2 + k$ objects. Then the problem can be reduced to showing monochromatic structure among these $2+k$ objects.&lt;/li>
 &lt;li>&lt;code>Pigeonhole principle&lt;/code> : If we put $n$ pigeons in less than $n$ pigeonholes, then at least one pigeonhole contains more than one pigeons. Simple enough to state, but it might take a while to frame the question to use this, the most apt use case is when paired with the above mention &amp;ldquo;coloring&amp;rdquo; strategy.&lt;/li>
 &lt;li>&lt;code>Neighborhood Dragging&lt;/code> : We consider the neighbourhood (denoted by the set $N$) of two defined objects, or vertex (in the question) and then argue if a foreign object can be in it or not (usually depends on the question for partculars).&lt;/li>
 &lt;li>&lt;code>WLOG vertex&lt;/code> : In some instances where the graph isn&amp;rsquo;t particularly defined well, we might WLOG assume a pair of vertex or an edge to exist.&lt;/li>
@@ -407,7 +407,8 @@ This article assumes familiarity with the definition of the &amp;ldquo;Fibonacci
 &lt;p>$G_n$: The ratio of two successive term in the Fibonacci Sequence, i.e, $\displaystyle G_n = \frac{F_{n+1}}{F_n}$&lt;/p>
 &lt;hr>
 &lt;h1 id="binets-formula">Binet&amp;rsquo;s Formula&lt;/h1>
-&lt;p>$$F_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\right)$$&lt;/p>
+&lt;p>$$F_{n}=\frac{1}{\sqrt{5}}\left(\frac{\sqrt{5}+1}{2}\right)^{n}-\frac{(-1)^{n}}{\sqrt{5}}\left(\frac{\sqrt{5}-1}{2}\right)^{n}$$&lt;/p>
+&lt;p>for $n \geq 0$.&lt;/p>
 &lt;hr>
 &lt;h1 id="properties">Properties&lt;/h1>
 &lt;ol>
@@ -500,4 +501,28 @@ $$
 Then induction on $k \geq 2$ and using the recurrence for the Fibonacci numbers show that $F_{n+k} \bmod r=F_{n+k+j} \bmod r$. Therefore the sequence $F_{n} \bmod r$ is periodic. $\blacksquare$&lt;/p>
 &lt;p>This above theorem while may or may not be useful, has seen usage because of the proof. The idea of finite pairs of remainders and that eventually some remainder of index values will repeat has been used in question based on divisibility sequences.&lt;/p>
 &lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>Key: [D] means Very Difficult. [E] means Easy. [M] means Moderate. [E-M] means between Easy to Moderate. Difficulty grading is ofcourse relative.&lt;/p>
+&lt;p>&lt;code>1.&lt;/code> [E] Prove that if $a_{n}=F_{2 n-1}, b_{n}=2 F_{n} F_{n-1}$, and $c_{n}=F_{n}^{2}-F_{n-1}^{2}$, then $a_{n}^{2}=b_{n}^{2}+c_{n}^{2} .$&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> [D] [IMO Longlist 1974 2] Let $\left{u_{n}\right}$ be the Fibonacci sequence, i.e., $u_{0}=0, u_{1}=1$, $u_{n}=u_{n-1}+u_{n-2}$ for $n&amp;gt;1$. Prove that there exist infinitely many prime numbers $p$ that divide $u_{p-1}$.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> [D] Prove that, for every $n \in \mathbb{N}$, we have
+$$
+\sum_{j=1}^{n}\left(\begin{array}{l}
+n \
+j
+\end{array}\right) F_{2 n+1-j}=F_{2 n+1}-1,
+$$
+where $F_{k}$ is the $k$-th Fibonacci number.&lt;/p>
+&lt;p>&lt;code>4.&lt;/code> [M] Let $F_{n}$ be the $n^{\text {th }}$ Fibonacci number defined by $F_{1}=F_{2}=1$ and $F_{n+2}=F_{n+1}+F_{n}$ for $n \in \mathbb{N}$. Prove that
+$$
+\sum_{k=0}^{n}\left(\begin{array}{c}
+n-k+1 \
+k
+\end{array}\right)=F_{n+2}
+$$&lt;/p>
+&lt;p>&lt;code>5.&lt;/code> [E-M] Prove
+$$
+f_{n}^{4}-f_{n-2} f_{n-1} f_{n+1} f_{n+2}=1, \quad n \geq 3
+$$&lt;/p>
+&lt;p>Note: The identity in &lt;code>5.&lt;/code> is called the &lt;code>Gelin-Cesàro&lt;/code> identity.&lt;/p>
 &lt;p>$$\dots$$&lt;/p></content></item></channel></rss>

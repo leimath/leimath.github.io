@@ -56,7 +56,7 @@ In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\ri
 
 $$\dotsb$$
 
-`Theorem 2[Pösá]` Let $V$ be the set of all the vertices of $G, E$ the set of all the edges of $G$. Prove that if $|E| \geqslant|V|+4$, then there must be two cycles which have no common edges.
+`Theorem 2[Pósa]` Let $V$ be the set of all the vertices of $G, E$ the set of all the edges of $G$. If $|E| \geqslant|V|+4$, then there must be two cycles which have no common edges.
 
 $$\dotsb$$
 
@@ -101,7 +101,7 @@ $$\dotsb$$
 
 # Questions
 
-`1.` Prove Pösá's Theorem (Theorem 2 above).
+`1.` Prove Theorem 2 above.
 
 `2.` [USAMO 1986] In a lecture, there are five mathematicians. Each of them took a nap twice and every two of them took naps at the same time. Prove that there must be three persons who took naps at the same time.
 

@@ -21,9 +21,9 @@ The book followed throughout is: _Graph Theory with Applications_ by _Bondy J.A.
 ---
 ---
 
-# Regarding the Konigsberg Problem
+# Regarding the Königsberg Problem
 
-The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to [here - for a audiovisual treatment](https://www.youtube.com/watch?v=nZwSo4vfw6c) or [here - for a full report on it.](https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem)
+The entirety of the Königsberg problem solved by Euler is covered at various places; Please refer to [here - for a audiovisual treatment](https://www.youtube.com/watch?v=nZwSo4vfw6c) or [here - for a full report on it.](https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem)
 
 The key question that was put forward against Euler was: Can a traveler go through every bridge once and only once ?
 
@@ -33,11 +33,11 @@ His solution led to many theorems that came forward and is presented below.
 
 # Eulerian Graphs
 
-A `tour` of a graph $G$ is a closed walk that traverses each edge of $G$ **at least** once.
+Note that in various instances a _chain_ is also referred to as a `walk`.
+A `tour` of a graph $G$ is a closed (starts and ends in same vertex) walk that traverses each edge of $G$ **at least** once.
 If a cycle in a graph traverses every edge of the graph **exactly** once then the cycle is termed as `Euler Tour` (old books also call it `Euler Trail` as well).
 A graph where Euler tour is admitted is called a `Eulerian Graph`.
 
-Note that in various instances a _chain_ is also referred to as a `walk`.
 A `path` is any walk (or, chain) with distinct vertices.
 
 ---
@@ -55,6 +55,19 @@ no vertices of odd degree.
 most two vertices of odd-degree
 
 Note: Some theorems are quite tricky, especially Theorem 1, and non-intuitive. Please refer to the book mentioned above for proofs else, skip them.
+
+`Theorem 5["Euler Path Theorem"]`: 
+
+1. A graph contains a closed Euler path if and only if
+* Every vertex has even degree, and
+* All edges are in the same component.
+
+2. A graph contains an open Euler path if and only if
+(a) Exactly two vertices have odd degree, and
+(b) All edges are in the same component.
+
+Note: An Euler path is called `closed` if it starts and ends at the same
+vertex; otherwise it’s called `open`.
 
 ---
 

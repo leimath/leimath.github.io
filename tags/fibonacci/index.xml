@@ -109,7 +109,7 @@ Then induction on $k \geq 2$ and using the recurrence for the Fibonacci numbers 
 &lt;h1 id="questions">Questions&lt;/h1>
 &lt;p>Key: [D] means Very Difficult. [E] means Easy. [M] means Moderate. [E-M] means between Easy to Moderate. Difficulty grading is ofcourse relative.&lt;/p>
 &lt;p>&lt;code>1.&lt;/code> [E] Prove that if $a_{n}=F_{2 n-1}, b_{n}=2 F_{n} F_{n-1}$, and $c_{n}=F_{n}^{2}-F_{n-1}^{2}$, then $a_{n}^{2}=b_{n}^{2}+c_{n}^{2} .$&lt;/p>
-&lt;p>&lt;code>2.&lt;/code> [D] [IMO Longlist 1974 2] Let $\left{u_{n}\right}$ be the Fibonacci sequence, i.e., $u_{0}=0, u_{1}=1$, $u_{n}=u_{n-1}+u_{n-2}$ for $n&amp;gt;1$. Prove that there exist infinitely many prime numbers $p$ that divide $u_{p-1}$.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> [D] [IMO Longlist 1974 2] Let $\lbrace u_{n}\rbrace$ be the Fibonacci sequence, i.e., $u_{0}=0, u_{1}=1$, $u_{n}=u_{n-1}+u_{n-2}$ for $n&amp;gt;1$. Prove that there exist infinitely many prime numbers $p$ that divide $u_{p-1}$.&lt;/p>
 &lt;p>&lt;code>3.&lt;/code> [D] Prove that, for every $n \in \mathbb{N}$, we have
 $$
 \sum_{j=1}^{n}\left(\begin{array}{l}

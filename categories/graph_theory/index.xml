@@ -1,20 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>graph_theory on LeiMath</title><link>https://leimath.github.io/categories/graph_theory/</link><description>Recent content in graph_theory on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/categories/graph_theory/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 5</title><link>https://leimath.github.io/posts/gt-notes-p5/</link><pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p5/</guid><description>This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.
-The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
-Regarding the Konigsberg Problem The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.</description><content>&lt;p>This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>graph_theory on LeiMath</title><link>https://leimath.github.io/categories/graph_theory/</link><description>Recent content in graph_theory on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/categories/graph_theory/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 6</title><link>https://leimath.github.io/posts/gt-notes-p6/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p6/</guid><description>This is the sixth part of the graph theory notes. We take a look at Hamiltonian Graphs. We omit a tactics section since the questions related to Hamiltonian Graphs are diverse each requiring some approach unique in its own way, please see the #Questions section for further references.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.</description><content>&lt;p>This is the sixth part of the graph theory notes. We take a look at Hamiltonian Graphs. We omit a tactics section since the questions related to Hamiltonian Graphs are diverse each requiring some approach unique in its own way, please see the &lt;strong>#Questions&lt;/strong> section for further references.&lt;/p>
 &lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
 &lt;hr>
 &lt;hr>
-&lt;h1 id="regarding-the-konigsberg-problem">Regarding the Konigsberg Problem&lt;/h1>
-&lt;p>The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to &lt;a href="https://www.youtube.com/watch?v=nZwSo4vfw6c">here - for a audiovisual treatment&lt;/a> or &lt;a href="https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem">here - for a full report on it.&lt;/a>&lt;/p>
+&lt;h1 id="hamiltonian-graph">Hamiltonian Graph&lt;/h1>
+&lt;p>If a chain exists such that it passes through &lt;strong>every&lt;/strong> vertex only once, then the chain is called a &lt;code>Hamiltonian Chain&lt;/code>, respectively the definition also follows similarly for &lt;code>Hamiltonian Cycles&lt;/code>. Put differently, a Hamiltonian chain is where it visits every vertex
+exactly once but need not cover every edge. If a graph contains a Hamiltonian &lt;strong>&lt;em>cycle&lt;/em>&lt;/strong> then the graph is called a &lt;code>Hamiltonian Graph&lt;/code>.&lt;/p>
+&lt;p>Note that no nontrivial necessary and sufficient condition for a graph to be Hamiltonian is known, it is one of the main unsolved problem of graph theory. However, there are some negative tests, which can show that a given
+graph contains no Hamilton path or cycle, and some positive tests, which can show that
+a given graph contains a Hamilton path or cycle without actually constructing one. These
+tests do not apply to every graph.&lt;/p>
+&lt;p>Refer to &lt;a href="https://www.youtube.com/watch?v=CEOGcSCTar8">this&lt;/a> to get a idea on the differences in the Eulerian Graph and Hamiltonian Graphs. Loosely, Eulerian graphs only bother with edges whereas a Hamiltonian graph has to deal with the vertices.&lt;/p>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>&lt;code>Theorem 1&lt;/code>: In a bigraph $G$ if $|V_1| \neq |V_2|$, $G$ must contain no Hamiltonian cycle. If the difference between $|V_1|$ and $|V_2|$ is more than $1$, $G$ must contain no Hamiltonian chain.&lt;/p>
+&lt;p>&lt;code>Theorem 2&lt;/code>: Let $G$ be a simple graph with $n \geqslant 3$ vertices. For every pair of vertices $v,v'$ if $$d(v) + d(v') \geqslant n - 1$$ then $G$ contains a Hamiltonian chain.&lt;/p>
+&lt;p>Note that the Theorem 2 condition is indeed gives a way for existence of a Hamiltonian chain but it is not necessary. There exists examples (e.g, a regular hexagon) where the condition fails yet the graph is a Hamiltonian chain.&lt;/p>
+&lt;p>&lt;code>Theorem 3[Ore]&lt;/code>: Let $G$ be a simple graph with $n$ vertices. For every two nonadjacent vertices $v,v'$ if $$d(v) + d(v') \geqslant n$$ then $G$ is a Hamiltonian cycle.&lt;/p>
+&lt;p>&lt;code>Theorem 4[Dirac]&lt;/code>: Let $G$ be a simple graph with $n$ vertices. If the degree of every vertex $v$ is no less than $\frac{n}{2}$, then $G$ must contain a Hamiltonian cycle.&lt;/p>
+&lt;p>&lt;code>Theorem 5[Pósa]&lt;/code> Let $G$ be a graph with $n$ vertices, where $n \geq 3$, and suppose that the degrees in $G$ satisfy $$d_{1}&amp;gt;1 ~ ,~ d_{2}&amp;gt;2~,~ \ldots ~, ~ d_{i}&amp;gt;i$$ where $d_1,d_2, \ldots, d_i$ represents the degrees of each vertex for all values of $i &amp;lt; \frac{n}{2}$.
+Then $G$ contains a Hamilton cycle.&lt;/p>
+&lt;p>This is the so called &lt;code>Pósa's theorem&lt;/code>, and in a way &amp;ndash; the combined power form of Theorem 3 and 4.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 6&lt;/code>: If $G$ contains a Hamiltonian graph, remove several vertices $v_1, v_2, v_3, \ldots v_k$ and their adjacent edges from $G$ to get new graph $G^\prime$, then the number of connected components in $G^\prime$ is no more than $k$.&lt;/p>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>A lot of different variants of questions are possible and simply listing down tactics wouldn&amp;rsquo;t cover the strategies usually required, hence we recommend the reader to do questions from any standard book (either from the one mentioned at the begining of this post, or &lt;em>Graph Theory: A Problem Oriented Approach by Daniel Marcus, Chapter G&lt;/em>) along with the questions presented below.&lt;/p>
+&lt;p>&lt;code>1.&lt;/code> Arrange 7 examinations in 7 days so that the two courses which are taught by one teacher cannot be arranged in two consecutive days. If every teacher can teach at most 4 courses which have examination. Prove that it is possible to arrange the examinations in the above way.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> A factory produces two-color paper using 6 distinct colored yarns. Among six kinds of yarns, every color must be matched in groups with three other colors. Prove that it is possible to choose three kinds of two-color paper so that all 6 colors are present.&lt;/p>
+&lt;p>&lt;code>3.&lt;/code> If $A_{0} A_{1} A_{2} \ldots A_{2 n-1}$ is a regular polygon of $2 n$ sides. Join all its diagonals to get a graph $G$. Prove that every Hamiltonian cycle of $G$ must contain two edges which are parallel in the graph.&lt;/p>
+&lt;p>&lt;code>4.&lt;/code> An executive has $2 n$ friends, among whom there are several friends hate each other. But the number of persons every friend hates is no more than $n-1$. Can they sit in a round table so that no two adjacent friend hate each other?&lt;/p>
+&lt;p>&lt;code>5.&lt;/code> Around a table there sit at least five persons and it is possible to rearrange their seats so that beside everyone there are two new neighbours.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 5</title><link>https://leimath.github.io/posts/gt-notes-p5/</link><pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p5/</guid><description>This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.
+The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+Regarding the Königsberg Problem The entirety of the Königsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.</description><content>&lt;p>This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.&lt;/p>
+&lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="regarding-the-königsberg-problem">Regarding the Königsberg Problem&lt;/h1>
+&lt;p>The entirety of the Königsberg problem solved by Euler is covered at various places; Please refer to &lt;a href="https://www.youtube.com/watch?v=nZwSo4vfw6c">here - for a audiovisual treatment&lt;/a> or &lt;a href="https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem">here - for a full report on it.&lt;/a>&lt;/p>
 &lt;p>The key question that was put forward against Euler was: Can a traveler go through every bridge once and only once ?&lt;/p>
 &lt;p>His solution led to many theorems that came forward and is presented below.&lt;/p>
 &lt;hr>
 &lt;h1 id="eulerian-graphs">Eulerian Graphs&lt;/h1>
-&lt;p>A &lt;code>tour&lt;/code> of a graph $G$ is a closed walk that traverses each edge of $G$ &lt;strong>at least&lt;/strong> once.
+&lt;p>Note that in various instances a &lt;em>chain&lt;/em> is also referred to as a &lt;code>walk&lt;/code>.
+A &lt;code>tour&lt;/code> of a graph $G$ is a closed (starts and ends in same vertex) walk that traverses each edge of $G$ &lt;strong>at least&lt;/strong> once.
 If a cycle in a graph traverses every edge of the graph &lt;strong>exactly&lt;/strong> once then the cycle is termed as &lt;code>Euler Tour&lt;/code> (old books also call it &lt;code>Euler Trail&lt;/code> as well).
 A graph where Euler tour is admitted is called a &lt;code>Eulerian Graph&lt;/code>.&lt;/p>
-&lt;p>Note that in various instances a &lt;em>chain&lt;/em> is also referred to as a &lt;code>walk&lt;/code>.
-A &lt;code>path&lt;/code> is any walk (or, chain) with distinct vertices.&lt;/p>
+&lt;p>A &lt;code>path&lt;/code> is any walk (or, chain) with distinct vertices.&lt;/p>
 &lt;hr>
 &lt;h1 id="theorems">Theorems&lt;/h1>
 &lt;p>&lt;code>Theorem 1&lt;/code>: A finite graph $G$ is a chain or a cycle if and only if $G$ is connected and the number of vertices with odd degree in $G$ is equal to $2$ or $0$. When and only when the number of vertices with odd degrees in $G$ is equal to $0$, the connected graph $G$ is a cycle.&lt;/p>
@@ -24,6 +55,21 @@ no vertices of odd degree.&lt;/p>
 &lt;p>&lt;code>Theorem 4&lt;/code>: A connected graph has an Euler trail if and only if it has at
 most two vertices of odd-degree&lt;/p>
 &lt;p>Note: Some theorems are quite tricky, especially Theorem 1, and non-intuitive. Please refer to the book mentioned above for proofs else, skip them.&lt;/p>
+&lt;p>&lt;code>Theorem 5[&amp;quot;Euler Path Theorem&amp;quot;]&lt;/code>:&lt;/p>
+&lt;ol>
+&lt;li>A graph contains a closed Euler path if and only if&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Every vertex has even degree, and&lt;/li>
+&lt;li>All edges are in the same component.&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>A graph contains an open Euler path if and only if
+(a) Exactly two vertices have odd degree, and
+(b) All edges are in the same component.&lt;/li>
+&lt;/ol>
+&lt;p>Note: An Euler path is called &lt;code>closed&lt;/code> if it starts and ends at the same
+vertex; otherwise it’s called &lt;code>open&lt;/code>.&lt;/p>
 &lt;hr>
 &lt;h1 id="tactics">Tactics&lt;/h1>
 &lt;p>Along with previously discussed tactics, some extra ones are:&lt;/p>
@@ -66,7 +112,7 @@ We start from a pendant vertex $v$ and we can end up at another pendant vertex $
 &lt;p>&lt;em>Proof 2&lt;/em> : Assume that $\mu=u v_{1} v_{2} \cdots v_{k} v$ is the longest chain of $T$, we can show that $d(u)=d(v)=1$, i.e. $u, v$ are pendant vertices.
 In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\right)$ adjacent to $u$. If $w$ is one of $v_{2}, \ldots, v_{k}, v$, then a cycle occurs. It contradicts the definition of tree. If $w$ is different from $v_{2}, \ldots, v_{k}$, $v$, then $w u v_{1} \cdots v_{k} v$ is a chain longer than $\mu$, a contradiction. So $d(u)=1$. Similarly, $d(v)=1$. Hence tree $T$ has at least two pendant vertices.&lt;/p>
 &lt;p>$$\dotsb$$&lt;/p>
-&lt;p>&lt;code>Theorem 2[Pösá]&lt;/code> Let $V$ be the set of all the vertices of $G, E$ the set of all the edges of $G$. Prove that if $|E| \geqslant|V|+4$, then there must be two cycles which have no common edges.&lt;/p>
+&lt;p>&lt;code>Theorem 2[Pósa]&lt;/code> Let $V$ be the set of all the vertices of $G, E$ the set of all the edges of $G$. If $|E| \geqslant|V|+4$, then there must be two cycles which have no common edges.&lt;/p>
 &lt;p>$$\dotsb$$&lt;/p>
 &lt;p>&lt;code>Theorem 3&lt;/code>: Let $n$ be the number of vertices of $T$, then the number of edges of $T$ is $n - 1$.&lt;/p>
 &lt;p>$$\dotsb$$&lt;/p>
@@ -93,7 +139,7 @@ In fact, if $d(u) \geqslant 2$, then there exists vertex $w\left(w \neq v_{1}\ri
 &lt;/ul>
 &lt;hr>
 &lt;h1 id="questions">Questions&lt;/h1>
-&lt;p>&lt;code>1.&lt;/code> Prove Pösá&amp;rsquo;s Theorem (Theorem 2 above).&lt;/p>
+&lt;p>&lt;code>1.&lt;/code> Prove Theorem 2 above.&lt;/p>
 &lt;p>&lt;code>2.&lt;/code> [USAMO 1986] In a lecture, there are five mathematicians. Each of them took a nap twice and every two of them took naps at the same time. Prove that there must be three persons who took naps at the same time.&lt;/p>
 &lt;p>&lt;code>3.&lt;/code> Given a number table with $n$ rows and $n$ columns, every two rows are different. Prove that there must exist a column, after deleting it, every two rows are still different.&lt;/p>
 &lt;p>&lt;code>4.&lt;/code> [CMC 1987] $n(n&amp;gt;3)$ table tennis players play several single games. The opponents of any two players are different. Prove that we can remove one player so that the opponents of any two players in the remaining players are still different.&lt;/p>

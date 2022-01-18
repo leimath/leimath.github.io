@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
-  Regarding the Konigsberg Problem The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.">
+  Regarding the Königsberg Problem The entirety of the Königsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.">
 <meta name=keywords content>
 <meta name=robots content="noodp">
 <link rel=canonical href=https://leimath.github.io/posts/gt-notes-p5/>
@@ -21,7 +21,7 @@ The book followed throughout is: Graph Theory with Applications by Bondy J.A., M
 <meta property="og:title" content="My Graph Theory Notes - Part 5">
 <meta property="og:description" content="This is the fifth part of the graph theory notes. We take a look at Euler&amp;rsquo;s Problem and its resolution in this post.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
-  Regarding the Konigsberg Problem The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.">
+  Regarding the Königsberg Problem The entirety of the Königsberg problem solved by Euler is covered at various places; Please refer to here - for a audiovisual treatment or here - for a full report on it.">
 <meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p5/">
 <meta property="og:site_name" content="LeiMath">
 <meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
@@ -78,17 +78,17 @@ LeiMath
 <p>The book followed throughout is: <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p>
 <hr>
 <hr>
-<h1 id=regarding-the-konigsberg-problem>Regarding the Konigsberg Problem<a href=#regarding-the-konigsberg-problem class=hanchor arialabel=Anchor>&#8983;</a> </h1>
-<p>The entirety of the Konigsberg problem solved by Euler is covered at various places; Please refer to <a href="https://www.youtube.com/watch?v=nZwSo4vfw6c">here - for a audiovisual treatment</a> or <a href=https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem>here - for a full report on it.</a></p>
+<h1 id=regarding-the-königsberg-problem>Regarding the Königsberg Problem<a href=#regarding-the-königsberg-problem class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>The entirety of the Königsberg problem solved by Euler is covered at various places; Please refer to <a href="https://www.youtube.com/watch?v=nZwSo4vfw6c">here - for a audiovisual treatment</a> or <a href=https://www.maa.org/press/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem>here - for a full report on it.</a></p>
 <p>The key question that was put forward against Euler was: Can a traveler go through every bridge once and only once ?</p>
 <p>His solution led to many theorems that came forward and is presented below.</p>
 <hr>
 <h1 id=eulerian-graphs>Eulerian Graphs<a href=#eulerian-graphs class=hanchor arialabel=Anchor>&#8983;</a> </h1>
-<p>A <code>tour</code> of a graph $G$ is a closed walk that traverses each edge of $G$ <strong>at least</strong> once.
+<p>Note that in various instances a <em>chain</em> is also referred to as a <code>walk</code>.
+A <code>tour</code> of a graph $G$ is a closed (starts and ends in same vertex) walk that traverses each edge of $G$ <strong>at least</strong> once.
 If a cycle in a graph traverses every edge of the graph <strong>exactly</strong> once then the cycle is termed as <code>Euler Tour</code> (old books also call it <code>Euler Trail</code> as well).
 A graph where Euler tour is admitted is called a <code>Eulerian Graph</code>.</p>
-<p>Note that in various instances a <em>chain</em> is also referred to as a <code>walk</code>.
-A <code>path</code> is any walk (or, chain) with distinct vertices.</p>
+<p>A <code>path</code> is any walk (or, chain) with distinct vertices.</p>
 <hr>
 <h1 id=theorems>Theorems<a href=#theorems class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p><code>Theorem 1</code>: A finite graph $G$ is a chain or a cycle if and only if $G$ is connected and the number of vertices with odd degree in $G$ is equal to $2$ or $0$. When and only when the number of vertices with odd degrees in $G$ is equal to $0$, the connected graph $G$ is a cycle.</p>
@@ -98,6 +98,21 @@ no vertices of odd degree.</p>
 <p><code>Theorem 4</code>: A connected graph has an Euler trail if and only if it has at
 most two vertices of odd-degree</p>
 <p>Note: Some theorems are quite tricky, especially Theorem 1, and non-intuitive. Please refer to the book mentioned above for proofs else, skip them.</p>
+<p><code>Theorem 5["Euler Path Theorem"]</code>:</p>
+<ol>
+<li>A graph contains a closed Euler path if and only if</li>
+</ol>
+<ul>
+<li>Every vertex has even degree, and</li>
+<li>All edges are in the same component.</li>
+</ul>
+<ol start=2>
+<li>A graph contains an open Euler path if and only if
+(a) Exactly two vertices have odd degree, and
+(b) All edges are in the same component.</li>
+</ol>
+<p>Note: An Euler path is called <code>closed</code> if it starts and ends at the same
+vertex; otherwise it’s called <code>open</code>.</p>
 <hr>
 <h1 id=tactics>Tactics<a href=#tactics class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p>Along with previously discussed tactics, some extra ones are:</p>
@@ -118,6 +133,12 @@ Prove that there exists a <code>subdivision graph</code> which is a cycle drawn 
 <hr>
 </div>
 <div class=pagination__buttons>
+<span class="button previous">
+<a href=https://leimath.github.io/posts/gt-notes-p6/>
+<span class=button__icon>←</span>
+<span class=button__text>My Graph Theory Notes - Part 6</span>
+</a>
+</span>
 <span class="button next">
 <a href=https://leimath.github.io/posts/gt-notes-p4/>
 <span class=button__text>My Graph Theory Notes - Part 4</span>

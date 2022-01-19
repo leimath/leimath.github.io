@@ -23,7 +23,7 @@ The book followed throughout is: _Graph Theory with Applications_ by _Bondy J.A.
 
 # Degree of a Vertex
 
-The `degree` of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident ot $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.
+The `degree` of a vertex $v$ in a graph $G$, denoted by $d_G(v)$ (or simply, $d(v)$ if the context of graph is clear), is the number of edges incident to $v$ of $G$. Each loop is counted as two edges. $\delta(G)$ and $\Delta(G)$ are used to represent the minimum and maximum degrees of the vertices of $G$ respectively. A vertex is odd if the degree is odd, else it is even.
 
 Let $G(V,E)$ be a graph where $V,E$ are the vertex and edge set respectively. If it happens that for ALL vertex $v$, $d(v) = k$ for some $k$, then the graph $G$ is called `k-regular`. The complete graph on $n$ vertices is $(n-1)$ regular.
 

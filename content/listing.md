@@ -9,3 +9,4 @@
 * [Graph Theory Notes - Part 5](https://leimath.github.io/posts/gt-notes-p5/)
 * [Graph Theory Notes - Part 6](https://leimath.github.io/posts/gt-notes-p6/)
 * [Graph Theory Notes - Part 7](https://leimath.github.io/posts/gt-notes-p7/)
+* [Graph Theory Notes - Part 8](https://leimath.github.io/posts/gt-notes-p8/)

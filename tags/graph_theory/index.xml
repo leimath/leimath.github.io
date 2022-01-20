@@ -25,7 +25,41 @@ Planar Graphs A graph is called Planar if it can be drawn in the plane so that i
 &lt;h1 id="questions">Questions&lt;/h1>
 &lt;p>&lt;code>1.&lt;/code> Prove that the $K_5$ and $K_3,3$ are not planar.&lt;/p>
 &lt;p>&lt;code>2.&lt;/code> In a bus network there are $n$ stations. Each station is connected to at least 6 roads. Prove that there must be two roads intersecting on the plane.&lt;/p>
-&lt;p>&lt;code>3.&lt;/code> Let $S=\lbrace x_{1}, x_{2}, \ldots, x_{n}\rbrace ~~ (n \geqslant 3)$ be the set of vertices on the plane. The distance between two arbitrary vertices is no less than 1. Prove that there are at most $3 n-6$ pairs of vertices whose distances are 1 .&lt;/p></content></item><item><title>My Graph Theory Notes - Part 6</title><link>https://leimath.github.io/posts/gt-notes-p6/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p6/</guid><description>This is the sixth part of the graph theory notes. We take a look at Hamiltonian Graphs. We omit a tactics section since the questions related to Hamiltonian Graphs are diverse each requiring some approach unique in its own way, please see the #Questions section for further references.
+&lt;p>&lt;code>3.&lt;/code> Let $S=\lbrace x_{1}, x_{2}, \ldots, x_{n}\rbrace ~~ (n \geqslant 3)$ be the set of vertices on the plane. The distance between two arbitrary vertices is no less than 1. Prove that there are at most $3 n-6$ pairs of vertices whose distances are 1 .&lt;/p></content></item><item><title>My Graph Theory Notes - Part 8</title><link>https://leimath.github.io/posts/gt-notes-p8/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p8/</guid><description>This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.
+The book followed for the other notes is : Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
+For this post, the readers are also encouraged to seek the proofs in other books such as the legendary Adrian Bondy &amp;amp; U.</description><content>&lt;p>This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.&lt;/p>
+&lt;p>The book followed for the other notes is : &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
+&lt;p>For this post, the readers are also encouraged to seek the proofs in other books such as the legendary &lt;em>Adrian Bondy &amp;amp; U.S.R Murty - Graph Theory&lt;/em> from &lt;em>Springer - Verlag&lt;/em> or &lt;em>Graph Theory: A Problem Oriented Approach by Daniel Marcus&lt;/em>.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h1 id="ramsey-number">Ramsey Number&lt;/h1>
+&lt;p>Consider $k$ colors, $c_1, c_2, c_3, \ldots, c_k$ to color the complete graph $K_n$. We call $K_n$ as the &lt;code>k-color complete graph&lt;/code> if &lt;strong>every&lt;/strong> edge is colored in one color. It doesn&amp;rsquo;t take much convincing to claim that if $n$ is large enough, $k$-color complete graph $K_n$ must contain a monochromatic triangle. Call the least of such $n$ by $r_k$.&lt;/p>
+&lt;p>$\displaystyle r_k$ is nothing but the &lt;code>Ramsey Number&lt;/code> named after British mathematician Ramsey who proved its existence.&lt;/p>
+&lt;p>Suppose every edge of the complete graph $K_{n}$ is colored in red or blue, which means that $K_{n}$ is a two-color (red, blue) complete graph $K_{n}$. For two constant natural numbers $p, q$, when $n$ is large enough, the two-color (red, blue) complete graph $K_{n}$ must contain a red $K_{p}$ or a blue $K_{q}$. We denote the least $n$ satisfying the above proposition by $r(p, q)$. We also call $r(p, q)$ the Ramsey number.&lt;/p>
+&lt;p>$r(p,q)$ is hence the minimum $n$ so that any $n$-subgraph $G$ of the complete graph $K_n$ contains a complete subgraph $K_p$ or its complementary graph $\bar{G}$ contains a complete subgraph $K_q$.
+Also that, $r(1,q) = r(p,1) = 1$.&lt;/p>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>&lt;code>All of the proofs are omitted as some are way too long or quite difficult for the needs of these notes&lt;/code>, particularly that they hold no purpose here (or for a Scholarship exam for which these notes are for!) and might as well be referred directly from any standard Graph Theory book - like the ones mentioned below.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 1&lt;/code>: If a complete graph $K_n$ in two colors contains a monochromatic triangle, then the minimum $n$ is equal to 6.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>For Theorem 1, $r(3,3) = r_2 = 6$.
+See &lt;a href="https://math.mit.edu/~apost/courses/18.204_2018/ramsey-numbers.pdf">here, page 2&lt;/a> for a proof.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 2&lt;/code>: [I] For every positive integer $k$, the Ramsey Number $r_k$ exists. When $k \geqslant 2$, $$r_k \leqslant k(r_{k-1}-1 ) + 2$$&lt;/p>
+&lt;p>[II] For any $k \in \mathbb{N}$, $$r_k \leqslant 1 + 1 + k + k(k-1) + \ldots + \frac{k!}{2!} + \frac{k!}{1!} + k!$$&lt;/p>
+&lt;p>Note that Theorem 2 [II] is also written (with the help of series expansion of $e$) as $r_k \leqslant \lfloor k!~e~ \rfloor + 1$ where $\lfloor . \rfloor$ is the greatest integer function.&lt;/p>
+&lt;p>Some hints for the proof can be found &lt;a href="https://math.stackexchange.com/questions/1055435/modification-of-the-ramsey-number?noredirect=1">here&lt;/a>&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>Note that $r(2,q) = q$ and $r(p,2) = p$. Also, $r(p,q) = r(q,p)$ See &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em> Page 103, Section 7.2 for the discussion/proof.&lt;/p>
+&lt;p>&lt;code>Theorem 4&lt;/code> [Ramsey&amp;rsquo;s Theorem] For any two positive integers $n$ and $m$, the number $r(p, q)$ exists and satisfies the inequality $R(p, q) \leq r(p-1, q)+r(p, q-1) .$&lt;/p>
+&lt;p>For a proof see, &lt;em>Adrian Bondy &amp;amp; Murty - Graph Theory (GTM) by Springer - Verlag&lt;/em> Page 309 m, &lt;strong>Theorem 12.5&lt;/strong>.&lt;/p>
+&lt;p>$$\dotsb$$&lt;/p>
+&lt;p>&lt;code>Theorem 4&lt;/code>: When $p \geqslant 2$ and $q \geqslant 2$ then $$r(p,q) \leqslant \binom{p+q-2}{p-1}$$&lt;/p>
+&lt;p>Proof can be found in &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em> Page 106, Theorem 7.5&lt;/p>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>A lot of questions on Ramsey Numbers can be found &lt;a href="https://artofproblemsolving.com/community/q2_%22ramsey%20number%22">here&lt;/a> and also similarly searching &amp;ldquo;Ramsey&amp;rdquo; in the search field of artofproblemsolving forums. We direct the reader to try them to truly cover the varieties of such questions.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 6</title><link>https://leimath.github.io/posts/gt-notes-p6/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p6/</guid><description>This is the sixth part of the graph theory notes. We take a look at Hamiltonian Graphs. We omit a tactics section since the questions related to Hamiltonian Graphs are diverse each requiring some approach unique in its own way, please see the #Questions section for further references.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.</description><content>&lt;p>This is the sixth part of the graph theory notes. We take a look at Hamiltonian Graphs. We omit a tactics section since the questions related to Hamiltonian Graphs are diverse each requiring some approach unique in its own way, please see the &lt;strong>#Questions&lt;/strong> section for further references.&lt;/p>
 &lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
 &lt;hr>

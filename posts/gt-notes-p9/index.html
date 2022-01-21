@@ -1,0 +1,126 @@
+<!doctype html><html lang=en>
+<head>
+<title>My Graph Theory Notes - Part 9 :: LeiMath</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="This is the final part of the graph theory notes. We take a look at Tournaments.
+ Tournaments So far all the graphs encountered were undirected that is, none of the edges that stood for &amp;ldquo;relationship&amp;rdquo; between two vertex had any direction. If we attach some directional information to an edge, then the graph is called a directed graph. Let the directional information be represented by an arrow which points to a vertex from another vertex, the from side has the arrow and is called an arc in literature.">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<link rel=canonical href=https://leimath.github.io/posts/gt-notes-p9/>
+<link rel=stylesheet href=https://leimath.github.io/assets/style.css>
+<link rel=stylesheet href=https://leimath.github.io/assets/green.css>
+<link rel=apple-touch-icon href=https://leimath.github.io/img/apple-touch-icon-192x192.png>
+<link rel="shortcut icon" href=https://leimath.github.io/img/favicon/green.png>
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content>
+<meta name=twitter:creator content="LeiMath">
+<meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My Graph Theory Notes - Part 9">
+<meta property="og:description" content="This is the final part of the graph theory notes. We take a look at Tournaments.
+ Tournaments So far all the graphs encountered were undirected that is, none of the edges that stood for &amp;ldquo;relationship&amp;rdquo; between two vertex had any direction. If we attach some directional information to an edge, then the graph is called a directed graph. Let the directional information be represented by an arrow which points to a vertex from another vertex, the from side has the arrow and is called an arc in literature.">
+<meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p9/">
+<meta property="og:site_name" content="LeiMath">
+<meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+<meta property="article:section" content="graph_theory">
+<meta property="article:section" content="math">
+<meta property="article:published_time" content="2022-01-20 00:00:00 +0000 UTC">
+</head>
+<body class=green>
+<div class="container headings--one-size">
+<header class=header>
+<div class=header__inner>
+<div class=header__logo>
+<a href=/>
+<div class=logo>
+LeiMath
+</div>
+</a>
+</div>
+<div class=menu-trigger>menu</div>
+</div>
+<nav class=menu>
+<ul class="menu__inner menu__inner--desktop">
+<li><a href=/about>About</a></li>
+<li><a href=/listing>Listing</a></li>
+</ul>
+<ul class="menu__inner menu__inner--mobile">
+<li><a href=/about>About</a></li>
+<li><a href=/listing>Listing</a></li>
+</ul>
+</nav>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}}</script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+</header>
+<div class=content>
+<div class=post>
+<h1 class=post-title>
+<a href=https://leimath.github.io/posts/gt-notes-p9/>My Graph Theory Notes - Part 9</a></h1>
+<div class=post-meta>
+<span class=post-date>
+2022-01-20
+</span>
+<span class=post-author>:: LeiMath</span>
+</div>
+<span class=post-tags>
+#<a href=https://leimath.github.io/tags/graph_theory/>graph_theory</a>&nbsp;
+#<a href=https://leimath.github.io/tags/graphs/>graphs</a>&nbsp;
+#<a href=https://leimath.github.io/tags/notes/>notes</a>&nbsp;
+</span>
+<div class=post-content><div>
+<p>This is the final part of the graph theory notes. We take a look at Tournaments.</p>
+<hr>
+<h1 id=tournaments>Tournaments<a href=#tournaments class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>So far all the graphs encountered were <code>undirected</code> that is, none of the edges that stood for &ldquo;relationship&rdquo; between two vertex had any direction. If we attach some directional information to an edge, then the graph is called a <code>directed</code> graph. Let the directional information be represented by an arrow which points <em>to</em> a vertex <em>from</em> another vertex, the <em>from</em> side has the arrow and is called an <code>arc</code> in literature. If there is an arc from $v_i$ to $v_j$ then the pair is represented as $(v_i,v_j)$ and the order is fixed. A directed graph is represented as $G = (V,U)$ where the $V$ stands for the usual vertex set and $U$ stands for the arc set composed of directed pairs like $(v_i,v_j)$ etc if an arc exists. The directed graph also follow the <em>simple</em> nature.</p>
+<p>The number of arcs which have the starting point from $v_i$ have a name, <code>outdegree</code> represented by $d^{\star}(v_i)$. Similarly the number of arcs whose arrow points to $v_i$ also have a name, <code>indegree</code> represented by $d^{\circ}(v)$.</p>
+<p>We call a directed graph a <code>tournament</code> if the graph contains $n$ vertices and there is only one arc joining every two vertices. We denote the directed graph by $\overline{K_n}$.</p>
+<p>In a directed graph $D = (V,U)$ let there exist distinct arcs $u_i$. If the starting point of $u_i$ is $v_i$ and endpoint of $u_i$ is $v_{i+1}$ for $i \in \lbrace 1,2,3, \ldots , n \rbrace $ then $n$ is called the length of the directed path from $v_1$ to $v_{n+1}$, and if $v_1 = v_{n+1}$ then this path is called a circuit.</p>
+<hr>
+<h1 id=theorems>Theorems<a href=#theorems class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p><code>Theorem 1</code>: Let $v_i$ be the vertices of a tournament $\overline{K_n}$ for $i \in \lbrace 1,2,3, \ldots \rbrace$ then, $$\sum\limits_{k=1}^n d^{\star}(v_k) = \sum\limits_{k=1}^n d^{\circ}(v_k) = \frac{1}{2} n (n-1)$$</p>
+<p><code>Theorem 2</code>: There exists a vertex in a tournament so that there is a path from it to any other vertices. The maximum length of the paths is 2.</p>
+<p><code>Theorem 3</code>: If the vertex of $\overline{K_n}$ with maximum outdegree is unique, then this outdegree is $n-1$.</p>
+<p><code>Theorem 4</code>: Tournament $\overline{K_n}$ contains a Hamiltonian path whose length is $n-1$.</p>
+<p><code>Theorem 5</code>: The tournament $\overline{K_n}$ for $n \geqslant 3$ contains a circuit which is a triangle, if and only if there are two vertices $v,v^{\prime}$ which satisfy $$d^{\star}(v) = d^{\circ}(v^{\prime})$$</p>
+<hr>
+<h1 id=questions>Questions<a href=#questions class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p><code>1.</code> Prove that if a tournament $\overline{K_n}$ contains a circuit, then $\overline{K_n} contains a triangular circuit.</p>
+<p><code>2.</code> There are $100$ species of insects. Among every two of them
+there is one species who can eliminate another species. (But A
+eliminates B, B eliminates C, which does not mean that A eliminates
+C . ) Prove that the $100$ species of insects can be arranged in an order so
+that any species can perish another species next to it.</p>
+</div></div>
+<div class=pagination>
+<div class=pagination__title>
+<span class=pagination__title-h>Read other posts</span>
+<hr>
+</div>
+<div class=pagination__buttons>
+<span class="button next">
+<a href=https://leimath.github.io/posts/gt-notes-p7/>
+<span class=button__text>My Graph Theory Notes - Part 7</span>
+<span class=button__icon>→</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+<footer class=footer>
+<div class=footer__inner>
+<div class=copyright>
+<span>2022</a></span>
+<span>::</span>
+</div>
+</div>
+</footer>
+<script src=https://leimath.github.io/assets/main.js></script>
+<script src=https://leimath.github.io/assets/prism.js></script>
+</div>
+</body>
+</html>

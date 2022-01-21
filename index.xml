@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LeiMath</title><link>https://leimath.github.io/</link><description>Recent content on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 7</title><link>https://leimath.github.io/posts/gt-notes-p7/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p7/</guid><description>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LeiMath</title><link>https://leimath.github.io/</link><description>Recent content on LeiMath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://leimath.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>My Graph Theory Notes - Part 9</title><link>https://leimath.github.io/posts/gt-notes-p9/</link><pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p9/</guid><description>This is the final part of the graph theory notes. We take a look at Tournaments.
+Tournaments So far all the graphs encountered were undirected that is, none of the edges that stood for &amp;ldquo;relationship&amp;rdquo; between two vertex had any direction. If we attach some directional information to an edge, then the graph is called a directed graph. Let the directional information be represented by an arrow which points to a vertex from another vertex, the from side has the arrow and is called an arc in literature.</description><content>&lt;p>This is the final part of the graph theory notes. We take a look at Tournaments.&lt;/p>
+&lt;hr>
+&lt;h1 id="tournaments">Tournaments&lt;/h1>
+&lt;p>So far all the graphs encountered were &lt;code>undirected&lt;/code> that is, none of the edges that stood for &amp;ldquo;relationship&amp;rdquo; between two vertex had any direction. If we attach some directional information to an edge, then the graph is called a &lt;code>directed&lt;/code> graph. Let the directional information be represented by an arrow which points &lt;em>to&lt;/em> a vertex &lt;em>from&lt;/em> another vertex, the &lt;em>from&lt;/em> side has the arrow and is called an &lt;code>arc&lt;/code> in literature. If there is an arc from $v_i$ to $v_j$ then the pair is represented as $(v_i,v_j)$ and the order is fixed. A directed graph is represented as $G = (V,U)$ where the $V$ stands for the usual vertex set and $U$ stands for the arc set composed of directed pairs like $(v_i,v_j)$ etc if an arc exists. The directed graph also follow the &lt;em>simple&lt;/em> nature.&lt;/p>
+&lt;p>The number of arcs which have the starting point from $v_i$ have a name, &lt;code>outdegree&lt;/code> represented by $d^{\star}(v_i)$. Similarly the number of arcs whose arrow points to $v_i$ also have a name, &lt;code>indegree&lt;/code> represented by $d^{\circ}(v)$.&lt;/p>
+&lt;p>We call a directed graph a &lt;code>tournament&lt;/code> if the graph contains $n$ vertices and there is only one arc joining every two vertices. We denote the directed graph by $\overline{K_n}$.&lt;/p>
+&lt;p>In a directed graph $D = (V,U)$ let there exist distinct arcs $u_i$. If the starting point of $u_i$ is $v_i$ and endpoint of $u_i$ is $v_{i+1}$ for $i \in \lbrace 1,2,3, \ldots , n \rbrace $ then $n$ is called the length of the directed path from $v_1$ to $v_{n+1}$, and if $v_1 = v_{n+1}$ then this path is called a circuit.&lt;/p>
+&lt;hr>
+&lt;h1 id="theorems">Theorems&lt;/h1>
+&lt;p>&lt;code>Theorem 1&lt;/code>: Let $v_i$ be the vertices of a tournament $\overline{K_n}$ for $i \in \lbrace 1,2,3, \ldots \rbrace$ then, $$\sum\limits_{k=1}^n d^{\star}(v_k) = \sum\limits_{k=1}^n d^{\circ}(v_k) = \frac{1}{2} n (n-1)$$&lt;/p>
+&lt;p>&lt;code>Theorem 2&lt;/code>: There exists a vertex in a tournament so that there is a path from it to any other vertices. The maximum length of the paths is 2.&lt;/p>
+&lt;p>&lt;code>Theorem 3&lt;/code>: If the vertex of $\overline{K_n}$ with maximum outdegree is unique, then this outdegree is $n-1$.&lt;/p>
+&lt;p>&lt;code>Theorem 4&lt;/code>: Tournament $\overline{K_n}$ contains a Hamiltonian path whose length is $n-1$.&lt;/p>
+&lt;p>&lt;code>Theorem 5&lt;/code>: The tournament $\overline{K_n}$ for $n \geqslant 3$ contains a circuit which is a triangle, if and only if there are two vertices $v,v^{\prime}$ which satisfy $$d^{\star}(v) = d^{\circ}(v^{\prime})$$&lt;/p>
+&lt;hr>
+&lt;h1 id="questions">Questions&lt;/h1>
+&lt;p>&lt;code>1.&lt;/code> Prove that if a tournament $\overline{K_n}$ contains a circuit, then $\overline{K_n} contains a triangular circuit.&lt;/p>
+&lt;p>&lt;code>2.&lt;/code> There are $100$ species of insects. Among every two of them
+there is one species who can eliminate another species. (But A
+eliminates B, B eliminates C, which does not mean that A eliminates
+C . ) Prove that the $100$ species of insects can be arranged in an order so
+that any species can perish another species next to it.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 7</title><link>https://leimath.github.io/posts/gt-notes-p7/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p7/</guid><description>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
 Planar Graphs A graph is called Planar if it can be drawn in the plane so that its edges intersect only at their ends.</description><content>&lt;p>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.&lt;/p>
 &lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
@@ -23,7 +45,7 @@ Planar Graphs A graph is called Planar if it can be drawn in the plane so that i
 &lt;li>$1 \cdot\left(f_{3}^{\prime}-f_{3}^{\prime \prime}\right)+2 \cdot\left(f_{4}^{\prime}-f_{4}^{\prime \prime}\right)+3 \cdot\left(f_{5}^{\prime}-f_{5}^{\prime \prime}\right)+\cdots=0$, where $n$ is the number of the vertices of $G$, and also the length of $c$.&lt;/li>
 &lt;/ol>
 &lt;h1 id="questions">Questions&lt;/h1>
-&lt;p>&lt;code>1.&lt;/code> Prove that the $K_5$ and $K_3,3$ are not planar.&lt;/p>
+&lt;p>&lt;code>1.&lt;/code> Prove that the $K_5$ and $K_{3,3}$ are not planar.&lt;/p>
 &lt;p>&lt;code>2.&lt;/code> In a bus network there are $n$ stations. Each station is connected to at least 6 roads. Prove that there must be two roads intersecting on the plane.&lt;/p>
 &lt;p>&lt;code>3.&lt;/code> Let $S=\lbrace x_{1}, x_{2}, \ldots, x_{n}\rbrace ~~ (n \geqslant 3)$ be the set of vertices on the plane. The distance between two arbitrary vertices is no less than 1. Prove that there are at most $3 n-6$ pairs of vertices whose distances are 1 .&lt;/p></content></item><item><title>My Graph Theory Notes - Part 8</title><link>https://leimath.github.io/posts/gt-notes-p8/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p8/</guid><description>This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.
 The book followed for the other notes is : Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
@@ -634,10 +656,14 @@ Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theo
 &lt;p>Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theory as well as Playwriting among all things. I sketch sometimes.&lt;/p>
 &lt;p>I frequent in competitive programming websites, in particular - Atcoder. I have been also into CTF Challenges to some extent as well.&lt;/p>
 &lt;p>★ A complete list of all the posts &lt;em>yearwise&lt;/em> can be found in the &lt;a href="https://leimath.github.io/listing/">Listing&lt;/a> page.&lt;/p>
-&lt;p>Theme is &lt;a href="https://github.com/panr/hugo-theme-terminal">terminal&lt;/a> provided by &lt;a href="https://github.com/panr">panr&lt;/a> built on &lt;a href="https://gohugo.io/getting-started/quick-start/">hugo&lt;/a>.&lt;/p></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Part 3 Graph Theory Notes - Part 4 Graph Theory Notes - Part 5 Graph Theory Notes - Part 6 Graph Theory Notes - Part 7 Graph Theory Notes - Part 8</description><content>&lt;h1 id="2022">2022&lt;/h1>
+&lt;p>Theme is &lt;a href="https://github.com/panr/hugo-theme-terminal">terminal&lt;/a> provided by &lt;a href="https://github.com/panr">panr&lt;/a> built on &lt;a href="https://gohugo.io/getting-started/quick-start/">hugo&lt;/a>.&lt;/p></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations ★ Graph Theory Notes
+Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Part 3 Graph Theory Notes - Part 4 Graph Theory Notes - Part 5 Graph Theory Notes - Part 6 Graph Theory Notes - Part 7 Graph Theory Notes - Part 8 Graph Theory Notes - Part 9</description><content>&lt;h1 id="2022">2022&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://leimath.github.io/posts/fibonacci-for-the-olympiad/">Fibonacci For The Olympiad&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/diophantine-toolbox/">A Toolbox for Diophantine Equations&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>★ Graph Theory Notes&lt;/p>
+&lt;ul>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p1/">Graph Theory Notes - Part 1&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p2/">Graph Theory Notes - Part 2&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p3/">Graph Theory Notes - Part 3&lt;/a>&lt;/li>
@@ -646,4 +672,5 @@ Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theo
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p6/">Graph Theory Notes - Part 6&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p7/">Graph Theory Notes - Part 7&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p8/">Graph Theory Notes - Part 8&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p9/">Graph Theory Notes - Part 9&lt;/a>&lt;/li>
 &lt;/ul></content></item></channel></rss>

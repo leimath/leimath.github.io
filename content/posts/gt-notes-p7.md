@@ -52,7 +52,7 @@ A neat proof can be found in the text mentioned above.
 
 # Questions
 
-`1.` Prove that the $K_5$ and $K_3,3$ are not planar.
+`1.` Prove that the $K_5$ and $K_{3,3}$ are not planar.
 
 `2.` In a bus network there are $n$ stations. Each station is connected to at least 6 roads. Prove that there must be two roads intersecting on the plane.
 

@@ -20,7 +20,17 @@ Tournaments So far all the graphs encountered were undirected that is, none of t
 there is one species who can eliminate another species. (But A
 eliminates B, B eliminates C, which does not mean that A eliminates
 C . ) Prove that the $100$ species of insects can be arranged in an order so
-that any species can perish another species next to it.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 7</title><link>https://leimath.github.io/posts/gt-notes-p7/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p7/</guid><description>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.
+that any species can perish another species next to it.&lt;/p></content></item><item><title>Rational Approximation Theorem</title><link>https://leimath.github.io/posts/rational-appr/</link><pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/rational-appr/</guid><description>I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.
+By the way, all the theorem says is that as long as $p \geqslant 1$ we can approximate any real number to a rational number by some arbitary precision.
+Lemma: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i &amp;gt; j$ it so happens that $$\left | x_j - x_i \right | &amp;lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$</description><content>&lt;p>I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.&lt;/p>
+&lt;p>By the way, all the theorem says is that as long as $p \geqslant 1$ we can approximate any real number to a rational number by some arbitary precision.&lt;/p>
+&lt;hr>
+&lt;p>&lt;code>Lemma&lt;/code>: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i &amp;gt; j$ it so happens that $$\left | x_j - x_i \right | &amp;lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$&lt;/p>
+&lt;p>&lt;em>Proof.&lt;/em> Divide the interval $[0,1)$ into $n$ subintervals as $\displaystyle \left[0,\frac{1}{n}\right), \left[\frac{1}{n} , \frac{2}{n}\right), \ldots , \left [ \frac{n-1}{n} , 1 \right)$. Now by Pigeonhole Principle, there exists $i , j ~(0 \leqslant i &amp;lt; j \leqslant n)~ $ such that $x_i,x_j$ remain in one of the subintervals and hence the result $$ \displaystyle |x_j - x_i| &amp;lt; \frac{1}{n}$$ holds. $\blacksquare$&lt;/p>
+&lt;hr>
+&lt;p>&lt;code>Theorem[Rational Approximation]&lt;/code>: Let $\alpha$ be a positive real number. Let $n$ be a positive integer. Prove that there exists $p,q \in \mathbb{Z}^+$w which satisfies $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$&lt;/p>
+&lt;p>&lt;em>Proof.&lt;/em> Consider the numbers $m_i = [i \alpha]$ for some $i \in \lbrace 1,2,3, \ldots \rbrace$ that means $m_i \leqslant i \alpha &amp;lt; m_i + 1$ or $0 \leqslant i \alpha - m_i &amp;lt; 1$. By the above lemma, there exists $k,l$ such that $0 \leqslant k &amp;lt; l \leqslant n$ for $\displaystyle \left | (l \alpha - m_l) - (k \alpha - m_k)\right | &amp;lt; \frac{1}{n}$. Rearranging this gives $\displaystyle \left | \alpha ( l - k) - (m_l - m_k) \right | &amp;lt; \frac{1}{n}$. Now let $p = l - k$ and $q = m_l - m_k$ then after subsituting (note the inequality change) $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$ $\blacksquare$&lt;/p>
+&lt;hr></content></item><item><title>My Graph Theory Notes - Part 7</title><link>https://leimath.github.io/posts/gt-notes-p7/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p7/</guid><description>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
 Planar Graphs A graph is called Planar if it can be drawn in the plane so that its edges intersect only at their ends.</description><content>&lt;p>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.&lt;/p>
 &lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
@@ -649,21 +659,24 @@ f_{n}^{4}-f_{n-2} f_{n-1} f_{n+1} f_{n+2}=1, \quad n \geq 3
 $$&lt;/p>
 &lt;p>Note: The identity in &lt;code>5.&lt;/code> is called the &lt;code>Gelin-Cesàro&lt;/code> identity.&lt;/p>
 &lt;p>$$\dots$$&lt;/p></content></item><item><title>About</title><link>https://leimath.github.io/about/</link><pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/about/</guid><description>About My name is Im Saesin (alias : LeiMath) and this is my blog. I am currently a student.
-This website is a collection of Scholarship Math Problems, Articles and my Notes. Ocassionally stumbling into Olympiad Math Problems and Mathematical Curiosities. I am very interested in the works and life of Pierre de Fermat.
+This website1 is a collection of scholarship math problems, articles and my notes. Ocassionally stumbling into Olympiad Math Problems and Mathematical Curiosities. I am very interested in the works and life of Pierre de Fermat.
 Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theory as well as Playwriting among all things.</description><content>&lt;h1 id="about">About&lt;/h1>
 &lt;p>My name is &lt;code>Im Saesin&lt;/code> (alias : LeiMath) and this is my blog. I am currently a student.&lt;/p>
-&lt;p>This website is a collection of Scholarship Math Problems, Articles and my Notes. Ocassionally stumbling into Olympiad Math Problems and Mathematical Curiosities. I am very interested in the works and life of Pierre de Fermat.&lt;/p>
+&lt;p>This website&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is a collection of scholarship math problems, articles and my notes. Ocassionally stumbling into Olympiad Math Problems and Mathematical Curiosities. I am very interested in the works and life of Pierre de Fermat.&lt;/p>
 &lt;p>Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theory as well as Playwriting among all things. I sketch sometimes.&lt;/p>
 &lt;p>I frequent in competitive programming websites, in particular - Atcoder. I have been also into CTF Challenges to some extent as well.&lt;/p>
 &lt;p>★ A complete list of all the posts &lt;em>yearwise&lt;/em> can be found in the &lt;a href="https://leimath.github.io/listing/">Listing&lt;/a> page.&lt;/p>
-&lt;p>Theme is &lt;a href="https://github.com/panr/hugo-theme-terminal">terminal&lt;/a> provided by &lt;a href="https://github.com/panr">panr&lt;/a> built on &lt;a href="https://gohugo.io/getting-started/quick-start/">hugo&lt;/a>.&lt;/p></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations ★ Graph Theory Notes
-Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Part 3 Graph Theory Notes - Part 4 Graph Theory Notes - Part 5 Graph Theory Notes - Part 6 Graph Theory Notes - Part 7 Graph Theory Notes - Part 8 Graph Theory Notes - Part 9</description><content>&lt;h1 id="2022">2022&lt;/h1>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>Theme is &lt;a href="https://github.com/panr/hugo-theme-terminal">terminal&lt;/a> provided by &lt;a href="https://github.com/panr">panr&lt;/a> built on &lt;a href="https://gohugo.io/">hugo&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Part 3 Graph Theory Notes - Part 4 Graph Theory Notes - Part 5 Graph Theory Notes - Part 6 Graph Theory Notes - Part 7 Graph Theory Notes - Part 8 Graph Theory Notes - Part 9 Rational Approximation Theorem</description><content>&lt;h1 id="2022">2022&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://leimath.github.io/posts/fibonacci-for-the-olympiad/">Fibonacci For The Olympiad&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/diophantine-toolbox/">A Toolbox for Diophantine Equations&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>★ Graph Theory Notes&lt;/p>
-&lt;ul>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p1/">Graph Theory Notes - Part 1&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p2/">Graph Theory Notes - Part 2&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p3/">Graph Theory Notes - Part 3&lt;/a>&lt;/li>
@@ -673,4 +686,5 @@ Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Par
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p7/">Graph Theory Notes - Part 7&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p8/">Graph Theory Notes - Part 8&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p9/">Graph Theory Notes - Part 9&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://leimath.github.io/posts/rational-appr/">Rational Approximation Theorem&lt;/a>&lt;/li>
 &lt;/ul></content></item></channel></rss>

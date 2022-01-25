@@ -83,7 +83,7 @@ The first one is a result (n-above-a) and what follows is a theorem called <code
 <p><em>Proof:</em></p>
 <p>$$\text{Part I}$$</p>
 <p>Suppose first that $0 &lt; a &lt; 1.$ It follows that ${1 \over a} > 1$ and so we may write $${1 \over a} = 1 + h \quad \text{where } h > 0$$</p>
-<p><code>[Lemma I]</code> Now note that if $-1 &lt; a$ then it implies that $(1+a)^n \geqslant 1 + na$ for every positive integer $n$ (can be proven by induction) and by this it follows that $$0 &lt; a^n = {1 \over (1+h)^n} \leqslant {1 \over 1 + nh} &lt; {1 \over h} \cdot {1 \over n}$$ Since the last term is convergent and coverges to ${1\over h} \cdot 0 = 0$, it follows by <a href=https://en.wikipedia.org/wiki/Squeeze_theorem>Sandwich/Squeeze</a> Lemma that $\lim\limits_{n \to \infty} a^n = 0.$</p>
+<p><code>[Lemma I]</code> Now note that if $-1 &lt; a$ then it implies that $(1+a)^n \geqslant 1 + na$ for every positive integer $n$ (can be proven by induction). And now by Lemma I it follows that $$0 &lt; a^n = {1 \over (1+h)^n} \leqslant {1 \over 1 + nh} &lt; {1 \over h} \cdot {1 \over n}$$ Since the last term is convergent and coverges to ${1\over h} \cdot 0 = 0$, it follows by <a href=https://en.wikipedia.org/wiki/Squeeze_theorem>Sandwich/Squeeze</a> Lemma that $\lim\limits_{n \to \infty} a^n = 0.$</p>
 <p>$$\text{Part II}$$</p>
 <p>If $-1 &lt; a &lt; 0$, then $$-|a|^n \leqslant a^n \leqslant |a|^n$$ and from the first part of the proof we get $$\lim\limits_{n \to \infty} |a|^n = 0 = \lim\limits_{n \to \infty} (-|a|^n)$$ and thus again by Sandwich Lemma we conclude that $\lim\limits_{n \to \infty} a^n = 0$.</p>
 <p>Now it is easy to see that $\lbrace 0^n \rbrace \to 0$ and so this finishes the case for $|a| &lt; 1$.</p>
@@ -104,7 +104,7 @@ The first one is a result (n-above-a) and what follows is a theorem called <code
 <div class=pagination__buttons>
 <span class="button next">
 <a href=https://leimath.github.io/posts/rational-appr/>
-<span class=button__text>Rational Approximation Theorem</span>
+<span class=button__text>Dirichlet's Approximation Theorem</span>
 <span class=button__icon>→</span>
 </a>
 </span>

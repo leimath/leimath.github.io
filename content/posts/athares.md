@@ -33,7 +33,7 @@ Now it is easy to see that $\lbrace 0^n \rbrace \to 0$ and so this finishes the 
 
 Also $\lbrace 1^n \rbrace \to 1$ is also understood. Since no neighbourhood of length 2 or less contains both $1$ and $-1$, it follows that the sequence $\lbrace(-1)^n\rbrace$ does not converge.
 
-Lastly, if $|a| > 1$ then by Lemma I we have $$a^2n = [1 + (a^2 -1)] \geqslant 1 + n(a^2 - 1)$$ and so $\lbrace a^n \rbrace$ is unbounded and does not converge. $\blacksquare$
+Lastly, if $|a| > 1$ then by Lemma I we have $$a^2n = [1 + (a^2 -1)]^n \geqslant 1 + n(a^2 - 1)$$ and so $\lbrace a^n \rbrace$ is unbounded and does not converge. $\blacksquare$
 
 ---
 
@@ -44,5 +44,7 @@ Lastly, if $|a| > 1$ then by Lemma I we have $$a^2n = [1 + (a^2 -1)] \geqslant 1
 {{< image src="/assets/images/athares2.png" alt="the limit" position="center" style="width:17em; height:3em;" >}}
 
 If $f$ and $g$ are continuous, and if $f(b)=g(b)$, then $h$ is continuous.
+
+Note that by **non-degenerate** interval we refer to intervals of the form $(a,b),(a,b],[a,b)$ or $[a,b]$ where necessarily $a < b$, or any unbounded interval.
 
 The proof is left to the readers as it makes up for a good exercise.

@@ -11,5 +11,5 @@
 * [Graph Theory Notes - Part 7](https://leimath.github.io/posts/gt-notes-p7/)
 * [Graph Theory Notes - Part 8](https://leimath.github.io/posts/gt-notes-p8/)
 * [Graph Theory Notes - Part 9](https://leimath.github.io/posts/gt-notes-p9/)
-* [Rational Approximation Theorem](https://leimath.github.io/posts/rational-appr/)
+* [Dirichlet's Approximation Theorem](https://leimath.github.io/posts/rational-appr/)
 * [A Result and a Theorem](https://leimath.github.io/posts/athares/)

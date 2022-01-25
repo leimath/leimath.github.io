@@ -1,6 +1,6 @@
 +++
 title = "Rational Approximation Theorem"
-date = "2022-01-20"
+date = "2022-01-22"
 author = "LeiMath"
 tags = [
     "math_problems",

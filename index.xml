@@ -16,12 +16,13 @@ The first one is a result (n-above-a) and what follows is a theorem called &lt;c
 &lt;p>If $-1 &amp;lt; a &amp;lt; 0$, then $$-|a|^n \leqslant a^n \leqslant |a|^n$$ and from the first part of the proof we get $$\lim\limits_{n \to \infty} |a|^n = 0 = \lim\limits_{n \to \infty} (-|a|^n)$$ and thus again by Sandwich Lemma we conclude that $\lim\limits_{n \to \infty} a^n = 0$.&lt;/p>
 &lt;p>Now it is easy to see that $\lbrace 0^n \rbrace \to 0$ and so this finishes the case for $|a| &amp;lt; 1$.&lt;/p>
 &lt;p>Also $\lbrace 1^n \rbrace \to 1$ is also understood. Since no neighbourhood of length 2 or less contains both $1$ and $-1$, it follows that the sequence $\lbrace(-1)^n\rbrace$ does not converge.&lt;/p>
-&lt;p>Lastly, if $|a| &amp;gt; 1$ then by Lemma I we have $$a^2n = [1 + (a^2 -1)] \geqslant 1 + n(a^2 - 1)$$ and so $\lbrace a^n \rbrace$ is unbounded and does not converge. $\blacksquare$&lt;/p>
+&lt;p>Lastly, if $|a| &amp;gt; 1$ then by Lemma I we have $$a^2n = [1 + (a^2 -1)]^n \geqslant 1 + n(a^2 - 1)$$ and so $\lbrace a^n \rbrace$ is unbounded and does not converge. $\blacksquare$&lt;/p>
 &lt;hr>
 &lt;h1 id="pasting-theorem">Pasting Theorem&lt;/h1>
 &lt;p>&lt;code>[Pasting Theorem]&lt;/code> Let $[a, b] \subseteq \mathbb{R}$ and $[b, c] \subseteq \mathbb{R}$ be non-degenerate closed bounded intervals, and let $f:[a, b] \rightarrow \mathbb{R}$ and $g:[b, c] \rightarrow \mathbb{R}$ be functions. Let $h:[a, c] \rightarrow \mathbb{R}$ be defined by&lt;/p>
 &lt;img src="https://leimath.github.io/assets/images/athares2.png" alt="the limit" class="center" style="width:17em; height:3em;" />
 &lt;p>If $f$ and $g$ are continuous, and if $f(b)=g(b)$, then $h$ is continuous.&lt;/p>
+&lt;p>Note that by &lt;strong>non-degenerate&lt;/strong> interval we refer to intervals of the form $(a,b),(a,b],[a,b)$ or $[a,b]$ where necessarily $a &amp;lt; b$, or any unbounded interval.&lt;/p>
 &lt;p>The proof is left to the readers as it makes up for a good exercise.&lt;/p></content></item><item><title>Dirichlet's Approximation Theorem</title><link>https://leimath.github.io/posts/rational-appr/</link><pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/rational-appr/</guid><description>I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.
 By the way, all the theorem says is that as long as $p \geqslant 1$ we can approximate any real number to a rational number by some arbitary precision.
 Lemma: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i &amp;gt; j$ it so happens that $$\left | x_j - x_i \right | &amp;lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$</description><content>&lt;p>I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.&lt;/p>
@@ -697,7 +698,7 @@ Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theo
 &lt;p>Theme is &lt;a href="https://github.com/panr/hugo-theme-terminal">terminal&lt;/a> provided by &lt;a href="https://github.com/panr">panr&lt;/a> built on &lt;a href="https://gohugo.io/">hugo&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Part 3 Graph Theory Notes - Part 4 Graph Theory Notes - Part 5 Graph Theory Notes - Part 6 Graph Theory Notes - Part 7 Graph Theory Notes - Part 8 Graph Theory Notes - Part 9 Rational Approximation Theorem A Result and a Theorem</description><content>&lt;h1 id="2022">2022&lt;/h1>
+&lt;/section></content></item><item><title/><link>https://leimath.github.io/listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://leimath.github.io/listing/</guid><description>2022 Fibonacci For The Olympiad A Toolbox for Diophantine Equations Graph Theory Notes - Part 1 Graph Theory Notes - Part 2 Graph Theory Notes - Part 3 Graph Theory Notes - Part 4 Graph Theory Notes - Part 5 Graph Theory Notes - Part 6 Graph Theory Notes - Part 7 Graph Theory Notes - Part 8 Graph Theory Notes - Part 9 Dirichlet&amp;rsquo;s Approximation Theorem A Result and a Theorem</description><content>&lt;h1 id="2022">2022&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://leimath.github.io/posts/fibonacci-for-the-olympiad/">Fibonacci For The Olympiad&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/diophantine-toolbox/">A Toolbox for Diophantine Equations&lt;/a>&lt;/li>
@@ -710,6 +711,6 @@ Beyond Mathematics, I have dabbled into Theoretical Computer Science, Music Theo
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p7/">Graph Theory Notes - Part 7&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p8/">Graph Theory Notes - Part 8&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/gt-notes-p9/">Graph Theory Notes - Part 9&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leimath.github.io/posts/rational-appr/">Rational Approximation Theorem&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://leimath.github.io/posts/rational-appr/">Dirichlet&amp;rsquo;s Approximation Theorem&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://leimath.github.io/posts/athares/">A Result and a Theorem&lt;/a>&lt;/li>
 &lt;/ul></content></item></channel></rss>

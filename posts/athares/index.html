@@ -88,12 +88,13 @@ The first one is a result (n-above-a) and what follows is a theorem called <code
 <p>If $-1 &lt; a &lt; 0$, then $$-|a|^n \leqslant a^n \leqslant |a|^n$$ and from the first part of the proof we get $$\lim\limits_{n \to \infty} |a|^n = 0 = \lim\limits_{n \to \infty} (-|a|^n)$$ and thus again by Sandwich Lemma we conclude that $\lim\limits_{n \to \infty} a^n = 0$.</p>
 <p>Now it is easy to see that $\lbrace 0^n \rbrace \to 0$ and so this finishes the case for $|a| &lt; 1$.</p>
 <p>Also $\lbrace 1^n \rbrace \to 1$ is also understood. Since no neighbourhood of length 2 or less contains both $1$ and $-1$, it follows that the sequence $\lbrace(-1)^n\rbrace$ does not converge.</p>
-<p>Lastly, if $|a| > 1$ then by Lemma I we have $$a^2n = [1 + (a^2 -1)] \geqslant 1 + n(a^2 - 1)$$ and so $\lbrace a^n \rbrace$ is unbounded and does not converge. $\blacksquare$</p>
+<p>Lastly, if $|a| > 1$ then by Lemma I we have $$a^2n = [1 + (a^2 -1)]^n \geqslant 1 + n(a^2 - 1)$$ and so $\lbrace a^n \rbrace$ is unbounded and does not converge. $\blacksquare$</p>
 <hr>
 <h1 id=pasting-theorem>Pasting Theorem<a href=#pasting-theorem class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <p><code>[Pasting Theorem]</code> Let $[a, b] \subseteq \mathbb{R}$ and $[b, c] \subseteq \mathbb{R}$ be non-degenerate closed bounded intervals, and let $f:[a, b] \rightarrow \mathbb{R}$ and $g:[b, c] \rightarrow \mathbb{R}$ be functions. Let $h:[a, c] \rightarrow \mathbb{R}$ be defined by</p>
 <img src=/assets/images/athares2.png alt="the limit" class=center style=width:17em;height:3em>
 <p>If $f$ and $g$ are continuous, and if $f(b)=g(b)$, then $h$ is continuous.</p>
+<p>Note that by <strong>non-degenerate</strong> interval we refer to intervals of the form $(a,b),(a,b],[a,b)$ or $[a,b]$ where necessarily $a &lt; b$, or any unbounded interval.</p>
 <p>The proof is left to the readers as it makes up for a good exercise.</p>
 </div></div>
 <div class=pagination>

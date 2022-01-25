@@ -1,5 +1,5 @@
 +++
-title = "Rational Approximation Theorem"
+title = "Dirichlet's Approximation Theorem"
 date = "2022-01-22"
 author = "LeiMath"
 tags = [
@@ -23,7 +23,7 @@ _Proof._ Divide the interval $[0,1)$ into $n$ subintervals as $\displaystyle \le
 ---
 
 
-`Theorem[Rational Approximation]`: Let $\alpha$ be a positive real number. Let $n$ be a positive integer. Prove that there exists $p,q \in \mathbb{Z}^+$w which satisfies $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$ 
+`Theorem[Dirichlet's Rational Approximation]`: Let $\alpha$ be a positive real number. Let $n$ be a positive integer. There exists $p,q \in \mathbb{Z}^+$ which satisfies $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$ 
 
 _Proof._ Consider the numbers $m_i = [i \alpha]$ for some $i \in \lbrace 1,2,3, \ldots \rbrace$ that means $m_i \leqslant i \alpha < m_i + 1$ or $0 \leqslant i \alpha - m_i < 1$. By the above lemma, there exists $k,l$ such that $0 \leqslant k < l \leqslant n$ for $\displaystyle \left | (l \alpha - m_l) - (k \alpha - m_k)\right | < \frac{1}{n}$. Rearranging this gives $\displaystyle \left | \alpha ( l - k) - (m_l - m_k) \right | < \frac{1}{n}$. Now let $p = l - k$ and $q = m_l - m_k$ then after subsituting (note the inequality change)  $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$ $\blacksquare$
 

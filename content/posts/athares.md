@@ -23,7 +23,7 @@ $$\text{Part I}$$
 
 Suppose first that $0 < a < 1.$ It follows that ${1 \over a} > 1$ and so we may write $${1 \over a} = 1 + h \quad \text{where } h > 0$$
 
-`[Lemma I]` Now note that if $-1 < a$ then it implies that $(1+a)^n \geqslant 1 + na$ for every positive integer $n$ (can be proven by induction) and by this it follows that $$0 < a^n = {1 \over (1+h)^n} \leqslant {1 \over 1 + nh} < {1 \over h} \cdot {1 \over n}$$ Since the last term is convergent and coverges to ${1\over h} \cdot 0 = 0$, it follows by [Sandwich/Squeeze](https://en.wikipedia.org/wiki/Squeeze_theorem) Lemma that $\lim\limits_{n \to \infty} a^n = 0.$
+`[Lemma I]` Now note that if $-1 < a$ then it implies that $(1+a)^n \geqslant 1 + na$ for every positive integer $n$ (can be proven by induction). And now by Lemma I it follows that $$0 < a^n = {1 \over (1+h)^n} \leqslant {1 \over 1 + nh} < {1 \over h} \cdot {1 \over n}$$ Since the last term is convergent and coverges to ${1\over h} \cdot 0 = 0$, it follows by [Sandwich/Squeeze](https://en.wikipedia.org/wiki/Squeeze_theorem) Lemma that $\lim\limits_{n \to \infty} a^n = 0.$
 
 $$\text{Part II}$$
 

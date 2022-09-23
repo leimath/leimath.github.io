@@ -22,7 +22,8 @@ eliminates B, B eliminates C, which does not mean that A eliminates
 C . ) Prove that the $100$ species of insects can be arranged in an order so
 that any species can perish another species next to it.&lt;/p></content></item><item><title>My Graph Theory Notes - Part 7</title><link>https://leimath.github.io/posts/gt-notes-p7/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://leimath.github.io/posts/gt-notes-p7/</guid><description>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.
 The book followed throughout is: Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
-Planar Graphs A graph is called Planar if it can be drawn in the plane so that its edges intersect only at their ends.</description><content>&lt;p>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.&lt;/p>
+Planar Graphs A graph is called Planar if it can be drawn in the plane so that its edges intersect only at their ends.
+The vertices and edges of the graph partition (no overlap) the plane into several regions, each such region is called a face, denoted by $F_i$ for some $i \in \mathbb{N}$.</description><content>&lt;p>This is the seventh part of the graph theory notes. We take a look at Planar Graphs.&lt;/p>
 &lt;p>The book followed throughout is: &lt;em>Graph Theory with Applications&lt;/em> by &lt;em>Bondy J.A., Murty U.S.R.&lt;/em>. Please refer to the book for examples as well as visual graph drawings.&lt;/p>
 &lt;hr>
 &lt;hr>
@@ -96,9 +97,9 @@ tests do not apply to every graph.&lt;/p>
 &lt;p>Refer to &lt;a href="https://www.youtube.com/watch?v=CEOGcSCTar8">this&lt;/a> to get a idea on the differences in the Eulerian Graph and Hamiltonian Graphs. Loosely, Eulerian graphs only bother with edges whereas a Hamiltonian graph has to deal with the vertices.&lt;/p>
 &lt;h1 id="theorems">Theorems&lt;/h1>
 &lt;p>&lt;code>Theorem 1&lt;/code>: In a bigraph $G$ if $|V_1| \neq |V_2|$, $G$ must contain no Hamiltonian cycle. If the difference between $|V_1|$ and $|V_2|$ is more than $1$, $G$ must contain no Hamiltonian chain.&lt;/p>
-&lt;p>&lt;code>Theorem 2&lt;/code>: Let $G$ be a simple graph with $n \geqslant 3$ vertices. For every pair of vertices $v,v'$ if $$d(v) + d(v') \geqslant n - 1$$ then $G$ contains a Hamiltonian chain.&lt;/p>
+&lt;p>&lt;code>Theorem 2&lt;/code>: Let $G$ be a simple graph with $n \geqslant 3$ vertices. For every pair of vertices $v,v&amp;rsquo;$ if $$d(v) + d(v&amp;rsquo;) \geqslant n - 1$$ then $G$ contains a Hamiltonian chain.&lt;/p>
 &lt;p>Note that the Theorem 2 condition is indeed gives a way for existence of a Hamiltonian chain but it is not necessary. There exists examples (e.g, a regular hexagon) where the condition fails yet the graph is a Hamiltonian chain.&lt;/p>
-&lt;p>&lt;code>Theorem 3[Ore]&lt;/code>: Let $G$ be a simple graph with $n$ vertices. For every two nonadjacent vertices $v,v'$ if $$d(v) + d(v') \geqslant n$$ then $G$ is a Hamiltonian cycle.&lt;/p>
+&lt;p>&lt;code>Theorem 3[Ore]&lt;/code>: Let $G$ be a simple graph with $n$ vertices. For every two nonadjacent vertices $v,v&amp;rsquo;$ if $$d(v) + d(v&amp;rsquo;) \geqslant n$$ then $G$ is a Hamiltonian cycle.&lt;/p>
 &lt;p>&lt;code>Theorem 4[Dirac]&lt;/code>: Let $G$ be a simple graph with $n$ vertices. If the degree of every vertex $v$ is no less than $\frac{n}{2}$, then $G$ must contain a Hamiltonian cycle.&lt;/p>
 &lt;p>&lt;code>Theorem 5[Pósa]&lt;/code> Let $G$ be a graph with $n$ vertices, where $n \geq 3$, and suppose that the degrees in $G$ satisfy $$d_{1}&amp;gt;1 ~ ,~ d_{2}&amp;gt;2~,~ \ldots ~, ~ d_{i}&amp;gt;i$$ where $d_1,d_2, \ldots, d_i$ represents the degrees of each vertex for all values of $i &amp;lt; \frac{n}{2}$.
 Then $G$ contains a Hamilton cycle.&lt;/p>

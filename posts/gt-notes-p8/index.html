@@ -1,145 +1,16 @@
-<!doctype html><html lang=en>
-<head>
-<title>My Graph Theory Notes - Part 8 :: LeiMath</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.
+<!doctype html><html lang=en><head><title>My Graph Theory Notes - Part 8 :: LeiMath</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.
 The book followed for the other notes is : Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
-For this post, the readers are also encouraged to seek the proofs in other books such as the legendary Adrian Bondy &amp;amp; U.">
-<meta name=keywords content>
-<meta name=robots content="noodp">
-<link rel=canonical href=https://leimath.github.io/posts/gt-notes-p8/>
-<link rel=stylesheet href=https://leimath.github.io/assets/style.css>
-<link rel=stylesheet href=https://leimath.github.io/assets/green.css>
-<link rel=apple-touch-icon href=https://leimath.github.io/img/apple-touch-icon-192x192.png>
-<link rel="shortcut icon" href=https://leimath.github.io/img/favicon/green.png>
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content>
-<meta name=twitter:creator content="LeiMath">
-<meta property="og:locale" content="en">
-<meta property="og:type" content="article">
-<meta property="og:title" content="My Graph Theory Notes - Part 8">
-<meta property="og:description" content="This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.
+For this post, the readers are also encouraged to seek the proofs in other books such as the legendary Adrian Bondy &amp;amp; U."><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://leimath.github.io/posts/gt-notes-p8/><link rel=stylesheet href=https://leimath.github.io/assets/style.css><link rel=stylesheet href=https://leimath.github.io/assets/green.css><link rel=apple-touch-icon href=https://leimath.github.io/img/apple-touch-icon-192x192.png><link rel="shortcut icon" href=https://leimath.github.io/img/favicon/green.png><meta name=twitter:card content="summary"><meta name=twitter:site content><meta name=twitter:creator content="LeiMath"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="My Graph Theory Notes - Part 8"><meta property="og:description" content="This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.
 The book followed for the other notes is : Graph Theory with Applications by Bondy J.A., Murty U.S.R.. Please refer to the book for examples as well as visual graph drawings.
-For this post, the readers are also encouraged to seek the proofs in other books such as the legendary Adrian Bondy &amp;amp; U.">
-<meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p8/">
-<meta property="og:site_name" content="LeiMath">
-<meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-<meta property="article:section" content="graph_theory">
-<meta property="article:section" content="math">
-<meta property="article:published_time" content="2022-01-19 00:00:00 +0000 UTC">
-</head>
-<body class=green>
-<div class="container headings--one-size">
-<header class=header>
-<div class=header__inner>
-<div class=header__logo>
-<a href=/>
-<div class=logo>
-LeiMath
-</div>
-</a>
-</div>
-<div class=menu-trigger>menu</div>
-</div>
-<nav class=menu>
-<ul class="menu__inner menu__inner--desktop">
-<li><a href=/about>About</a></li>
-<li><a href=/listing>Listing</a></li>
-</ul>
-<ul class="menu__inner menu__inner--mobile">
-<li><a href=/about>About</a></li>
-<li><a href=/listing>Listing</a></li>
-</ul>
-</nav>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}}</script>
-<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
-</header>
-<div class=content>
-<div class=post>
-<h1 class=post-title>
-<a href=https://leimath.github.io/posts/gt-notes-p8/>My Graph Theory Notes - Part 8</a></h1>
-<div class=post-meta>
-<span class=post-date>
-2022-01-19
-</span>
-<span class=post-author>:: LeiMath</span>
-</div>
-<span class=post-tags>
-#<a href=https://leimath.github.io/tags/graph_theory/>graph_theory</a>&nbsp;
+For this post, the readers are also encouraged to seek the proofs in other books such as the legendary Adrian Bondy &amp;amp; U."><meta property="og:url" content="https://leimath.github.io/posts/gt-notes-p8/"><meta property="og:site_name" content="LeiMath"><meta property="og:image" content="https://leimath.github.io/img/favicon/green.png"><meta property="og:image:width" content="2048"><meta property="og:image:height" content="1024"><meta property="article:section" content="graph_theory"><meta property="article:section" content="math"><meta property="article:published_time" content="2022-01-19 00:00:00 +0000 UTC"></head><body class=green><div class="container headings--one-size"><header class=header><div class=header__inner><div class=header__logo><a href=/><div class=logo>LeiMath</div></a></div><div class=menu-trigger>menu</div></div><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/listing>Listing</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/listing>Listing</a></li></ul></nav><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},svg:{fontCache:"global"}}</script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></header><div class=content><div class=post><h1 class=post-title><a href=https://leimath.github.io/posts/gt-notes-p8/>My Graph Theory Notes - Part 8</a></h1><div class=post-meta><span class=post-date>2022-01-19</span>
+<span class=post-author>:: LeiMath</span></div><span class=post-tags>#<a href=https://leimath.github.io/tags/graph_theory/>graph_theory</a>&nbsp;
 #<a href=https://leimath.github.io/tags/graphs/>graphs</a>&nbsp;
-#<a href=https://leimath.github.io/tags/notes/>notes</a>&nbsp;
-</span>
-<div class=post-content><div>
-<p>This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.</p>
-<p>The book followed for the other notes is : <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p>
-<p>For this post, the readers are also encouraged to seek the proofs in other books such as the legendary <em>Adrian Bondy & U.S.R Murty - Graph Theory</em> from <em>Springer - Verlag</em> or <em>Graph Theory: A Problem Oriented Approach by Daniel Marcus</em>.</p>
-<hr>
-<hr>
-<h1 id=ramsey-number>Ramsey Number<a href=#ramsey-number class=hanchor arialabel=Anchor>&#8983;</a> </h1>
-<p>Consider $k$ colors, $c_1, c_2, c_3, \ldots, c_k$ to color the complete graph $K_n$. We call $K_n$ as the <code>k-color complete graph</code> if <strong>every</strong> edge is colored in one color. It doesn&rsquo;t take much convincing to claim that if $n$ is large enough, $k$-color complete graph $K_n$ must contain a monochromatic triangle. Call the least of such $n$ by $r_k$.</p>
-<p>$\displaystyle r_k$ is nothing but the <code>Ramsey Number</code> named after British mathematician Ramsey who proved its existence.</p>
-<p>Suppose every edge of the complete graph $K_{n}$ is colored in red or blue, which means that $K_{n}$ is a two-color (red, blue) complete graph $K_{n}$. For two constant natural numbers $p, q$, when $n$ is large enough, the two-color (red, blue) complete graph $K_{n}$ must contain a red $K_{p}$ or a blue $K_{q}$. We denote the least $n$ satisfying the above proposition by $r(p, q)$. We also call $r(p, q)$ the Ramsey number.</p>
-<p>$r(p,q)$ is hence the minimum $n$ so that any $n$-subgraph $G$ of the complete graph $K_n$ contains a complete subgraph $K_p$ or its complementary graph $\bar{G}$ contains a complete subgraph $K_q$.
-Also that, $r(1,q) = r(p,1) = 1$.</p>
-<h1 id=theorems>Theorems<a href=#theorems class=hanchor arialabel=Anchor>&#8983;</a> </h1>
-<p><code>All of the proofs are omitted as some are way too long or quite difficult for the needs of these notes</code>, particularly that they hold no purpose here (or for a Scholarship exam for which these notes are for!) and might as well be referred directly from any standard Graph Theory book - like the ones mentioned below.</p>
-<p>$$\dotsb$$</p>
-<p><code>Theorem 1</code>: If a complete graph $K_n$ in two colors contains a monochromatic triangle, then the minimum $n$ is equal to 6.</p>
-<p>$$\dotsb$$</p>
-<p>For Theorem 1, $r(3,3) = r_2 = 6$.
-See <a href=https://math.mit.edu/~apost/courses/18.204_2018/ramsey-numbers.pdf>here, page 2</a> for a proof.</p>
-<p>$$\dotsb$$</p>
-<p><code>Theorem 2</code>: [I] For every positive integer $k$, the Ramsey Number $r_k$ exists. When $k \geqslant 2$, $$r_k \leqslant k(r_{k-1}-1 ) + 2$$</p>
-<p>[II] For any $k \in \mathbb{N}$, $$r_k \leqslant 1 + 1 + k + k(k-1) + \ldots + \frac{k!}{2!} + \frac{k!}{1!} + k!$$</p>
-<p>Note that Theorem 2 [II] is also written (with the help of series expansion of $e$) as $r_k \leqslant \lfloor k!~e~ \rfloor + 1$ where $\lfloor . \rfloor$ is the greatest integer function.</p>
-<p>Some hints for the proof can be found <a href="https://math.stackexchange.com/questions/1055435/modification-of-the-ramsey-number?noredirect=1">here</a></p>
-<p>$$\dotsb$$</p>
-<p>Note that $r(2,q) = q$ and $r(p,2) = p$. Also, $r(p,q) = r(q,p)$ See <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em> Page 103, Section 7.2 for the discussion/proof.</p>
-<p><code>Theorem 4</code> [Ramsey&rsquo;s Theorem] For any two positive integers $n$ and $m$, the number $r(p, q)$ exists and satisfies the inequality $R(p, q) \leq r(p-1, q)+r(p, q-1) .$</p>
-<p>For a proof see, <em>Adrian Bondy & Murty - Graph Theory (GTM) by Springer - Verlag</em> Page 309 m, <strong>Theorem 12.5</strong>.</p>
-<p>$$\dotsb$$</p>
-<p><code>Theorem 4</code>: When $p \geqslant 2$ and $q \geqslant 2$ then $$r(p,q) \leqslant \binom{p+q-2}{p-1}$$</p>
-<p>Proof can be found in <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em> Page 106, Theorem 7.5</p>
-<hr>
-<h1 id=questions>Questions<a href=#questions class=hanchor arialabel=Anchor>&#8983;</a> </h1>
-<p>A lot of questions on Ramsey Numbers can be found <a href=https://artofproblemsolving.com/community/q2_%22ramsey%20number%22>here</a> and also similarly searching &ldquo;Ramsey&rdquo; in the search field of artofproblemsolving forums. We direct the reader to try them to truly cover the varieties of such questions.</p>
-</div></div>
-<div class=pagination>
-<div class=pagination__title>
-<span class=pagination__title-h>Read other posts</span>
-<hr>
-</div>
-<div class=pagination__buttons>
-<span class="button previous">
-<a href=https://leimath.github.io/posts/gt-notes-p7/>
-<span class=button__icon>←</span>
-<span class=button__text>My Graph Theory Notes - Part 7</span>
-</a>
-</span>
-<span class="button next">
-<a href=https://leimath.github.io/posts/gt-notes-p6/>
-<span class=button__text>My Graph Theory Notes - Part 6</span>
-<span class=button__icon>→</span>
-</a>
-</span>
-</div>
-</div>
-</div>
-</div>
-<footer class=footer>
-<div class=footer__inner>
-<div class=copyright>
-<span>2022</a></span>
-<span>::</span>
-</div>
-</div>
-</footer>
-<script src=https://leimath.github.io/assets/main.js></script>
-<script src=https://leimath.github.io/assets/prism.js></script>
-</div>
-</body>
-</html>
+#<a href=https://leimath.github.io/tags/notes/>notes</a>&nbsp;</span><div class=post-content><div><p>This is the eight part of the graph theory notes. We take a look at some theorems mostly related to Ramsey Numbers.</p><p>The book followed for the other notes is : <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em>. Please refer to the book for examples as well as visual graph drawings.</p><p>For this post, the readers are also encouraged to seek the proofs in other books such as the legendary <em>Adrian Bondy & U.S.R Murty - Graph Theory</em> from <em>Springer - Verlag</em> or <em>Graph Theory: A Problem Oriented Approach by Daniel Marcus</em>.</p><hr><hr><h1 id=ramsey-number>Ramsey Number<a href=#ramsey-number class=hanchor arialabel=Anchor>&#8983;</a></h1><p>Consider $k$ colors, $c_1, c_2, c_3, \ldots, c_k$ to color the complete graph $K_n$. We call $K_n$ as the <code>k-color complete graph</code> if <strong>every</strong> edge is colored in one color. It doesn&rsquo;t take much convincing to claim that if $n$ is large enough, $k$-color complete graph $K_n$ must contain a monochromatic triangle. Call the least of such $n$ by $r_k$.</p><p>$\displaystyle r_k$ is nothing but the <code>Ramsey Number</code> named after British mathematician Ramsey who proved its existence.</p><p>Suppose every edge of the complete graph $K_{n}$ is colored in red or blue, which means that $K_{n}$ is a two-color (red, blue) complete graph $K_{n}$. For two constant natural numbers $p, q$, when $n$ is large enough, the two-color (red, blue) complete graph $K_{n}$ must contain a red $K_{p}$ or a blue $K_{q}$. We denote the least $n$ satisfying the above proposition by $r(p, q)$. We also call $r(p, q)$ the Ramsey number.</p><p>$r(p,q)$ is hence the minimum $n$ so that any $n$-subgraph $G$ of the complete graph $K_n$ contains a complete subgraph $K_p$ or its complementary graph $\bar{G}$ contains a complete subgraph $K_q$.
+Also that, $r(1,q) = r(p,1) = 1$.</p><h1 id=theorems>Theorems<a href=#theorems class=hanchor arialabel=Anchor>&#8983;</a></h1><p><code>All of the proofs are omitted as some are way too long or quite difficult for the needs of these notes</code>, particularly that they hold no purpose here (or for a Scholarship exam for which these notes are for!) and might as well be referred directly from any standard Graph Theory book - like the ones mentioned below.</p><p>$$\dotsb$$</p><p><code>Theorem 1</code>: If a complete graph $K_n$ in two colors contains a monochromatic triangle, then the minimum $n$ is equal to 6.</p><p>$$\dotsb$$</p><p>For Theorem 1, $r(3,3) = r_2 = 6$.
+See <a href=https://math.mit.edu/~apost/courses/18.204_2018/ramsey-numbers.pdf>here, page 2</a> for a proof.</p><p>$$\dotsb$$</p><p><code>Theorem 2</code>: [I] For every positive integer $k$, the Ramsey Number $r_k$ exists. When $k \geqslant 2$, $$r_k \leqslant k(r_{k-1}-1 ) + 2$$</p><p>[II] For any $k \in \mathbb{N}$, $$r_k \leqslant 1 + 1 + k + k(k-1) + \ldots + \frac{k!}{2!} + \frac{k!}{1!} + k!$$</p><p>Note that Theorem 2 [II] is also written (with the help of series expansion of $e$) as $r_k \leqslant \lfloor k!~e~ \rfloor + 1$ where $\lfloor . \rfloor$ is the greatest integer function.</p><p>Some hints for the proof can be found <a href="https://math.stackexchange.com/questions/1055435/modification-of-the-ramsey-number?noredirect=1">here</a></p><p>$$\dotsb$$</p><p>Note that $r(2,q) = q$ and $r(p,2) = p$. Also, $r(p,q) = r(q,p)$ See <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em> Page 103, Section 7.2 for the discussion/proof.</p><p><code>Theorem 4</code> [Ramsey&rsquo;s Theorem] For any two positive integers $n$ and $m$, the number $r(p, q)$ exists and satisfies the inequality $R(p, q) \leq r(p-1, q)+r(p, q-1) .$</p><p>For a proof see, <em>Adrian Bondy & Murty - Graph Theory (GTM) by Springer - Verlag</em> Page 309 m, <strong>Theorem 12.5</strong>.</p><p>$$\dotsb$$</p><p><code>Theorem 4</code>: When $p \geqslant 2$ and $q \geqslant 2$ then $$r(p,q) \leqslant \binom{p+q-2}{p-1}$$</p><p>Proof can be found in <em>Graph Theory with Applications</em> by <em>Bondy J.A., Murty U.S.R.</em> Page 106, Theorem 7.5</p><hr><h1 id=questions>Questions<a href=#questions class=hanchor arialabel=Anchor>&#8983;</a></h1><p>A lot of questions on Ramsey Numbers can be found <a href=https://artofproblemsolving.com/community/q2_%22ramsey%20number%22>here</a> and also similarly searching &ldquo;Ramsey&rdquo; in the search field of artofproblemsolving forums. We direct the reader to try them to truly cover the varieties of such questions.</p></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://leimath.github.io/posts/gt-notes-p7/><span class=button__icon>←</span>
+<span class=button__text>My Graph Theory Notes - Part 7</span></a></span>
+<span class="button next"><a href=https://leimath.github.io/posts/gt-notes-p6/><span class=button__text>My Graph Theory Notes - Part 6</span>
+<span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><div class=copyright><span>2022</a></span>
+<span>::</span></div></div></footer><script src=https://leimath.github.io/assets/main.js></script>
+<script src=https://leimath.github.io/assets/prism.js></script></div></body></html>

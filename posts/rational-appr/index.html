@@ -1,119 +1,14 @@
-<!doctype html><html lang=en>
-<head>
-<title>Dirichlet's Approximation Theorem :: LeiMath</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.
+<!doctype html><html lang=en><head><title>Dirichlet's Approximation Theorem :: LeiMath</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.
 By the way, all the theorem says is that as long as $p \geqslant 1$ we can approximate any real number to a rational number by some arbitary precision.
- Lemma: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i &amp;gt; j$ it so happens that $$\left | x_j - x_i \right | &amp;lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$">
-<meta name=keywords content>
-<meta name=robots content="noodp">
-<link rel=canonical href=https://leimath.github.io/posts/rational-appr/>
-<link rel=stylesheet href=https://leimath.github.io/assets/style.css>
-<link rel=stylesheet href=https://leimath.github.io/assets/green.css>
-<link rel=apple-touch-icon href=https://leimath.github.io/img/apple-touch-icon-192x192.png>
-<link rel="shortcut icon" href=https://leimath.github.io/img/favicon/green.png>
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content>
-<meta name=twitter:creator content="LeiMath">
-<meta property="og:locale" content="en">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Dirichlet's Approximation Theorem">
-<meta property="og:description" content="I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.
+Lemma: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i &amp;gt; j$ it so happens that $$\left | x_j - x_i \right | &amp;lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$"><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://leimath.github.io/posts/rational-appr/><link rel=stylesheet href=https://leimath.github.io/assets/style.css><link rel=stylesheet href=https://leimath.github.io/assets/green.css><link rel=apple-touch-icon href=https://leimath.github.io/img/apple-touch-icon-192x192.png><link rel="shortcut icon" href=https://leimath.github.io/img/favicon/green.png><meta name=twitter:card content="summary"><meta name=twitter:site content><meta name=twitter:creator content="LeiMath"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Dirichlet's Approximation Theorem"><meta property="og:description" content="I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.
 By the way, all the theorem says is that as long as $p \geqslant 1$ we can approximate any real number to a rational number by some arbitary precision.
- Lemma: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i &amp;gt; j$ it so happens that $$\left | x_j - x_i \right | &amp;lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$">
-<meta property="og:url" content="https://leimath.github.io/posts/rational-appr/">
-<meta property="og:site_name" content="LeiMath">
-<meta property="og:image" content="https://leimath.github.io/img/favicon/green.png">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-<meta property="article:published_time" content="2022-01-22 00:00:00 +0000 UTC">
-</head>
-<body class=green>
-<div class="container headings--one-size">
-<header class=header>
-<div class=header__inner>
-<div class=header__logo>
-<a href=/>
-<div class=logo>
-LeiMath
-</div>
-</a>
-</div>
-<div class=menu-trigger>menu</div>
-</div>
-<nav class=menu>
-<ul class="menu__inner menu__inner--desktop">
-<li><a href=/about>About</a></li>
-<li><a href=/listing>Listing</a></li>
-</ul>
-<ul class="menu__inner menu__inner--mobile">
-<li><a href=/about>About</a></li>
-<li><a href=/listing>Listing</a></li>
-</ul>
-</nav>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}}</script>
-<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
-</header>
-<div class=content>
-<div class=post>
-<h1 class=post-title>
-<a href=https://leimath.github.io/posts/rational-appr/>Dirichlet&rsquo;s Approximation Theorem</a></h1>
-<div class=post-meta>
-<span class=post-date>
-2022-01-22
-</span>
-<span class=post-author>:: LeiMath</span>
-</div>
-<span class=post-tags>
-#<a href=https://leimath.github.io/tags/math_problems/>math_problems</a>&nbsp;
+Lemma: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i &amp;gt; j$ it so happens that $$\left | x_j - x_i \right | &amp;lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$"><meta property="og:url" content="https://leimath.github.io/posts/rational-appr/"><meta property="og:site_name" content="LeiMath"><meta property="og:image" content="https://leimath.github.io/img/favicon/green.png"><meta property="og:image:width" content="2048"><meta property="og:image:height" content="1024"><meta property="article:published_time" content="2022-01-22 00:00:00 +0000 UTC"></head><body class=green><div class="container headings--one-size"><header class=header><div class=header__inner><div class=header__logo><a href=/><div class=logo>LeiMath</div></a></div><div class=menu-trigger>menu</div></div><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/listing>Listing</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/listing>Listing</a></li></ul></nav><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},svg:{fontCache:"global"}}</script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></header><div class=content><div class=post><h1 class=post-title><a href=https://leimath.github.io/posts/rational-appr/>Dirichlet&rsquo;s Approximation Theorem</a></h1><div class=post-meta><span class=post-date>2022-01-22</span>
+<span class=post-author>:: LeiMath</span></div><span class=post-tags>#<a href=https://leimath.github.io/tags/math_problems/>math_problems</a>&nbsp;
 #<a href=https://leimath.github.io/tags/math_questions/>math_questions</a>&nbsp;
-#<a href=https://leimath.github.io/tags/maths/>maths</a>&nbsp;
-</span>
-<div class=post-content><div>
-<p>I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.</p>
-<p>By the way, all the theorem says is that as long as $p \geqslant 1$ we can approximate any real number to a rational number by some arbitary precision.</p>
-<hr>
-<p><code>Lemma</code>: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i > j$ it so happens that $$\left | x_j - x_i \right | &lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$</p>
-<p><em>Proof.</em> Divide the interval $[0,1)$ into $n$ subintervals as $\displaystyle \left[0,\frac{1}{n}\right), \left[\frac{1}{n} , \frac{2}{n}\right), \ldots , \left [ \frac{n-1}{n} , 1 \right)$. Now by Pigeonhole Principle, there exists $i , j ~(0 \leqslant i &lt; j \leqslant n)~ $ such that $x_i,x_j$ remain in one of the subintervals and hence the result $$ \displaystyle |x_j - x_i| &lt; \frac{1}{n}$$ holds. $\blacksquare$</p>
-<hr>
-<p><code>Theorem[Dirichlet's Rational Approximation]</code>: Let $\alpha$ be a positive real number. Let $n$ be a positive integer. There exists $p,q \in \mathbb{Z}^+$ which satisfies $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$</p>
-<p><em>Proof.</em> Consider the numbers $m_i = [i \alpha]$ for some $i \in \lbrace 1,2,3, \ldots \rbrace$ that means $m_i \leqslant i \alpha &lt; m_i + 1$ or $0 \leqslant i \alpha - m_i &lt; 1$. By the above lemma, there exists $k,l$ such that $0 \leqslant k &lt; l \leqslant n$ for $\displaystyle \left | (l \alpha - m_l) - (k \alpha - m_k)\right | &lt; \frac{1}{n}$. Rearranging this gives $\displaystyle \left | \alpha ( l - k) - (m_l - m_k) \right | &lt; \frac{1}{n}$. Now let $p = l - k$ and $q = m_l - m_k$ then after subsituting (note the inequality change) $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$ $\blacksquare$</p>
-<hr>
-</div></div>
-<div class=pagination>
-<div class=pagination__title>
-<span class=pagination__title-h>Read other posts</span>
-<hr>
-</div>
-<div class=pagination__buttons>
-<span class="button previous">
-<a href=https://leimath.github.io/posts/athares/>
-<span class=button__icon>←</span>
-<span class=button__text>A Result and a Theorem</span>
-</a>
-</span>
-<span class="button next">
-<a href=https://leimath.github.io/posts/gt-notes-p9/>
-<span class=button__text>My Graph Theory Notes - Part 9</span>
-<span class=button__icon>→</span>
-</a>
-</span>
-</div>
-</div>
-</div>
-</div>
-<footer class=footer>
-<div class=footer__inner>
-<div class=copyright>
-<span>2022</a></span>
-<span>::</span>
-</div>
-</div>
-</footer>
-<script src=https://leimath.github.io/assets/main.js></script>
-<script src=https://leimath.github.io/assets/prism.js></script>
-</div>
-</body>
-</html>
+#<a href=https://leimath.github.io/tags/maths/>maths</a>&nbsp;</span><div class=post-content><div><p>I recently came across this question given in some olympiad paper and found it quite accessible, so here is the proof in all its glory after a lemma that will be in use.</p><p>By the way, all the theorem says is that as long as $p \geqslant 1$ we can approximate any real number to a rational number by some arbitary precision.</p><hr><p><code>Lemma</code>: Consider $n+1$ positive real numbers $x_0, x_1, x_2, x_3, \ldots, x_n$ all being in $[0,1)$ then for any $i \neq j$ and $i > j$ it so happens that $$\left | x_j - x_i \right | &lt; \frac{1}{n}$$ for $i,j \in \mathbb{Z}^+$</p><p><em>Proof.</em> Divide the interval $[0,1)$ into $n$ subintervals as $\displaystyle \left[0,\frac{1}{n}\right), \left[\frac{1}{n} , \frac{2}{n}\right), \ldots , \left [ \frac{n-1}{n} , 1 \right)$. Now by Pigeonhole Principle, there exists $i , j ~(0 \leqslant i &lt; j \leqslant n)~ $ such that $x_i,x_j$ remain in one of the subintervals and hence the result $$ \displaystyle |x_j - x_i| &lt; \frac{1}{n}$$ holds. $\blacksquare$</p><hr><p><code>Theorem[Dirichlet's Rational Approximation]</code>: Let $\alpha$ be a positive real number. Let $n$ be a positive integer. There exists $p,q \in \mathbb{Z}^+$ which satisfies $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$</p><p><em>Proof.</em> Consider the numbers $m_i = [i \alpha]$ for some $i \in \lbrace 1,2,3, \ldots \rbrace$ that means $m_i \leqslant i \alpha &lt; m_i + 1$ or $0 \leqslant i \alpha - m_i &lt; 1$. By the above lemma, there exists $k,l$ such that $0 \leqslant k &lt; l \leqslant n$ for $\displaystyle \left | (l \alpha - m_l) - (k \alpha - m_k)\right | &lt; \frac{1}{n}$. Rearranging this gives $\displaystyle \left | \alpha ( l - k) - (m_l - m_k) \right | &lt; \frac{1}{n}$. Now let $p = l - k$ and $q = m_l - m_k$ then after subsituting (note the inequality change) $$\left|\alpha - \frac{q}{p}\right| \leqslant \frac{1}{np}$$ $\blacksquare$</p><hr></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://leimath.github.io/posts/athares/><span class=button__icon>←</span>
+<span class=button__text>A Result and a Theorem</span></a></span>
+<span class="button next"><a href=https://leimath.github.io/posts/gt-notes-p9/><span class=button__text>My Graph Theory Notes - Part 9</span>
+<span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><div class=copyright><span>2022</a></span>
+<span>::</span></div></div></footer><script src=https://leimath.github.io/assets/main.js></script>
+<script src=https://leimath.github.io/assets/prism.js></script></div></body></html>

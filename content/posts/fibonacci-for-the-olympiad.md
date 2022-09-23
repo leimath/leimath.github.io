@@ -15,6 +15,8 @@ This article assumes familiarity with the definition of the "Fibonacci Sequence"
 
 We will present various properties related to Fibonacci Numbers (and related) without any proof. It is the interest of the reader to seek out the proofs and validate each result for their own.
 
+Wiki Link: https://en.wikipedia.org/wiki/Fibonacci_number
+
 ----
 
 # Definitions
@@ -79,6 +81,7 @@ Fact 2: Every positive integer $m$, there is a Fibonacci number divisible by $m$
 
 // Proof: https://math.stackexchange.com/questions/1523198/proving-that-every-integer-has-a-fibonacci-number-multiple (also see, https://artofproblemsolving.com/community/c6h2231614p17047441)
 
+Fact 3: A number x, if fibonacci if 5x^2 ± 4 is a square. Another way to test if a number is fibonacci is to invert binet's formula.
 
 
 ---
